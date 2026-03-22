@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "badge": "Global Inquiries",
+    "titleLine1": "Partner with",
+    "titleLine2": "the experts.",
+    "cornerIcon": "architecture",
+    "cornerText": "Engineered excellence for the world's most ambitious structural ventures."
+  },
+  "form": {
+    "heading": "Project Initiation",
+    "description": "Complete the structural brief below. Our architects respond within 24 hours.",
+    "fields": {
+      "nameLabel": "Legal Name",
+      "namePlaceholder": "ALEXANDER KIRK",
+      "emailLabel": "Corporate Email",
+      "emailPlaceholder": "CONTACT@KIRK.COM",
+      "subjectLabel": "Consultation Subject",
+      "subjectOptions": ["STRUCTURAL VENTURE", "ARCHITECTURAL AUDIT", "EXPERT CONSULTATION", "STRATEGIC PARTNERSHIP"],
+      "messageLabel": "Message Brief",
+      "messagePlaceholder": "DESCRIBE THE SCOPE OF YOUR ARCHITECTURAL REQUIREMENT..."
+    },
+    "submitButton": "Transmit Inquiry"
+  },
+  "imagery": {
+    "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbKjXb5z78e5PAsbd3avLwCx7NOyfY5rqb-ZphnRpEJ__8RTxPpmqjamvD2FUXJgRa0OtSlnfPNQjwh08NWIinJ4Fp4qDd8DIvVTdg3cmZLeykoajrj7QPTzZsZJYnNqMlMf-9A47uVEMprG1pfOmMeg0yEtMKvhm2iM3mufYH0eNujKynDBtSfI-ikQMTj1XpF_sAfZbw4X3sDwXRqBQ0GxYru6igW6LQaQPGHn2YuUbkdDTi5AUY9TmI8e0U2hooG5FCqd36AJA",
+    "decorativeLabel": "HQ LONDON"
+  },
+  "offices": {
+    "primary": {
+      "label": "Primary Office",
+      "address": "12 Bruton Street\nMayfair, London\nW1J 6QA, UK",
+      "phone": "+44 (0) 20 7123 4567"
+    },
+    "global": {
+      "label": "Global Ventures",
+      "locations": [
+        { "city": "New York", "established": "EST 2012" },
+        { "city": "Singapore", "established": "EST 2016" },
+        { "city": "Dubai", "established": "EST 2021" }
+      ]
+    }
+  },
+  "metrics": [
+    { "value": "420+", "label": "Completed Ventures", "highlight": true },
+    { "value": "12", "label": "Global Studios", "highlight": false },
+    { "value": "84", "label": "Design Awards", "highlight": false },
+    { "value": "B+", "label": "ESG Rating", "highlight": false }
+  ],
+  "map": {
+    "heading": "Strategic Presence",
+    "pinLabel": "HQ LONDON",
+    "mapImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuDEvTjjsMJ5FmcCiQ-GOsR32_61sC2cO-nYbCDeunGCqtVruOXo5ZJMDk3WBPg6E6A3XTr-uoti8G34wT3zunPUK_6Ot69UJOwaLyM8kpLfDsXL3S58oJeclXHjLYCTODr0rp0AJh9bctYwGfDEhQ1STUpHIOtMtiQwf-ZShApOLS7548_KIRTPma0fZMxeWd6yFwIqjI1D8pQ1477e5gvXimERl2yq-pnJskHbvYgGzqJrzvZ-Wy94rdVdCy61FGkBiA-IdirRhss"
+  }
+}

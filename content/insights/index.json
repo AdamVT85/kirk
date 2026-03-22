@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "badge": "Intelligence Hub",
+    "titleLine1": "INSIGHTS FOR",
+    "titleLine2": "OPERATIONS.",
+    "description": "Strategic foresight for industry leaders. We dissect complex regulatory landscapes and risk architectures to engineer operational resilience."
+  },
+  "filters": ["All Insights", "Regulatory", "Safety", "Risk", "Global Logistics"],
+  "featured": {
+    "badge": "Featured Analysis",
+    "category": "Regulatory",
+    "readTime": "12 Min Read",
+    "title": "NAVIGATING THE 2024 MARITIME ACCORD: IMPLICATIONS FOR GLOBAL SUPPLY CHAINS",
+    "description": "An exhaustive audit of the upcoming regulatory shifts in international waters and how tier-one operators are pivoting to maintain compliance without sacrificing velocity.",
+    "linkText": "Read Investigation",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAeZOetuKulg73nElmdxS42ZIP-RZvaEHMiWCWDCwI71Ohu0PuIwZrwJzTLb964u8kE9Vzf_FOjM0hDzaAMhOgcwNRNJfbY2qxxkPH45sbfcD7j_Wa36SnJo0KDZSjSWy5LRQCZD-Vbx81D_PbLgJMngIG9P-JXGlxkNDAT-82RcgwBpdEMMN1DOhFWhGtkun79Asf8uRvh40aT0q2uIo_2DbB84Fbrg_s-TiDAQEmbhvqsEYpvsmShYjzpYcd9YfQperKEqzFlp20"
+  },
+  "metricLedger": {
+    "heading": "The Metric Ledger",
+    "metrics": [
+      { "value": "14.2%", "label": "Avg. Risk Mitigation Increase" },
+      { "value": "09/24", "label": "Next Compliance Deadline" }
+    ]
+  },
+  "sidebarArticle": {
+    "category": "Safety",
+    "title": "Autonomous Safety Protocols in Deep-Sea Mining Operations",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCm3efsJTxxkqp5d2Gqx2cDX8ww4IPoB41T5n-CSjILavs8sNi1dNTwRwCnpePbZ_c34XXNmXALAiadC6XCpbGzUt1NglORT3pshm3ibLLhyqIFTjkzjXA-QB6yRrUgvZTm87rQELWhRxAKPkqQ-MN7UVXRcElpITC5-SK7dNkkVffTqRqUn0OQxuhlVYrb1ER75YNj_9F_jKYowSVXUz81HP14gky1kgWy8_OI79XiraqB02UOefs__fmJRcNtCNTnFCP3oZoAp0Q"
+  },
+  "gridArticles": [
+    {
+      "category": "Risk",
+      "date": "08.14.24",
+      "title": "QUANTIFYING UNCERTAINTY: MACRO-RISK MODELS FOR 2025",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSE2cGxDfuU0G3Qlu0FymzOc6S2YA7TwmRdkGKgPw4yqRX6z7fiuX-VWUYekDKNLfrXc2LIE45qMdOCrVbSp2Ew_hOONbsggVB_OT06_0Vd2ZVU5zBO-w_G6t9sHlu8L_Rl2fmLkebADul-_nyry31CAtyf4tRN6PxfPUBwfGCnIdv82XvTNxNBW-N5D1lSabca3CRnGuxrqsVH30yF8P3ckcZlvltUfCbt-sy-IBrgP0n_zrdSSZaf8fhsvxiwf4VHDvdS03bRHw"
+    },
+    {
+      "category": "Operations",
+      "date": "08.12.24",
+      "title": "THE ARCHITECTURE OF ZERO-DOWNTIME LOGISTICS",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvg-zh5HuQ0FuaGhqaZcPanFaPz_eTzQuZ6DaxjKh-pOJ0LOwIoHfedFS3UWdhGxHKS6KuXL9I4xJjKAdBRjUg_fx8uFOU0Tgt0sHsaqjueaqNWENIsbjMo8tMtx4GNiLotwxn7tDKujPz_HL7H73ehdDv3t8uKTUeQeKR8OcCmYaS_dFcwME_uq_Hkhvpbkbc1cAd_gluKzOaDGe9VimupYcPpBIsSCkxpQsPRdo_p2DQMEqBiORqi1FLpO2MbhixTOCmKW9D4xo"
+    },
+    {
+      "category": "Ventures",
+      "date": "08.09.24",
+      "title": "ENGINEERING EXCELLENCE IN EMERGING MARKETS",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAU4QTR9fO1K-GJAXbhE53ScQ5_dTkomdLM66VgDo7aGD9jUjEilf5NB_ff2lYOCyqhy-47YbaAcE61Uk6GIT84R3_GEHyGMzM06GoPSkwdxX2Hs1B18cl8fUNZGqjw7v2TKWJhcT61hiI92RkyRzRnqz6MTF8y8sIkyPgZE9QBEY3kUAbZEWQRpgMkZYOBxsndsvn-8Z6zzRfIi6MCPtBg4G9R29H2MhWBUh7OEq_MsS33uQyMXFei2Czm4TQJceQ0UgiLhnCmvhU"
+    }
+  ],
+  "newsletter": {
+    "titleLine1": "STAY AHEAD OF",
+    "titleLine2": "THE CURVE.",
+    "description": "Monthly briefings on regulatory shifts and operational strategies delivered with surgical precision.",
+    "placeholder": "EMAIL ADDRESS",
+    "buttonText": "SUBSCRIBE"
+  }
+}

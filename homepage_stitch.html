@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "on-secondary-fixed-variant": "#474747",
+              "inverse-primary": "#005bc0",
+              "on-surface-variant": "#c1c6d7",
+              "on-tertiary-container": "#292a2a",
+              "on-secondary": "#303030",
+              "on-primary": "#002e68",
+              "on-secondary-container": "#b6b5b4",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "surface-container": "#20201f",
+              "surface-bright": "#393939",
+              "inverse-surface": "#e5e2e1",
+              "secondary": "#c8c6c6",
+              "on-tertiary-fixed": "#1b1c1c",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#353535",
+              "secondary-container": "#474747",
+              "surface-container-lowest": "#0e0e0e",
+              "background": "#131313",
+              "secondary-fixed": "#e4e2e1",
+              "primary": "#adc7ff",
+              "on-tertiary": "#303031",
+              "outline-variant": "#414754",
+              "on-primary-fixed-variant": "#004493",
+              "secondary-fixed-dim": "#c8c6c6",
+              "primary-fixed": "#d8e2ff",
+              "surface-dim": "#131313",
+              "primary-container": "#4a8eff",
+              "surface-container-low": "#1b1b1b",
+              "primary-fixed-dim": "#adc7ff",
+              "error-container": "#93000a",
+              "tertiary": "#c7c6c6",
+              "error": "#ffb4ab",
+              "on-surface": "#e5e2e1",
+              "tertiary-fixed": "#e3e2e2",
+              "on-primary-container": "#00285b",
+              "surface-tint": "#adc7ff",
+              "inverse-on-surface": "#313030",
+              "tertiary-container": "#919090",
+              "outline": "#8b90a0",
+              "on-error": "#690005",
+              "surface-variant": "#353535",
+              "on-primary-fixed": "#001a41",
+              "on-tertiary-fixed-variant": "#464747",
+              "on-secondary-fixed": "#1b1c1c"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+      .blueprint-grid {
+        background-image: linear-gradient(to right, rgba(65, 71, 84, 0.1) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(65, 71, 84, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none border-b border-white/5 bg-zinc-950/40 backdrop-blur-2xl">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-none">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-[#e5e2e1] uppercase">Kirk &amp; Kirk</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#adc7ff] border-b-2 border-[#adc7ff] pb-1" href="#">Expertise</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Ventures</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Architects</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-primary text-on-primary font-bold text-[0.75rem] uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95 duration-200 ease-in-out">
+                    Consultation
+                </button>
+</div>
+</div>
+</nav>
+<main class="relative overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center px-8 md:px-24 blueprint-grid">
+<div class="max-w-7xl w-full pt-32">
+<div class="inline-block border border-outline-variant px-4 py-1 mb-8">
+<span class="text-[0.7rem] uppercase tracking-[0.3em] font-medium text-primary">Operational Excellence</span>
+</div>
+<h1 class="text-[clamp(3rem,10vw,8rem)] leading-[0.9] font-black tracking-tighter uppercase mb-12">
+                    PRECISION IN<br/>OPERATIONS.
+                </h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-12">
+<p class="max-w-xl text-lg md:text-2xl font-light text-on-surface-variant leading-relaxed">
+                        Redefining the architecture of modern enterprise through high-output strategy and structural intelligence.
+                    </p>
+<div class="flex gap-4">
+<div class="w-32 h-[1px] bg-primary mb-4 hidden md:block"></div>
+<span class="text-[0.75rem] uppercase tracking-widest opacity-60">Est. 2024</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 hidden lg:block">
+<div class="p-8 border border-outline-variant aspect-square w-64 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="architecture">architecture</span>
+<span class="text-[0.75rem] leading-tight opacity-70">METICULOUSLY CRAFTED BUSINESS SYSTEMS.</span>
+</div>
+</div>
+</section>
+<!-- Strategic Solutions (Bento Grid Style) -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 flex flex-col md:flex-row justify-between items-baseline gap-4">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase">Strategic Solutions</h2>
+<span class="text-primary font-mono text-sm tracking-widest">01 / CAPABILITIES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-outline-variant">
+<div class="md:col-span-8 bg-surface p-12 group hover:bg-surface-container transition-colors duration-500">
+<span class="text-[0.7rem] uppercase tracking-[0.2em] text-primary-container mb-6 block">Scale</span>
+<h3 class="text-4xl font-bold mb-8 tracking-tight">Venture Architecture</h3>
+<p class="text-on-surface-variant max-w-md mb-12 leading-relaxed">Designing resilient frameworks for high-growth organizations. We don't just advise; we build the internal engines that drive long-term value.</p>
+<div class="w-12 h-12 border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined">arrow_outward</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface p-12 group hover:bg-surface-container transition-colors duration-500">
+<span class="text-[0.7rem] uppercase tracking-[0.2em] text-primary-container mb-6 block">Intelligence</span>
+<h3 class="text-3xl font-bold mb-8 tracking-tight">Digital Systems</h3>
+<p class="text-on-surface-variant mb-12 leading-relaxed">Automating the complex to achieve radical clarity in execution.</p>
+<div class="w-12 h-12 border border-outline-variant flex items-center justify-center group-hover:border-primary transition-all">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface p-12 group hover:bg-surface-container transition-colors duration-500">
+<span class="text-[0.7rem] uppercase tracking-[0.2em] text-primary-container mb-6 block">Flow</span>
+<h3 class="text-3xl font-bold mb-8 tracking-tight">Process Design</h3>
+<p class="text-on-surface-variant mb-12 leading-relaxed">Streamlining operations with engineering-grade precision.</p>
+<div class="w-12 h-12 border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined">rebase_edit</span>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface overflow-hidden relative min-h-[400px]">
+<img alt="Modern minimalist architectural structure" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Monochrome close up of architectural structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhL6AgjSgtBOgPDXQj_D7lzLivVdDIz-uNsU-rSByA7yNkYrId4ZyjvEHunO72lS3OF5Ta_RvD8qt7WJTCYXdAYYsWxriK4mqnHQ1HJDQxP3Q-dwdYr-6Us5le8Gr8lALh0onLj9xwVHGuTvuxYfUUDlg_rmnZh_mnjGtLnyuIUoaUuS-kohRH3qQhaTFBMtLemL72L-gzoRmqqoMZXLI5nWg9i3VuZFtC673AC-cHsHjvCvdPAOyMgRTNPqlBl1kfYAbUU5AybhM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-12 left-12">
+<h3 class="text-5xl font-black uppercase tracking-tighter">Engineered Excellence</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Expertise (The Blueprint Metric) -->
+<section class="py-32 px-8 md:px-24">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">Our Expertise</h2>
+<p class="text-on-surface-variant max-w-2xl text-lg font-light">Quantifiable impact through structured methodology. Our metrics are the blueprint for your expansion.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 border border-outline-variant">
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant flex flex-col gap-8 group">
+<span class="text-8xl font-black text-primary tracking-tighter">40%</span>
+<div>
+<h4 class="text-xl font-bold uppercase mb-2">Efficiency Gain</h4>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest opacity-60">Average Operational uplift</p>
+</div>
+</div>
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant flex flex-col gap-8">
+<span class="text-8xl font-black text-on-surface tracking-tighter">12</span>
+<div>
+<h4 class="text-xl font-bold uppercase mb-2">Global Markets</h4>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest opacity-60">Architected for scale</p>
+</div>
+</div>
+<div class="p-12 flex flex-col gap-8">
+<span class="text-8xl font-black text-primary tracking-tighter">$2B</span>
+<div>
+<h4 class="text-xl font-bold uppercase mb-2">Assets Optimized</h4>
+<p class="text-sm text-on-surface-variant uppercase tracking-widest opacity-60">Total portfolio intelligence</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Impact (Horizontal Scroll Aesthetic) -->
+<section class="py-32 bg-surface-container-lowest overflow-hidden">
+<div class="px-8 md:px-24 mb-16">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase">Client Impact</h2>
+</div>
+<div class="flex gap-8 px-8 md:px-24 overflow-x-auto no-scrollbar pb-12">
+<div class="min-w-[400px] md:min-w-[600px] bg-surface p-12 border border-outline-variant flex flex-col justify-between h-[450px]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="format_quote">format_quote</span>
+<span class="text-[0.7rem] uppercase font-bold tracking-[0.3em]">Case Study 01</span>
+</div>
+<p class="text-2xl md:text-3xl font-light italic leading-relaxed">"Kirk &amp; Kirk didn't just provide a report; they rebuilt our operational DNA from the ground up."</p>
+<div class="border-t border-outline-variant pt-8">
+<span class="block font-bold uppercase tracking-widest">Director of Strategy</span>
+<span class="text-sm opacity-60">Global Fintech Corp</span>
+</div>
+</div>
+<div class="min-w-[400px] md:min-w-[600px] bg-primary text-on-primary p-12 flex flex-col justify-between h-[450px]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-on-primary text-5xl" data-icon="bolt">bolt</span>
+<span class="text-[0.7rem] uppercase font-bold tracking-[0.3em] text-on-primary/80">Case Study 02</span>
+</div>
+<p class="text-2xl md:text-3xl font-bold leading-tight">RADICAL DIGITAL TRANSFORMATION FOR EUROPE'S LEADING LOGISTICS NETWORK.</p>
+<div class="border-t border-on-primary/20 pt-8">
+<span class="block font-bold uppercase tracking-widest">Outcome: 65% Reduced Latency</span>
+</div>
+</div>
+<div class="min-w-[400px] md:min-w-[600px] bg-surface p-12 border border-outline-variant flex flex-col justify-between h-[450px]">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="format_quote">format_quote</span>
+<span class="text-[0.7rem] uppercase font-bold tracking-[0.3em]">Case Study 03</span>
+</div>
+<p class="text-2xl md:text-3xl font-light italic leading-relaxed">"The precision of their venture architecture allowed us to scale into 4 new markets in 6 months."</p>
+<div class="border-t border-outline-variant pt-8">
+<span class="block font-bold uppercase tracking-widest">VP Operations</span>
+<span class="text-sm opacity-60">Pioneering HealthTech</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Intelligence -->
+<section class="py-32 px-8 md:px-24 border-t border-outline-variant">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase">Latest Intelligence</h2>
+<button class="flex items-center gap-4 text-primary group">
+<span class="uppercase font-bold tracking-widest text-sm">View Archive</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant">
+<div class="bg-surface group cursor-pointer overflow-hidden">
+<div class="relative h-[300px]">
+<img alt="Abstract digital network" class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 group-hover:brightness-75 transition-all duration-700" data-alt="Abstract digital network visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD87DzMP0gvquf9S7lPo7qWACXRkYL4skwaPgSKwiIsYkVnKH6IOPQ9bB48_gK-GA1nfPhuXRC_IjD4hsCGy5aNaXHZxE8p1-yWiSADes-MIbDpu2x9W_iBVr0-If_0nCUZmpm0aSZuMwQm4Dnr_HFh5n3L1fPtQw-BN8fLFET7XEGpvQS3VRAxYTqG4rFtsgoTb3paTROQZRl8Vqg7cJQBVbqPtvirVGyj7ODezKcoabSgEUWUspX7r8w40KHraDtJrxhSeN7ROKA"/>
+<div class="absolute top-8 left-8 bg-surface px-4 py-1">
+<span class="text-[0.6rem] font-bold uppercase tracking-widest">Systems</span>
+</div>
+</div>
+<div class="p-12">
+<h3 class="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">The Future of Autonomous Supply Chains</h3>
+<p class="text-on-surface-variant line-clamp-2 font-light">How predictive modeling is eliminating the need for reactive logistics management.</p>
+</div>
+</div>
+<div class="bg-surface group cursor-pointer overflow-hidden">
+<div class="relative h-[300px]">
+<img alt="Macro electronic hardware" class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 group-hover:brightness-75 transition-all duration-700" data-alt="Close up shot of dark modern electronic hardware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2NZ0LnTK4gWMaj4REmj3LZeYPBRYGrOXyq1MicKgXZlUdBylD_Y5qqA_-iM20jj7PxiJrb9CM3DJUoUQQebZajaB6TW8ebWJkEyyapMhE-sYckjUgzi8GUfICuzKZ_AVHMrHQ6yzv7m7YwkaqZ35ej5LpOcw9OHOUx5D7oCsqNbWk3xzuSYJsz4laIbOIeje1gzjiteLXgZcI6HmM9OqAhXhjEsTtOyWaoiwG7ntA3W5nbFAuzca1hpGt1J8ldss5EwiYxf5k24I"/>
+<div class="absolute top-8 left-8 bg-surface px-4 py-1">
+<span class="text-[0.6rem] font-bold uppercase tracking-widest">Strategy</span>
+</div>
+</div>
+<div class="p-12">
+<h3 class="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">Digital Resilience in Volatile Markets</h3>
+<p class="text-on-surface-variant line-clamp-2 font-light">Architecting internal systems that thrive under external economic pressure.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-48 px-8 md:px-24 bg-surface text-center">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-12">Ready to Build?</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8">
+<a class="px-12 py-5 bg-primary text-on-primary font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm w-full md:w-auto" href="#">Start Consultation</a>
+<a class="px-12 py-5 border border-outline-variant text-on-surface font-bold uppercase tracking-[0.2em] hover:bg-surface-container-high transition-all text-sm w-full md:w-auto" href="#">View Portfolio</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#353535] rounded-none bg-[#0e0e0e]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 w-full">
+<div class="md:col-span-1">
+<div class="text-3xl font-black tracking-tighter text-[#e5e2e1] mb-8">Kirk &amp; Kirk</div>
+<p class="text-[#e5e2e1]/60 font-light text-sm leading-relaxed max-w-xs">
+                    Pioneering operational architecture for the next era of global industry. Precision at every layer.
+                </p>
+</div>
+<div>
+<span class="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Navigation</span>
+<ul class="space-y-4">
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Expertise</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Ventures</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Architects</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Insights</a></li>
+</ul>
+</div>
+<div>
+<span class="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Intelligence</span>
+<ul class="space-y-4">
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Privacy</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Terms</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Legal</a></li>
+</ul>
+</div>
+<div>
+<span class="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Connect</span>
+<ul class="space-y-4">
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">LinkedIn</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Twitter</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Instagram</a></li>
+</ul>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-[#353535] flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-[0.65rem] uppercase tracking-[0.3em] text-[#e5e2e1]/40">© 2024 Kirk &amp; Kirk. Engineered Excellence.</span>
+<div class="flex gap-4">
+<div class="w-1 h-1 bg-primary"></div>
+<div class="w-1 h-1 bg-outline-variant"></div>
+<div class="w-1 h-1 bg-primary"></div>
+</div>
+</div>
+</footer>
+</body></html>

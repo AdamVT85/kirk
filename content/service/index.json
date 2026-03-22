@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Core Expertise 03",
+    "titleLine1": "Health, Safety &",
+    "titleLine2": "Compliance",
+    "description": "Engineering organizational resilience through radical regulatory precision and architectural risk management.",
+    "backgroundImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBV2xiEaWIfmiT3Z6DBBV1KwIQdXipfEsixTVF5C82BN6ZegavWjrpNQfusR6oGTIoCcVDTD5K7GAGlv2KCcJt5sOgqrQaBR5rK1sxIIKibE3BB0jd8YlfytY0KudevUIRP_gbwUy-RtZJkJ56LDSGjDzvFpVFYHVrUjDk-efh8mtWCBHX1NASHs6fOskDlmWrToJMaDPzQxDunw7wDvITE0O8mAzmBucBm6zfND2QiPGAute8uAunY5oHzzgWtSn7lUDPpMb_dDsU"
+  },
+  "metrics": [
+    { "label": "Risk Mitigation", "value": "100%" },
+    { "label": "Client Portfolio", "value": "450+" },
+    { "label": "Global Standards", "value": "ISO+" },
+    { "label": "Years Tenure", "value": "24" }
+  ],
+  "competencies": {
+    "heading": "Systemic Integrity",
+    "description": "Our approach to compliance is not reactive—it is structural. We treat safety protocols as the load-bearing walls of your enterprise.",
+    "matrixLabel": "Capabilities Matrix",
+    "cards": [
+      {
+        "icon": "security",
+        "title": "Governance Frameworks",
+        "description": "Developing bespoke constitutional safety documents that align with international regulatory mandates and local legislation."
+      },
+      {
+        "icon": "architecture",
+        "title": "Physical Auditing",
+        "description": "On-site structural risk assessments using high-fidelity spatial analysis to identify latent environmental hazards."
+      },
+      {
+        "icon": "verified_user",
+        "title": "Continuous Vigilance",
+        "description": "Real-time compliance monitoring and automated reporting cycles to maintain uninterrupted operational status."
+      }
+    ]
+  },
+  "philosophy": {
+    "label": "The Kirk Philosophy",
+    "quote": "\"Compliance is not a checkbox; it is the invisible architecture that allows a business to stand tall against the winds of volatility.\"",
+    "highlightedPhrase": "invisible architecture",
+    "authorName": "Alexander Kirk",
+    "authorTitle": "Managing Architect, Compliance",
+    "authorImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuC-HbDeRxIP1iHzefgyP5TGqbvQx8xRYTWwm-7frKoVCEgv8q5bCDC1-1SMAefsjYRaM_UH_SdG5QGhbwmMKu-RvrUqKnTLQSqp7qk3-LUTDngMNGnncKFW7LWZ-Eb8Ydoe7bmI4hE7xPFU0rrLQMCed54pQfZ9_MiJa-OCQ5r69nhy1ssWGAjd4PzL9vAV28YFOdotipundLo1MqPIEA7GkG2SgDzocQIj4VDsLGsADOtugNLxbHw6hQC-3Ee1XtNYBPv5NDSTD8o",
+    "buildingImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAAunnu44dk9tG8WSKAy3ayT3h01WtoCwf3Es821CcuhndTYvcm0DiOqFdyT-os9CpianTDW_GLVSEO_JHZbF4CLWImoykAqN7ugh_N9ZOThfbPUENA_3HfhO6SBUQ3b4-vXPChtxzsLRTCy6H7W2iodOC2vV1y2ZWRjjdg7XZWj4i5vlrNS4Hm2IpqUdVYSc8FaZfQHkWMRkCWG6unqvnnV-WMDqdgFoYS-kdYRWZjlHDy0Sqov1C-hQuDSek9TNA0SEeIGqUtLC0",
+    "overlayText": "Engineered For Performance"
+  },
+  "consultation": {
+    "heading": "Secure Your",
+    "headingHighlight": "Consultation",
+    "description": "Begin the architectural audit of your organizational safety standards. Our experts are ready to engineer your compliance strategy.",
+    "phone": "+44 (0) 20 7946 0128",
+    "email": "consult@kirkandkirk.com",
+    "fields": {
+      "nameLabel": "Full Identity",
+      "namePlaceholder": "NAME / ENTITY",
+      "emailLabel": "Digital Contact",
+      "emailPlaceholder": "EMAIL ADDRESS",
+      "intentLabel": "Project Intent",
+      "intentOptions": ["Health & Safety Audit", "Regulatory Compliance", "Risk Management", "Bespoke Framework"],
+      "specsLabel": "Specifications",
+      "specsPlaceholder": "DESCRIBE YOUR ORGANIZATIONAL NEEDS"
+    },
+    "submitButton": "Initiate Protocol"
+  }
+}

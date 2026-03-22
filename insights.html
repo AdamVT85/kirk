@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-primary": "#005bc0",
+                        "on-surface-variant": "#c1c6d7",
+                        "on-tertiary-container": "#292a2a",
+                        "on-secondary": "#303030",
+                        "on-primary": "#002e68",
+                        "on-secondary-container": "#b6b5b4",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "surface-container": "#20201f",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#c8c6c6",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353535",
+                        "secondary-container": "#474747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#131313",
+                        "secondary-fixed": "#e4e2e1",
+                        "primary": "#adc7ff",
+                        "on-tertiary": "#303031",
+                        "outline-variant": "#414754",
+                        "on-primary-fixed-variant": "#004493",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-dim": "#131313",
+                        "primary-container": "#4a8eff",
+                        "surface-container-low": "#1b1b1b",
+                        "primary-fixed-dim": "#adc7ff",
+                        "error-container": "#93000a",
+                        "tertiary": "#c7c6c6",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-primary-container": "#00285b",
+                        "surface-tint": "#adc7ff",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#919090",
+                        "outline": "#8b90a0",
+                        "on-error": "#690005",
+                        "surface-variant": "#353535",
+                        "on-primary-fixed": "#001a41",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-secondary-fixed": "#1b1c1c"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .blueprint-grid {
+            background-image: linear-gradient(to right, rgba(65, 71, 84, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(65, 71, 84, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 rounded-none border-b border-white/5 bg-zinc-950/40 backdrop-blur-2xl flex justify-between items-center px-8 py-4 w-full max-w-none">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black tracking-tighter text-[#e5e2e1] uppercase">Kirk &amp; Kirk</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Expertise</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Ventures</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Architects</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#adc7ff] border border-[#adc7ff] px-6 py-2 hover:bg-primary hover:text-on-primary transition-all duration-300">
+                Consultation
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 md:px-12">
+<!-- Hero Header Section -->
+<header class="mb-24 flex flex-col md:flex-row justify-between items-end gap-12">
+<div class="max-w-4xl">
+<div class="mb-6 inline-block border border-outline-variant px-3 py-1">
+<span class="text-[0.7rem] uppercase tracking-[0.3em] font-bold text-primary">Intelligence Hub</span>
+</div>
+<h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
+                    INSIGHTS FOR<br/>
+<span class="text-primary">OPERATIONS.</span>
+</h1>
+</div>
+<div class="md:w-1/3 text-on-surface-variant font-light leading-relaxed">
+<p class="body-lg">Strategic foresight for industry leaders. We dissect complex regulatory landscapes and risk architectures to engineer operational resilience.</p>
+</div>
+</header>
+<!-- Dynamic Category Filters -->
+<div class="mb-16 flex flex-wrap gap-4 border-b border-outline-variant/30 pb-8">
+<button class="px-6 py-2 bg-primary text-on-primary font-bold text-[0.75rem] uppercase tracking-widest transition-all">All Insights</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-medium text-[0.75rem] uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Regulatory</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-medium text-[0.75rem] uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Safety</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-medium text-[0.75rem] uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Risk</button>
+<button class="px-6 py-2 border border-outline-variant text-on-surface-variant font-medium text-[0.75rem] uppercase tracking-widest hover:border-primary hover:text-primary transition-all">Global Logistics</button>
+</div>
+<!-- High-Impact Masonry Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Featured Large Post -->
+<article class="md:col-span-8 group">
+<div class="relative overflow-hidden aspect-[16/9] mb-8 border border-white/5">
+<img class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Monochromatic modern skyscraper architecture against dark sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeZOetuKulg73nElmdxS42ZIP-RZvaEHMiWCWDCwI71Ohu0PuIwZrwJzTLb964u8kE9Vzf_FOjM0hDzaAMhOgcwNRNJfbY2qxxkPH45sbfcD7j_Wa36SnJo0KDZSjSWy5LRQCZD-Vbx81D_PbLgJMngIG9P-JXGlxkNDAT-82RcgwBpdEMMN1DOhFWhGtkun79Asf8uRvh40aT0q2uIo_2DbB84Fbrg_s-TiDAQEmbhvqsEYpvsmShYjzpYcd9YfQperKEqzFlp20"/>
+<div class="absolute top-0 left-0 bg-primary text-on-primary px-4 py-2 font-bold text-[0.7rem] uppercase tracking-widest">
+                        Featured Analysis
+                    </div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-[0.7rem] uppercase tracking-widest font-bold text-on-surface-variant">
+<span>Regulatory</span>
+<span class="w-1 h-1 bg-primary"></span>
+<span>12 Min Read</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tighter leading-tight group-hover:text-primary transition-colors duration-300">
+                        NAVIGATING THE 2024 MARITIME ACCORD: IMPLICATIONS FOR GLOBAL SUPPLY CHAINS
+                    </h2>
+<p class="text-on-surface-variant font-light max-w-2xl leading-relaxed">
+                        An exhaustive audit of the upcoming regulatory shifts in international waters and how tier-one operators are pivoting to maintain compliance without sacrificing velocity.
+                    </p>
+<a class="mt-4 flex items-center gap-2 text-primary font-bold text-[0.8rem] uppercase tracking-widest group-hover:translate-x-2 transition-transform" href="#">
+                        Read Investigation <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Sidebar Quick Feed -->
+<div class="md:col-span-4 flex flex-col gap-12">
+<div class="p-8 border border-outline-variant/30 bg-surface-container-lowest">
+<h3 class="text-xl font-bold tracking-tighter mb-6 uppercase border-b border-primary pb-4">The Metric Ledger</h3>
+<div class="space-y-8">
+<div class="flex flex-col gap-1">
+<span class="text-4xl font-black text-primary tracking-tighter">14.2%</span>
+<span class="text-[0.65rem] uppercase tracking-widest font-bold opacity-60">Avg. Risk Mitigation Increase</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-4xl font-black text-primary tracking-tighter">09/24</span>
+<span class="text-[0.65rem] uppercase tracking-widest font-bold opacity-60">Next Compliance Deadline</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10">
+<article class="group">
+<div class="aspect-square w-full mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale brightness-50 group-hover:brightness-100 transition-all duration-500" data-alt="Macro circuit board blue light technology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm3efsJTxxkqp5d2Gqx2cDX8ww4IPoB41T5n-CSjILavs8sNi1dNTwRwCnpePbZ_c34XXNmXALAiadC6XCpbGzUt1NglORT3pshm3ibLLhyqIFTjkzjXA-QB6yRrUgvZTm87rQELWhRxAKPkqQ-MN7UVXRcElpITC5-SK7dNkkVffTqRqUn0OQxuhlVYrb1ER75YNj_9F_jKYowSVXUz81HP14gky1kgWy8_OI79XiraqB02UOefs__fmJRcNtCNTnFCP3oZoAp0Q"/>
+</div>
+<span class="text-[0.65rem] uppercase tracking-widest font-bold text-primary mb-2 block">Safety</span>
+<h4 class="text-xl font-bold tracking-tight uppercase leading-none group-hover:underline underline-offset-4 decoration-primary">
+                            Autonomous Safety Protocols in Deep-Sea Mining Operations
+                        </h4>
+</article>
+</div>
+</div>
+<!-- Second Row Grid -->
+<article class="md:col-span-4 group mt-12">
+<div class="relative aspect-[4/5] mb-8 border border-white/5 overflow-hidden">
+<img class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 transition-transform duration-700" data-alt="Aerial view of industrial shipping containers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSE2cGxDfuU0G3Qlu0FymzOc6S2YA7TwmRdkGKgPw4yqRX6z7fiuX-VWUYekDKNLfrXc2LIE45qMdOCrVbSp2Ew_hOONbsggVB_OT06_0Vd2ZVU5zBO-w_G6t9sHlu8L_Rl2fmLkebADul-_nyry31CAtyf4tRN6PxfPUBwfGCnIdv82XvTNxNBW-N5D1lSabca3CRnGuxrqsVH30yF8P3ckcZlvltUfCbt-sy-IBrgP0n_zrdSSZaf8fhsvxiwf4VHDvdS03bRHw"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-[0.65rem] uppercase tracking-widest font-bold text-on-surface-variant">
+<span>Risk</span>
+<span class="w-1 h-1 bg-outline-variant"></span>
+<span>08.14.24</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tighter leading-tight uppercase group-hover:text-primary transition-colors">
+                        QUANTIFYING UNCERTAINTY: MACRO-RISK MODELS FOR 2025
+                    </h3>
+</div>
+</article>
+<article class="md:col-span-4 group mt-12">
+<div class="relative aspect-[4/5] mb-8 border border-white/5 overflow-hidden">
+<img class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 transition-transform duration-700" data-alt="Digital blue data visualization graph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvg-zh5HuQ0FuaGhqaZcPanFaPz_eTzQuZ6DaxjKh-pOJ0LOwIoHfedFS3UWdhGxHKS6KuXL9I4xJjKAdBRjUg_fx8uFOU0Tgt0sHsaqjueaqNWENIsbjMo8tMtx4GNiLotwxn7tDKujPz_HL7H73ehdDv3t8uKTUeQeKR8OcCmYaS_dFcwME_uq_Hkhvpbkbc1cAd_gluKzOaDGe9VimupYcPpBIsSCkxpQsPRdo_p2DQMEqBiORqi1FLpO2MbhixTOCmKW9D4xo"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-[0.65rem] uppercase tracking-widest font-bold text-on-surface-variant">
+<span>Operations</span>
+<span class="w-1 h-1 bg-outline-variant"></span>
+<span>08.12.24</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tighter leading-tight uppercase group-hover:text-primary transition-colors">
+                        THE ARCHITECTURE OF ZERO-DOWNTIME LOGISTICS
+                    </h3>
+</div>
+</article>
+<article class="md:col-span-4 group mt-12">
+<div class="relative aspect-[4/5] mb-8 border border-white/5 overflow-hidden">
+<img class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 transition-transform duration-700" data-alt="Futuristic steel architecture abstract" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU4QTR9fO1K-GJAXbhE53ScQ5_dTkomdLM66VgDo7aGD9jUjEilf5NB_ff2lYOCyqhy-47YbaAcE61Uk6GIT84R3_GEHyGMzM06GoPSkwdxX2Hs1B18cl8fUNZGqjw7v2TKWJhcT61hiI92RkyRzRnqz6MTF8y8sIkyPgZE9QBEY3kUAbZEWQRpgMkZYOBxsndsvn-8Z6zzRfIi6MCPtBg4G9R29H2MhWBUh7OEq_MsS33uQyMXFei2Czm4TQJceQ0UgiLhnCmvhU"/>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-[0.65rem] uppercase tracking-widest font-bold text-on-surface-variant">
+<span>Ventures</span>
+<span class="w-1 h-1 bg-outline-variant"></span>
+<span>08.09.24</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tighter leading-tight uppercase group-hover:text-primary transition-colors">
+                        ENGINEERING EXCELLENCE IN EMERGING MARKETS
+                    </h3>
+</div>
+</article>
+</div>
+<!-- Newsletter Section with Blueprint Motif -->
+<section class="mt-32 border border-outline-variant/30 relative overflow-hidden bg-surface-container-low p-12 md:p-24 blueprint-grid">
+<div class="relative z-10 max-w-3xl">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-[0.9] mb-8">
+                    STAY AHEAD OF<br/><span class="text-primary">THE CURVE.</span>
+</h2>
+<p class="text-on-surface-variant mb-12 font-light text-xl">Monthly briefings on regulatory shifts and operational strategies delivered with surgical precision.</p>
+<form class="flex flex-col md:flex-row gap-0 border-b border-on-surface-variant/30">
+<input class="bg-transparent border-none focus:ring-0 text-2xl font-bold tracking-tighter uppercase py-4 w-full placeholder:opacity-30" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-on-primary px-12 py-4 font-black uppercase tracking-widest hover:bg-white hover:text-surface transition-colors" type="submit">
+                        SUBSCRIBE
+                    </button>
+</form>
+</div>
+<!-- Decorative Square Frame -->
+<div class="absolute right-0 bottom-0 w-64 h-64 border-t border-l border-primary/20 pointer-events-none"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full border-t border-[#353535] rounded-none grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 w-full">
+<div class="md:col-span-2">
+<div class="text-3xl font-black tracking-tighter text-[#e5e2e1] mb-8 uppercase">Kirk &amp; Kirk</div>
+<p class="text-[#e5e2e1]/60 font-light max-w-sm mb-8">Engineering excellence through strategic insight and architectural precision. Redefining operational intelligence for the digital era.</p>
+<div class="flex gap-6">
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 uppercase font-bold text-[0.7rem] tracking-widest" href="#">Twitter</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 uppercase font-bold text-[0.7rem] tracking-widest" href="#">LinkedIn</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 uppercase font-bold text-[0.7rem] tracking-widest" href="#">Instagram</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[#adc7ff] font-bold uppercase text-[0.75rem] tracking-[0.2em] mb-4">Architecture</span>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Insights</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Expertise</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Ventures</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[#adc7ff] font-bold uppercase text-[0.75rem] tracking-[0.2em] mb-4">Legal</span>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Legal</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Privacy</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200" href="#">Terms</a>
+<div class="mt-8 pt-8 border-t border-[#353535]">
+<span class="text-[0.65rem] text-[#e5e2e1]/40 uppercase tracking-widest block">© 2024 Kirk &amp; Kirk. Engineered Excellence.</span>
+</div>
+</div>
+</footer>
+</body></html>

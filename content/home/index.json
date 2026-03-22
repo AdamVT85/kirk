@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "badge": "Operational Excellence",
+    "titleLine1": "PRECISION IN",
+    "titleLine2": "OPERATIONS.",
+    "description": "Redefining the architecture of modern enterprise through high-output strategy and structural intelligence.",
+    "established": "Est. 2024",
+    "cornerBox": "METICULOUSLY CRAFTED BUSINESS SYSTEMS."
+  },
+  "solutions": {
+    "heading": "Strategic Solutions",
+    "counter": "01 / CAPABILITIES",
+    "cards": [
+      {
+        "label": "Scale",
+        "title": "Venture Architecture",
+        "description": "Designing resilient frameworks for high-growth organizations. We don't just advise; we build the internal engines that drive long-term value.",
+        "icon": "arrow_outward"
+      },
+      {
+        "label": "Intelligence",
+        "title": "Digital Systems",
+        "description": "Automating the complex to achieve radical clarity in execution.",
+        "icon": "analytics"
+      },
+      {
+        "label": "Flow",
+        "title": "Process Design",
+        "description": "Streamlining operations with engineering-grade precision.",
+        "icon": "rebase_edit"
+      }
+    ],
+    "featureImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAhL6AgjSgtBOgPDXQj_D7lzLivVdDIz-uNsU-rSByA7yNkYrId4ZyjvEHunO72lS3OF5Ta_RvD8qt7WJTCYXdAYYsWxriK4mqnHQ1HJDQxP3Q-dwdYr-6Us5le8Gr8lALh0onLj9xwVHGuTvuxYfUUDlg_rmnZh_mnjGtLnyuIUoaUuS-kohRH3qQhaTFBMtLemL72L-gzoRmqqoMZXLI5nWg9i3VuZFtC673AC-cHsHjvCvdPAOyMgRTNPqlBl1kfYAbUU5AybhM",
+    "featureTitle": "Engineered Excellence"
+  },
+  "expertise": {
+    "heading": "Our Expertise",
+    "description": "Quantifiable impact through structured methodology. Our metrics are the blueprint for your expansion.",
+    "metrics": [
+      { "value": "40%", "title": "Efficiency Gain", "subtitle": "Average Operational uplift", "highlight": true },
+      { "value": "12", "title": "Global Markets", "subtitle": "Architected for scale", "highlight": false },
+      { "value": "$2B", "title": "Assets Optimized", "subtitle": "Total portfolio intelligence", "highlight": true }
+    ]
+  },
+  "clientImpact": {
+    "heading": "Client Impact",
+    "caseStudies": [
+      {
+        "type": "quote",
+        "label": "Case Study 01",
+        "quote": "\"Kirk & Kirk didn't just provide a report; they rebuilt our operational DNA from the ground up.\"",
+        "author": "Director of Strategy",
+        "company": "Global Fintech Corp"
+      },
+      {
+        "type": "highlight",
+        "label": "Case Study 02",
+        "headline": "RADICAL DIGITAL TRANSFORMATION FOR EUROPE'S LEADING LOGISTICS NETWORK.",
+        "outcome": "Outcome: 65% Reduced Latency"
+      },
+      {
+        "type": "quote",
+        "label": "Case Study 03",
+        "quote": "\"The precision of their venture architecture allowed us to scale into 4 new markets in 6 months.\"",
+        "author": "VP Operations",
+        "company": "Pioneering HealthTech"
+      }
+    ]
+  },
+  "intelligence": {
+    "heading": "Latest Intelligence",
+    "articles": [
+      {
+        "category": "Systems",
+        "title": "The Future of Autonomous Supply Chains",
+        "description": "How predictive modeling is eliminating the need for reactive logistics management.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD87DzMP0gvquf9S7lPo7qWACXRkYL4skwaPgSKwiIsYkVnKH6IOPQ9bB48_gK-GA1nfPhuXRC_IjD4hsCGy5aNaXHZxE8p1-yWiSADes-MIbDpu2x9W_iBVr0-If_0nCUZmpm0aSZuMwQm4Dnr_HFh5n3L1fPtQw-BN8fLFET7XEGpvQS3VRAxYTqG4rFtsgoTb3paTROQZRl8Vqg7cJQBVbqPtvirVGyj7ODezKcoabSgEUWUspX7r8w40KHraDtJrxhSeN7ROKA"
+      },
+      {
+        "category": "Strategy",
+        "title": "Digital Resilience in Volatile Markets",
+        "description": "Architecting internal systems that thrive under external economic pressure.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC2NZ0LnTK4gWMaj4REmj3LZeYPBRYGrOXyq1MicKgXZlUdBylD_Y5qqA_-iM20jj7PxiJrb9CM3DJUoUQQebZajaB6TW8ebWJkEyyapMhE-sYckjUgzi8GUfICuzKZ_AVHMrHQ6yzv7m7YwkaqZ35ej5LpOcw9OHOUx5D7oCsqNbWk3xzuSYJsz4laIbOIeje1gzjiteLXgZcI6HmM9OqAhXhjEsTtOyWaoiwG7ntA3W5nbFAuzca1hpGt1J8ldss5EwiYxf5k24I"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to Build?",
+    "primaryButton": "Start Consultation",
+    "secondaryButton": "View Portfolio"
+  }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "on-secondary-fixed-variant": "#474747",
+              "inverse-primary": "#005bc0",
+              "on-surface-variant": "#c1c6d7",
+              "on-tertiary-container": "#292a2a",
+              "on-secondary": "#303030",
+              "on-primary": "#002e68",
+              "on-secondary-container": "#b6b5b4",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "surface-container": "#20201f",
+              "surface-bright": "#393939",
+              "inverse-surface": "#e5e2e1",
+              "secondary": "#c8c6c6",
+              "on-tertiary-fixed": "#1b1c1c",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#353535",
+              "secondary-container": "#474747",
+              "surface-container-lowest": "#0e0e0e",
+              "background": "#131313",
+              "secondary-fixed": "#e4e2e1",
+              "primary": "#adc7ff",
+              "on-tertiary": "#303031",
+              "outline-variant": "#414754",
+              "on-primary-fixed-variant": "#004493",
+              "secondary-fixed-dim": "#c8c6c6",
+              "primary-fixed": "#d8e2ff",
+              "surface-dim": "#131313",
+              "primary-container": "#4a8eff",
+              "surface-container-low": "#1b1b1b",
+              "primary-fixed-dim": "#adc7ff",
+              "error-container": "#93000a",
+              "tertiary": "#c7c6c6",
+              "error": "#ffb4ab",
+              "on-surface": "#e5e2e1",
+              "tertiary-fixed": "#e3e2e2",
+              "on-primary-container": "#00285b",
+              "surface-tint": "#adc7ff",
+              "inverse-on-surface": "#313030",
+              "tertiary-container": "#919090",
+              "outline": "#8b90a0",
+              "on-error": "#690005",
+              "surface-variant": "#353535",
+              "on-primary-fixed": "#001a41",
+              "on-tertiary-fixed-variant": "#464747",
+              "on-secondary-fixed": "#1b1c1c"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(65, 71, 84, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(65, 71, 84, 0.1) 1px, transparent 1px);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #353535; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 rounded-none border-b border-white/5 bg-zinc-950/40 backdrop-blur-2xl flex justify-between items-center px-8 py-4 w-full max-w-none">
+<div class="flex items-center gap-8">
+<div class="text-xl font-black tracking-tighter text-[#e5e2e1] uppercase">
+                Kirk &amp; Kirk
+            </div>
+<div class="hidden md:flex gap-6">
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Expertise</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Ventures</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300" href="#">Architects</a>
+<a class="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#adc7ff] border-b-2 border-[#adc7ff] pb-1 hover:opacity-100 transition-all duration-300" href="#">Contact</a>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 text-[0.7rem] uppercase font-bold tracking-widest transition-all duration-200 hover:bg-primary-container scale-100 active:scale-95">
+            Consultation
+        </button>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section -->
+<section class="px-8 md:px-16 pt-12 pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 border-l border-outline-variant/30">
+<div class="lg:col-span-8 pt-12 pl-8 md:pl-16">
+<span class="inline-block px-3 py-1 border border-outline-variant text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-8">
+                        Global Inquiries
+                    </span>
+<h1 class="text-[clamp(3rem,8vw,6.5rem)] font-black leading-[0.9] tracking-tighter uppercase mb-12">
+                        Partner with <br/>
+<span class="text-primary">the experts.</span>
+</h1>
+</div>
+<div class="lg:col-span-4 hidden lg:flex items-end justify-end pb-12 pr-4">
+<div class="w-full aspect-square border border-outline-variant/30 p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-5xl">architecture</span>
+<p class="text-[0.75rem] uppercase tracking-widest leading-relaxed opacity-60">
+                            Engineered excellence for the world's most ambitious structural ventures.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Split -->
+<section class="grid grid-cols-1 lg:grid-cols-2">
+<!-- Form Side: Clean & Minimalist -->
+<div class="bg-surface-container-low p-8 md:p-24 border-r border-outline-variant/10">
+<div class="max-w-xl mx-auto lg:ml-0">
+<h2 class="text-2xl font-bold uppercase tracking-tight mb-2">Project Initiation</h2>
+<p class="text-on-surface-variant text-sm mb-12 font-light">Complete the structural brief below. Our architects respond within 24 hours.</p>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group">
+<label class="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">Legal Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20" placeholder="ALEXANDER KIRK" type="text"/>
+</div>
+<div class="relative group">
+<label class="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">Corporate Email</label>
+<input class="w-min-full w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20" placeholder="CONTACT@KIRK.COM" type="email"/>
+</div>
+</div>
+<div class="relative group">
+<label class="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">Consultation Subject</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface appearance-none">
+<option class="bg-surface-container-high">STRUCTURAL VENTURE</option>
+<option class="bg-surface-container-high">ARCHITECTURAL AUDIT</option>
+<option class="bg-surface-container-high">EXPERT CONSULTATION</option>
+<option class="bg-surface-container-high">STRATEGIC PARTNERSHIP</option>
+</select>
+</div>
+<div class="relative group">
+<label class="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">Message Brief</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20 resize-none" placeholder="DESCRIBE THE SCOPE OF YOUR ARCHITECTURAL REQUIREMENT..." rows="4"></textarea>
+</div>
+<button class="group flex items-center gap-4 bg-primary text-on-primary px-10 py-5 font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-primary-container" type="submit">
+                            Transmit Inquiry
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Imagery Side: Architectural & Office -->
+<div class="relative min-h-[600px] flex flex-col">
+<div class="flex-grow relative overflow-hidden">
+<img alt="Modern architectural building glass facade" class="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern architectural building glass facade with sky reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbKjXb5z78e5PAsbd3avLwCx7NOyfY5rqb-ZphnRpEJ__8RTxPpmqjamvD2FUXJgRa0OtSlnfPNQjwh08NWIinJ4Fp4qDd8DIvVTdg3cmZLeykoajrj7QPTzZsZJYnNqMlMf-9A47uVEMprG1pfOmMeg0yEtMKvhm2iM3mufYH0eNujKynDBtSfI-ikQMTj1XpF_sAfZbw4X3sDwXRqBQ0GxYru6igW6LQaQPGHn2YuUbkdDTi5AUY9TmI8e0U2hooG5FCqd36AJA"/>
+<div class="absolute inset-0 bg-surface/40 mix-blend-multiply"></div>
+<!-- Decorative Square Frame Motif -->
+<div class="absolute top-12 left-12 w-32 h-32 border border-primary/40 flex items-center justify-center backdrop-blur-sm">
+<span class="text-primary text-[0.6rem] font-bold uppercase tracking-widest -rotate-90">HQ LONDON</span>
+</div>
+</div>
+<!-- Office Details / Metric Grid -->
+<div class="grid grid-cols-2 blueprint-grid border-t border-outline-variant/30">
+<div class="p-12 border-r border-outline-variant/30 group hover:bg-surface-container-lowest transition-colors">
+<h4 class="text-[0.65rem] uppercase tracking-widest text-primary mb-6">Primary Office</h4>
+<address class="not-italic text-sm leading-relaxed font-light opacity-80">
+                            12 Bruton Street<br/>
+                            Mayfair, London<br/>
+                            W1J 6QA, UK
+                        </address>
+<div class="mt-8 flex gap-4">
+<span class="material-symbols-outlined text-outline">call</span>
+<span class="text-xs font-mono">+44 (0) 20 7123 4567</span>
+</div>
+</div>
+<div class="p-12 group hover:bg-surface-container-lowest transition-colors">
+<h4 class="text-[0.65rem] uppercase tracking-widest text-primary mb-6">Global Ventures</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs uppercase tracking-tighter">New York</span>
+<span class="text-[0.6rem] font-mono opacity-40">EST 2012</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs uppercase tracking-tighter">Singapore</span>
+<span class="text-[0.6rem] font-mono opacity-40">EST 2016</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<span class="text-xs uppercase tracking-tighter">Dubai</span>
+<span class="text-[0.6rem] font-mono opacity-40">EST 2021</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blueprint Metric Grid Section -->
+<section class="border-y border-outline-variant/30 bg-surface-container-lowest py-24 px-8 md:px-16 overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-0">
+<div class="p-10 border-outline-variant/20 md:border-r border-b md:border-b-0">
+<div class="text-[3.5rem] font-black tracking-tighter text-primary leading-none mb-4">420+</div>
+<div class="text-[0.7rem] uppercase tracking-[0.3em] font-medium opacity-60">Completed Ventures</div>
+</div>
+<div class="p-10 border-outline-variant/20 md:border-r border-b md:border-b-0">
+<div class="text-[3.5rem] font-black tracking-tighter text-on-surface leading-none mb-4">12</div>
+<div class="text-[0.7rem] uppercase tracking-[0.3em] font-medium opacity-60">Global Studios</div>
+</div>
+<div class="p-10 border-outline-variant/20 md:border-r border-b md:border-b-0">
+<div class="text-[3.5rem] font-black tracking-tighter text-on-surface leading-none mb-4">84</div>
+<div class="text-[0.7rem] uppercase tracking-[0.3em] font-medium opacity-60">Design Awards</div>
+</div>
+<div class="p-10">
+<div class="text-[3.5rem] font-black tracking-tighter text-on-surface leading-none mb-4">B+</div>
+<div class="text-[0.7rem] uppercase tracking-[0.3em] font-medium opacity-60">ESG Rating</div>
+</div>
+</div>
+</section>
+<!-- Visual Anchor: Map Section (Abstract representation) -->
+<section class="h-[400px] relative bg-surface-container-high overflow-hidden">
+<div class="absolute inset-0 blueprint-grid opacity-20"></div>
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<div class="text-center">
+<h3 class="text-[0.75rem] uppercase tracking-[0.5em] text-primary-container mb-6">Strategic Presence</h3>
+<div class="relative inline-block">
+<img alt="World map digital architectural rendering" class="max-w-4xl w-full grayscale opacity-30 mix-blend-screen" data-alt="Minimalist architectural line drawing world map" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEvTjjsMJ5FmcCiQ-GOsR32_61sC2cO-nYbCDeunGCqtVruOXo5ZJMDk3WBPg6E6A3XTr-uoti8G34wT3zunPUK_6Ot69UJOwaLyM8kpLfDsXL3S58oJeclXHjLYCTODr0rp0AJh9bctYwGfDEhQ1STUpHIOtMtiQwf-ZShApOLS7548_KIRTPma0fZMxeWd6yFwIqjI1D8pQ1477e5gvXimERl2yq-pnJskHbvYgGzqJrzvZ-Wy94rdVdCy61FGkBiA-IdirRhss"/>
+<!-- Location Pin -->
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-4 h-4 bg-primary rounded-full animate-pulse"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.6rem] font-bold tracking-widest uppercase bg-surface px-2 py-1 border border-outline-variant">HQ LONDON</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-[#353535] rounded-none bg-[#0e0e0e] grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 w-full">
+<div class="md:col-span-1">
+<div class="text-3xl font-black tracking-tighter text-[#e5e2e1] mb-8 uppercase">Kirk &amp; Kirk</div>
+<p class="text-[#e5e2e1]/60 font-light leading-relaxed max-w-xs text-sm">
+                Engineering excellence at the intersection of structural integrity and forward-thinking architectural aesthetics.
+            </p>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#adc7ff] font-bold uppercase text-xs tracking-widest mb-6">Navigation</h5>
+<ul class="space-y-3">
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Insights</a></li>
+<li><a class="text-[#adc7ff] font-bold transition-colors duration-200 text-sm" href="#">Contact</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Ventures</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Architects</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#adc7ff] font-bold uppercase text-xs tracking-widest mb-6">Social Intelligence</h5>
+<ul class="space-y-3">
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Twitter</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">LinkedIn</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Instagram</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#adc7ff] font-bold uppercase text-xs tracking-widest mb-6">Corporate</h5>
+<ul class="space-y-3">
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Legal</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Privacy</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200 text-sm" href="#">Terms</a></li>
+</ul>
+<div class="pt-8 border-t border-white/5">
+<p class="text-[0.65rem] uppercase tracking-widest text-[#e5e2e1]/40">© 2024 Kirk &amp; Kirk. Engineered Excellence.</p>
+</div>
+</div>
+</footer>
+</body></html>

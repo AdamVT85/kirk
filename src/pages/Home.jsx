@@ -1,0 +1,193 @@
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import content from '../../content/home/index.json';
+
+export default function Home() {
+  const scrollRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  return (
+    <main className="relative overflow-hidden pt-12 md:pt-0">
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-24 blueprint-grid">
+          <div className="max-w-7xl w-full pt-32">
+            <div className="inline-block border border-outline-variant px-4 py-1 mb-8">
+              <span className="text-[0.7rem] uppercase tracking-[0.3em] font-medium text-primary">{content.hero.badge}</span>
+            </div>
+            <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.9] font-black tracking-tighter uppercase mb-12">
+              {content.hero.titleLine1}<br />{content.hero.titleLine2}
+            </h1>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
+              <p className="max-w-xl text-lg md:text-2xl font-light text-on-surface-variant leading-relaxed">
+                {content.hero.description}
+              </p>
+              <div className="flex gap-4">
+                <div className="w-32 h-[1px] bg-primary mb-4 hidden md:block"></div>
+                <span className="text-[0.75rem] uppercase tracking-widest opacity-60">{content.hero.established}</span>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-12 right-12 hidden lg:block">
+            <div className="p-8 border border-outline-variant aspect-square w-64 flex flex-col justify-between">
+              <span className="material-symbols-outlined text-primary text-4xl" data-icon="architecture">architecture</span>
+              <span className="text-[0.75rem] leading-tight opacity-70">{content.hero.cornerBox}</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Strategic Solutions */}
+        <section className="py-32 px-8 md:px-24 bg-surface-container-low">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-20 flex flex-col md:flex-row justify-between items-baseline gap-4">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">{content.solutions.heading}</h2>
+              <span className="text-primary font-mono text-sm tracking-widest">{content.solutions.counter}</span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-px bg-outline-variant">
+              {content.solutions.cards.map((card, i) => (
+                <div key={i} className={`${i === 0 ? 'md:col-span-8' : 'md:col-span-4'} bg-surface p-12 group hover:bg-surface-container transition-colors duration-500`}>
+                  <span className="text-[0.7rem] uppercase tracking-[0.2em] text-primary-container mb-6 block">{card.label}</span>
+                  <h3 className={`${i === 0 ? 'text-4xl' : 'text-3xl'} font-bold mb-8 tracking-tight`}>{card.title}</h3>
+                  <p className={`text-on-surface-variant ${i === 0 ? 'max-w-md' : ''} mb-12 leading-relaxed`}>{card.description}</p>
+                  <div className="w-12 h-12 border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                    <span className="material-symbols-outlined">{card.icon}</span>
+                  </div>
+                </div>
+              ))}
+              <div className="md:col-span-8 bg-surface overflow-hidden relative min-h-[400px]">
+                <img alt="Modern minimalist architectural structure" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700" src={content.solutions.featureImage} />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+                <div className="absolute bottom-12 left-12">
+                  <h3 className="text-5xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Expertise */}
+        <section className="py-32 px-8 md:px-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-20">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.expertise.heading}</h2>
+              <p className="text-on-surface-variant max-w-2xl text-lg font-light">{content.expertise.description}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 border border-outline-variant">
+              {content.expertise.metrics.map((metric, i) => (
+                <div key={i} className={`p-12 ${i < content.expertise.metrics.length - 1 ? 'border-b md:border-b-0 md:border-r border-outline-variant' : ''} flex flex-col gap-8`}>
+                  <span className={`text-8xl font-black tracking-tighter ${metric.highlight ? 'text-primary' : 'text-on-surface'}`}>{metric.value}</span>
+                  <div>
+                    <h4 className="text-xl font-bold uppercase mb-2">{metric.title}</h4>
+                    <p className="text-sm text-on-surface-variant uppercase tracking-widest opacity-60">{metric.subtitle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Client Impact */}
+        <section className="py-32 bg-surface-container-lowest overflow-hidden">
+          <div className="px-8 md:px-24 mb-16">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">{content.clientImpact.heading}</h2>
+          </div>
+          <div
+            ref={scrollRef}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+            className={`flex gap-8 px-8 md:px-24 overflow-x-auto no-scrollbar pb-12 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} select-none`}
+          >
+            {content.clientImpact.caseStudies.map((cs, i) => {
+              if (cs.type === 'highlight') {
+                return (
+                  <div key={i} className="min-w-[400px] md:min-w-[600px] bg-primary text-on-primary p-12 flex flex-col justify-between h-[450px]">
+                    <div className="flex justify-between items-start">
+                      <span className="material-symbols-outlined text-on-primary text-5xl">bolt</span>
+                      <span className="text-[0.7rem] uppercase font-bold tracking-[0.3em] text-on-primary/80">{cs.label}</span>
+                    </div>
+                    <p className="text-2xl md:text-3xl font-bold leading-tight">{cs.headline}</p>
+                    <div className="border-t border-on-primary/20 pt-8">
+                      <span className="block font-bold uppercase tracking-widest">{cs.outcome}</span>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <div key={i} className="min-w-[400px] md:min-w-[600px] bg-surface p-12 border border-outline-variant flex flex-col justify-between h-[450px]">
+                  <div className="flex justify-between items-start">
+                    <span className="material-symbols-outlined text-primary text-5xl">format_quote</span>
+                    <span className="text-[0.7rem] uppercase font-bold tracking-[0.3em]">{cs.label}</span>
+                  </div>
+                  <p className="text-2xl md:text-3xl font-light italic leading-relaxed">{cs.quote}</p>
+                  <div className="border-t border-outline-variant pt-8">
+                    <span className="block font-bold uppercase tracking-widest">{cs.author}</span>
+                    <span className="text-sm opacity-60">{cs.company}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Latest Intelligence */}
+        <section className="py-32 px-8 md:px-24 border-t border-outline-variant">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">{content.intelligence.heading}</h2>
+              <button className="flex items-center gap-4 text-primary group">
+                <span className="uppercase font-bold tracking-widest text-sm">View Archive</span>
+                <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+              </button>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant">
+              {content.intelligence.articles.map((article, i) => (
+                <div key={i} className="bg-surface group cursor-pointer overflow-hidden">
+                  <div className="relative h-[300px]">
+                    <img alt={article.title} className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 group-hover:brightness-75 transition-all duration-700" src={article.image} />
+                    <div className="absolute top-8 left-8 bg-surface px-4 py-1">
+                      <span className="text-[0.6rem] font-bold uppercase tracking-widest">{article.category}</span>
+                    </div>
+                  </div>
+                  <div className="p-12">
+                    <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">{article.title}</h3>
+                    <p className="text-on-surface-variant line-clamp-2 font-light">{article.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-48 px-8 md:px-24 bg-surface text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-12">{content.cta.heading}</h2>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+              <Link to="/consultation" className="px-12 py-5 bg-primary text-on-primary font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm w-full md:w-auto">{content.cta.primaryButton}</Link>
+              <Link to="/service" className="px-12 py-5 border border-outline-variant text-on-surface font-bold uppercase tracking-[0.2em] hover:bg-surface-container-high transition-all text-sm w-full md:w-auto">{content.cta.secondaryButton}</Link>
+            </div>
+          </div>
+        </section>
+      </main>
+  );
+}
