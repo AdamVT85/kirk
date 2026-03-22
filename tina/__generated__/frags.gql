@@ -1,0 +1,192 @@
+fragment HomeParts on Home {
+  __typename
+  hero {
+    __typename
+    badge
+    titleLine1
+    titleLine2
+    description
+    established
+    cornerBox
+  }
+  solutions {
+    __typename
+    heading
+    counter
+    cards {
+      __typename
+      label
+      title
+      description
+      icon
+    }
+    featureImage
+    featureTitle
+  }
+  expertise {
+    __typename
+    heading
+    description
+    metrics {
+      __typename
+      value
+      title
+      subtitle
+      highlight
+    }
+  }
+  clientImpact {
+    __typename
+    heading
+    caseStudies {
+      __typename
+      type
+      label
+      quote
+      headline
+      author
+      company
+      outcome
+    }
+  }
+  intelligence {
+    __typename
+    heading
+    articles {
+      __typename
+      category
+      title
+      description
+      image
+    }
+  }
+  cta {
+    __typename
+    heading
+    primaryButton
+    secondaryButton
+  }
+}
+
+fragment ConsultationParts on Consultation {
+  __typename
+  hero {
+    __typename
+    badge
+    titleLine1
+    titleLine2
+    cornerIcon
+    cornerText
+  }
+  form {
+    __typename
+    heading
+    description
+    submitButton
+  }
+  imagery {
+    __typename
+    heroImage
+    decorativeLabel
+  }
+  offices {
+    __typename
+    primary {
+      __typename
+      label
+      address
+      phone
+    }
+  }
+  metrics {
+    __typename
+    value
+    label
+    highlight
+  }
+}
+
+fragment InsightsParts on Insights {
+  __typename
+  hero {
+    __typename
+    badge
+    titleLine1
+    titleLine2
+    description
+  }
+  filters
+  featured {
+    __typename
+    badge
+    category
+    readTime
+    title
+    description
+    linkText
+    image
+  }
+  gridArticles {
+    __typename
+    category
+    date
+    title
+    image
+  }
+  newsletter {
+    __typename
+    titleLine1
+    titleLine2
+    description
+    buttonText
+  }
+}
+
+fragment ServiceParts on Service {
+  __typename
+  hero {
+    __typename
+    badge
+    titleLine1
+    titleLine2
+    description
+    backgroundImage
+  }
+  metrics {
+    __typename
+    label
+    value
+  }
+  competencies {
+    __typename
+    heading
+    description
+    matrixLabel
+    cards {
+      __typename
+      icon
+      title
+      description
+    }
+  }
+  philosophy {
+    __typename
+    label
+    quote
+    highlightedPhrase
+    authorName
+    authorTitle
+    authorImage
+    buildingImage
+    overlayText
+  }
+  consultation {
+    __typename
+    heading
+    headingHighlight
+    description
+    phone
+    email
+    submitButton
+  }
+}
