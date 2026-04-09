@@ -52,13 +52,13 @@
     "featureTitle": "Operational Excellence"
   },
   "expertise": {
-    "heading": "Our Expertise",
-    "description": "Quantifiable impact through structured methodology. Our metrics are the blueprint for your expansion.",
+    "heading": "Our Experience",
+    "description": "Over 25 years we've worked with hundreds of companies to achieve significant measurable improvements to their operations.",
     "metrics": [
       {
-        "value": "40%",
-        "title": "Efficiency Gain",
-        "subtitle": "Average Operational uplift",
+        "value": "200+",
+        "title": "Businesses helped",
+        "subtitle": "Consulting and training",
         "highlight": true
       },
       {
