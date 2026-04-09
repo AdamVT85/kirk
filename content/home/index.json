@@ -8,13 +8,13 @@
     "cornerBox": "PROVING CONSULTANCY SERVICES FOR 25 YEARS"
   },
   "solutions": {
-    "heading": "Strategic Solutions",
-    "counter": "01 / CAPABILITIES",
+    "heading": "CONSULTANCY SERVICES",
+    "counter": "01 / OUR EXPERTISE",
     "cards": [
       {
-        "label": "Scale",
-        "title": "Venture Architecture",
-        "description": "Designing resilient frameworks for high-growth organizations. We don't just advise; we build the internal engines that drive long-term value.",
+        "label": "SAFETY",
+        "title": "Health, Safety and Environmental Compliance",
+        "description": "Kirk and Kirk Provided tailored health, safety, and environmental consultancy for SMBs.",
         "icon": "arrow_outward"
       },
       {
