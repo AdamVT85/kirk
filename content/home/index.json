@@ -38,8 +38,14 @@
       {
         "label": "RISK",
         "title": "Risk Management",
-        "description": "Identify and evaluate risks which could result in financial or programmatic losses to your organisation, and apply appropriate responses to them.  \n\n",
+        "description": "Identify and evaluate risks which could result in financial or programmatic losses to your organisation, and apply appropriate responses to them.  ",
         "icon": "warning"
+      },
+      {
+        "label": "Training",
+        "title": "Training and Education",
+        "description": "Providing industry standard training packages or designing bespoke training courses to meet the specific needs of your company.  ",
+        "icon": "school"
       }
     ],
     "featureImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAhL6AgjSgtBOgPDXQj_D7lzLivVdDIz-uNsU-rSByA7yNkYrId4ZyjvEHunO72lS3OF5Ta_RvD8qt7WJTCYXdAYYsWxriK4mqnHQ1HJDQxP3Q-dwdYr-6Us5le8Gr8lALh0onLj9xwVHGuTvuxYfUUDlg_rmnZh_mnjGtLnyuIUoaUuS-kohRH3qQhaTFBMtLemL72L-gzoRmqqoMZXLI5nWg9i3VuZFtC673AC-cHsHjvCvdPAOyMgRTNPqlBl1kfYAbUU5AybhM",
