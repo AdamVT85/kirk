@@ -55,6 +55,7 @@ export default defineConfig({
                   { type: 'string', name: 'title', label: 'Title' },
                   { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
                   { type: 'string', name: 'icon', label: 'Material Icon Name' },
+                  { type: 'string', name: 'slug', label: 'URL Slug' },
                 ],
               },
               { type: 'image', name: 'featureImage', label: 'Feature Image' },
@@ -233,6 +234,60 @@ export default defineConfig({
             fields: [
               { type: 'string', name: 'titleLine1', label: 'Title Line 1' },
               { type: 'string', name: 'titleLine2', label: 'Title Line 2' },
+              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
+              { type: 'string', name: 'buttonText', label: 'Button Text' },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'solutions',
+        label: 'Solution Landing Pages',
+        path: 'content/solutions',
+        format: 'json',
+        fields: [
+          {
+            type: 'object', name: 'hero', label: 'Hero Section',
+            fields: [
+              { type: 'string', name: 'badge', label: 'Badge' },
+              { type: 'string', name: 'title', label: 'Title' },
+              { type: 'string', name: 'subtitle', label: 'Subtitle' },
+              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
+            ],
+          },
+          {
+            type: 'object', name: 'overview', label: 'Overview',
+            fields: [
+              { type: 'string', name: 'heading', label: 'Heading' },
+              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
+              {
+                type: 'object', name: 'features', label: 'Features', list: true,
+                fields: [
+                  { type: 'string', name: 'icon', label: 'Material Icon Name' },
+                  { type: 'string', name: 'title', label: 'Title' },
+                  { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'object', name: 'approach', label: 'Approach',
+            fields: [
+              { type: 'string', name: 'heading', label: 'Heading' },
+              {
+                type: 'object', name: 'steps', label: 'Steps', list: true,
+                fields: [
+                  { type: 'string', name: 'number', label: 'Step Number' },
+                  { type: 'string', name: 'title', label: 'Title' },
+                  { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'object', name: 'cta', label: 'Call to Action',
+            fields: [
+              { type: 'string', name: 'heading', label: 'Heading' },
               { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
               { type: 'string', name: 'buttonText', label: 'Button Text' },
             ],

@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "badge": "Training",
+    "title": "Training & Education",
+    "subtitle": "Industry-standard and bespoke training for your workforce.",
+    "description": "Kirk & Kirk provides industry-standard training packages and designs bespoke training courses to meet the specific needs of your company. From IOSH and NEBOSH accredited programmes to tailored in-house sessions, we equip your people with the knowledge and competence they need."
+  },
+  "overview": {
+    "heading": "Competence That Counts",
+    "description": "Training isn't a box-ticking exercise — it's the foundation of a competent, confident workforce. Our courses are designed to deliver practical knowledge that people actually retain and apply, whether you need nationally accredited qualifications or bespoke sessions built around your specific operations and hazards.",
+    "features": [
+      {
+        "icon": "workspace_premium",
+        "title": "Accredited Programmes",
+        "description": "IOSH Managing Safely, IOSH Working Safely, NEBOSH General Certificate, and other nationally recognised qualifications delivered by experienced trainers."
+      },
+      {
+        "icon": "edit_note",
+        "title": "Bespoke Training",
+        "description": "Custom-designed courses tailored to your industry, workplace hazards, and operational procedures — delivered on-site or remotely to suit your schedule."
+      },
+      {
+        "icon": "groups",
+        "title": "Toolbox Talks & Briefings",
+        "description": "Short, focused safety briefings and toolbox talks designed for frontline teams, covering specific hazards, procedures, and seasonal risks."
+      }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Training Needs Analysis",
+        "description": "Assessing your workforce competence requirements against regulatory obligations, risk profiles, and operational needs to identify priority training areas."
+      },
+      {
+        "number": "02",
+        "title": "Course Design & Delivery",
+        "description": "Developing and delivering training programmes that combine regulatory knowledge with practical, workplace-relevant application."
+      },
+      {
+        "number": "03",
+        "title": "Assessment & Follow-Up",
+        "description": "Evaluating learning outcomes, issuing certifications where applicable, and providing refresher schedules to maintain ongoing competence."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Upskill Your Team",
+    "description": "Invest in your people's competence and confidence. Whether you need accredited qualifications or bespoke in-house training, we'll design a programme that works for your business.",
+    "buttonText": "Enquire Now"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "badge": "Operations",
+    "title": "Facilities & Project Management",
+    "subtitle": "A single point of contact for your workplace operations.",
+    "description": "Kirk & Kirk offers a complete, boutique facilities management service — from the daily running of your workplace to managing projects from inception to completion. One point of contact, total accountability, no loose ends."
+  },
+  "overview": {
+    "heading": "Your Operations, Our Expertise",
+    "description": "Managing a workplace involves hundreds of moving parts — maintenance, contractors, compliance, budgets, and projects competing for attention. Our facilities and project management service takes that complexity off your plate, delivering a professional, responsive service that keeps your operations running smoothly.",
+    "features": [
+      {
+        "icon": "home_repair_service",
+        "title": "Facilities Management",
+        "description": "Day-to-day management of your premises including planned preventative maintenance, contractor management, and compliance tracking."
+      },
+      {
+        "icon": "construction",
+        "title": "Project Management",
+        "description": "End-to-end management of refurbishment, fit-out, and construction projects — from brief and budget through to handover and defects."
+      },
+      {
+        "icon": "contract",
+        "title": "Contractor Procurement",
+        "description": "Sourcing, vetting, and managing specialist contractors and suppliers, ensuring quality, compliance, and value for money."
+      }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Needs Assessment",
+        "description": "Understanding your operational requirements, existing contracts, budget parameters, and pain points to design a tailored management plan."
+      },
+      {
+        "number": "02",
+        "title": "Service Design",
+        "description": "Building a bespoke facilities or project management framework with clear scope, KPIs, reporting structures, and escalation procedures."
+      },
+      {
+        "number": "03",
+        "title": "Delivery & Reporting",
+        "description": "Ongoing management with regular reporting, budget tracking, and continuous improvement to ensure your operations perform at their best."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Simplify Your Operations",
+    "description": "Let us handle the complexity of running your workplace. From daily facilities management to major projects, we've got it covered.",
+    "buttonText": "Enquire Now"
+  }
+}

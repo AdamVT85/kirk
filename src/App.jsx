@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Consultation from './pages/Consultation'
 import Insights from './pages/Insights'
 import Service from './pages/Service'
+import SolutionLanding from './pages/SolutionLanding'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="consultation" element={<Consultation />} />
           <Route path="insights" element={<Insights />} />
           <Route path="service" element={<Service />} />
+          <Route path="solutions/:slug" element={<SolutionLanding />} />
         </Route>
       </Routes>
     </BrowserRouter>

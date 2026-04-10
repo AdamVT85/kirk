@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "badge": "Management",
+    "title": "Integrated Management Systems",
+    "subtitle": "ISO 9001, ISO 14001, and ISO 45001 — integrated for efficiency.",
+    "description": "Kirk & Kirk offers an integrated approach to help your company establish, implement, and maintain management systems to ISO 9001 (Quality), ISO 14001 (Environmental), and ISO 45001 (Occupational Health & Safety) standards — reducing duplication and driving genuine operational improvement."
+  },
+  "overview": {
+    "heading": "One System, Three Standards",
+    "description": "Running separate management systems for quality, environment, and health & safety creates duplication, confusion, and administrative burden. Our integrated approach aligns all three standards into a single, coherent system that reflects how your business actually operates — saving time, reducing cost, and improving performance.",
+    "features": [
+      {
+        "icon": "verified",
+        "title": "ISO 9001 — Quality",
+        "description": "Establishing quality management systems that drive customer satisfaction, consistent delivery, and continuous improvement across your operations."
+      },
+      {
+        "icon": "eco",
+        "title": "ISO 14001 — Environmental",
+        "description": "Implementing environmental management systems that reduce your impact, ensure regulatory compliance, and demonstrate your commitment to sustainability."
+      },
+      {
+        "icon": "health_and_safety",
+        "title": "ISO 45001 — Health & Safety",
+        "description": "Building occupational health and safety management systems that protect your workforce, reduce incidents, and create a proactive safety culture."
+      }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Baseline Assessment",
+        "description": "Evaluating your existing processes, documentation, and performance against ISO requirements to identify gaps and opportunities for integration."
+      },
+      {
+        "number": "02",
+        "title": "System Development",
+        "description": "Designing and documenting an integrated management system that meets all three standards while reflecting your actual business processes."
+      },
+      {
+        "number": "03",
+        "title": "Certification Support",
+        "description": "Preparing your team for audit, conducting internal audits, and supporting you through the certification process with your chosen certification body."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Get Certified",
+    "description": "Achieve ISO certification with less overhead and more impact. Our consultants will guide you through every step of the integration and certification process.",
+    "buttonText": "Enquire Now"
+  }
+}

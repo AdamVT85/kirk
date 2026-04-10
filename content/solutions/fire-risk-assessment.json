@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "badge": "Fire Risk",
+    "title": "Fire Risk Assessment & Safety Management",
+    "subtitle": "Professional fire risk assessments for residential and commercial premises.",
+    "description": "Kirk & Kirk conducts thorough, legally compliant Fire Risk Assessments under the Regulatory Reform (Fire Safety) Order 2005. We help responsible persons understand their obligations, identify hazards, and implement proportionate fire safety measures."
+  },
+  "overview": {
+    "heading": "Fire Safety You Can Trust",
+    "description": "Fire risk assessment is a legal requirement for virtually all non-domestic premises. Our assessors bring decades of experience across commercial, residential, and mixed-use properties — delivering clear, actionable reports that satisfy regulatory requirements and genuinely protect life.",
+    "features": [
+      {
+        "icon": "local_fire_department",
+        "title": "Fire Risk Assessments",
+        "description": "Comprehensive assessments of your premises covering fire hazards, ignition sources, structural fire protection, means of escape, and emergency planning."
+      },
+      {
+        "icon": "fire_extinguisher",
+        "title": "Fire Safety Management Plans",
+        "description": "Development of fire safety management systems, emergency evacuation procedures, and ongoing maintenance schedules for fire protection equipment."
+      },
+      {
+        "icon": "apartment",
+        "title": "Residential & HMO Assessments",
+        "description": "Specialist fire risk assessments for blocks of flats, HMOs, and shared accommodation, including common areas and cladding considerations."
+      }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Site Survey",
+        "description": "A detailed physical inspection of your premises, examining fire hazards, building construction, compartmentation, detection systems, and escape routes."
+      },
+      {
+        "number": "02",
+        "title": "Risk Evaluation",
+        "description": "Systematic assessment of identified hazards against the people at risk, producing a clear risk rating and prioritised action plan."
+      },
+      {
+        "number": "03",
+        "title": "Report & Remediation",
+        "description": "A comprehensive written report with practical recommendations, timescales, and ongoing support to help you achieve and maintain compliance."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Book Your Assessment",
+    "description": "Don't wait for an incident or enforcement notice. Our qualified fire risk assessors are ready to help you protect your premises and the people in them.",
+    "buttonText": "Enquire Now"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "badge": "Safety",
+    "title": "Health, Safety & Environmental Compliance",
+    "subtitle": "Tailored HSE consultancy for SMBs.",
+    "description": "Kirk & Kirk provides comprehensive health, safety, and environmental consultancy designed specifically for small and medium-sized businesses. We help you meet your legal obligations, protect your people, and build a culture of safety that runs through every level of your organisation."
+  },
+  "overview": {
+    "heading": "Compliance Without Complexity",
+    "description": "Navigating health, safety, and environmental regulations shouldn't consume your business. We cut through the complexity to deliver practical, proportionate solutions that keep you compliant, reduce risk, and let you focus on what you do best.",
+    "features": [
+      {
+        "icon": "policy",
+        "title": "Policy & Documentation",
+        "description": "Development of bespoke health and safety policies, risk assessments, method statements, and safe systems of work tailored to your operations."
+      },
+      {
+        "icon": "checklist",
+        "title": "Auditing & Inspection",
+        "description": "Independent safety audits and workplace inspections to identify gaps, assess compliance, and provide actionable improvement plans."
+      },
+      {
+        "icon": "support_agent",
+        "title": "Competent Person Service",
+        "description": "Retained consultancy providing ongoing access to qualified health and safety advice, fulfilling your legal duty under the Management of Health and Safety at Work Regulations."
+      }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Gap Analysis",
+        "description": "A thorough review of your current health, safety, and environmental arrangements against regulatory requirements and industry best practice."
+      },
+      {
+        "number": "02",
+        "title": "Solution Design",
+        "description": "Practical, proportionate recommendations and documentation tailored to your business size, sector, and risk profile."
+      },
+      {
+        "number": "03",
+        "title": "Implementation Support",
+        "description": "Hands-on support to embed new processes, train your team, and ensure compliance is maintained long term."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Protect Your People",
+    "description": "Get expert health, safety, and environmental advice tailored to your business. Our team is ready to help you build a safer, more compliant operation.",
+    "buttonText": "Enquire Now"
+  }
+}

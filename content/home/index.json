@@ -15,37 +15,43 @@
         "label": "SAFETY",
         "title": "Health, Safety and Environmental Compliance",
         "description": "Kirk and Kirk Provided tailored health, safety, and environmental consultancy for SMBs.",
-        "icon": "health_and_safety"
+        "icon": "health_and_safety",
+        "slug": "health-safety-environmental"
       },
       {
         "label": "Fire Risk",
         "title": "Assessment & Fire Safety Management",
         "description": "Conducting professional Fire Risk Assessments for both residential and commercial premises",
-        "icon": "fire_check"
+        "icon": "fire_check",
+        "slug": "fire-risk-assessment"
       },
       {
         "label": "OPERATIONS",
         "title": "Facilities and Project Management",
         "description": "A complete, boutique facilities management service — a single point of contact for the daily running of your workplace and for projects from inception to completion.",
-        "icon": "assignment_globe"
+        "icon": "assignment_globe",
+        "slug": "facilities-project-management"
       },
       {
         "label": "Management",
         "title": "Integrated Management Systems",
         "description": "offer an integrated approach to enable your company to establish, implement and maintain ISO 9001, ISO 14001 and ISO 45001 management systems.",
-        "icon": "engineering"
+        "icon": "engineering",
+        "slug": "integrated-management-systems"
       },
       {
         "label": "RISK",
         "title": "Risk Management",
         "description": "Identify and evaluate risks which could result in financial or programmatic losses to your organisation, and apply appropriate responses to them.  ",
-        "icon": "warning"
+        "icon": "warning",
+        "slug": "risk-management"
       },
       {
         "label": "Training",
         "title": "Training and Education",
         "description": "Providing industry standard training packages or designing bespoke training courses to meet the specific needs of your company.  ",
-        "icon": "school"
+        "icon": "school",
+        "slug": "training-education"
       }
     ],
     "featureImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAhL6AgjSgtBOgPDXQj_D7lzLivVdDIz-uNsU-rSByA7yNkYrId4ZyjvEHunO72lS3OF5Ta_RvD8qt7WJTCYXdAYYsWxriK4mqnHQ1HJDQxP3Q-dwdYr-6Us5le8Gr8lALh0onLj9xwVHGuTvuxYfUUDlg_rmnZh_mnjGtLnyuIUoaUuS-kohRH3qQhaTFBMtLemL72L-gzoRmqqoMZXLI5nWg9i3VuZFtC673AC-cHsHjvCvdPAOyMgRTNPqlBl1kfYAbUU5AybhM",
