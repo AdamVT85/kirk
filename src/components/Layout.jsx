@@ -26,7 +26,7 @@ export default function Layout() {
       <Outlet />
 
       <footer className="w-full border-t border-[#353535] rounded-none bg-[#0e0e0e]">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 px-12 py-24 w-full">
           <div className="md:col-span-1">
             <div className="text-3xl font-black tracking-tighter text-[#e5e2e1] mb-8">Kirk & Kirk</div>
             <p className="text-[#e5e2e1]/60 font-light text-sm leading-relaxed max-w-xs">
@@ -34,9 +34,20 @@ export default function Layout() {
             </p>
           </div>
           <div>
-            <span className="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Navigation</span>
+            <span className="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Services</span>
             <ul className="space-y-4">
-              <li><Link to="/consultation" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Contact</Link></li>
+              <li><Link to="/solutions/health-safety-environmental" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Health, Safety & Environmental</Link></li>
+              <li><Link to="/solutions/fire-risk-assessment" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Fire Risk Assessment</Link></li>
+              <li><Link to="/solutions/facilities-project-management" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Facilities & Project Management</Link></li>
+              <li><Link to="/solutions/integrated-management-systems" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Integrated Management Systems</Link></li>
+              <li><Link to="/solutions/risk-management" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Risk Management</Link></li>
+              <li><Link to="/solutions/training-education" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Training & Education</Link></li>
+            </ul>
+          </div>
+          <div>
+            <span className="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Contact</span>
+            <ul className="space-y-4">
+              <li><Link to="/consultation" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Consultation</Link></li>
             </ul>
           </div>
           <div>
