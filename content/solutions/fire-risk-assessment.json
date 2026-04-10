@@ -3,52 +3,63 @@
     "badge": "Fire Risk",
     "title": "Fire Risk Assessment & Safety Management",
     "subtitle": "Professional fire risk assessments for residential and commercial premises.",
-    "description": "Kirk & Kirk conducts thorough, legally compliant Fire Risk Assessments under the Regulatory Reform (Fire Safety) Order 2005. We help responsible persons understand their obligations, identify hazards, and implement proportionate fire safety measures."
+    "description": "Kirk & Kirk conducts professional Fire Risk Assessments for both residential and commercial premises to ensure that you comply with your legal duties and meet insurance requirements."
   },
   "overview": {
-    "heading": "Fire Safety You Can Trust",
-    "description": "Fire risk assessment is a legal requirement for virtually all non-domestic premises. Our assessors bring decades of experience across commercial, residential, and mixed-use properties — delivering clear, actionable reports that satisfy regulatory requirements and genuinely protect life.",
+    "heading": "Your Legal Duty",
+    "description": "Under the Regulatory Reform (Fire Safety) Order 2005, it is your responsibility as an employer or landlord to assess fire safety risks, implement measures to fight, detect, and give warning of fire, plan exit routes, and keep those routes clear of obstructions to ensure the safe evacuation of the building.",
     "features": [
       {
-        "icon": "local_fire_department",
-        "title": "Fire Risk Assessments",
-        "description": "Comprehensive assessments of your premises covering fire hazards, ignition sources, structural fire protection, means of escape, and emergency planning."
+        "icon": "search",
+        "title": "Identification",
+        "description": "Thorough identification of fire hazards present in your premises and all persons who may be at risk."
       },
       {
-        "icon": "fire_extinguisher",
-        "title": "Fire Safety Management Plans",
-        "description": "Development of fire safety management systems, emergency evacuation procedures, and ongoing maintenance schedules for fire protection equipment."
+        "icon": "assessment",
+        "title": "Evaluation",
+        "description": "A rigorous evaluation of identified risks to determine which can be reduced, controlled, or eradicated entirely."
       },
       {
-        "icon": "apartment",
-        "title": "Residential & HMO Assessments",
-        "description": "Specialist fire risk assessments for blocks of flats, HMOs, and shared accommodation, including common areas and cladding considerations."
+        "icon": "description",
+        "title": "Reporting & Action Plan",
+        "description": "A detailed recording and explanation of our findings along with a prioritised action plan for any improvements required to achieve compliance."
       }
     ]
   },
+  "sectors": {
+    "heading": "Who Does the Law Apply To?",
+    "description": "The Regulatory Reform Order 2005 places fire safety responsibilities on a wide range of duty holders. If any of the following apply to you, a fire risk assessment is a legal requirement.",
+    "items": [
+      { "name": "Business Premises", "icon": "store" },
+      { "name": "Employers & Self-Employed", "icon": "badge" },
+      { "name": "Mixed-Use Dwellings", "icon": "home_work" },
+      { "name": "Charities & Voluntary Orgs", "icon": "volunteer_activism" },
+      { "name": "Paying Guest Accommodation", "icon": "hotel" }
+    ]
+  },
   "approach": {
-    "heading": "Our Approach",
+    "heading": "Our Process",
     "steps": [
       {
         "number": "01",
-        "title": "Site Survey",
-        "description": "A detailed physical inspection of your premises, examining fire hazards, building construction, compartmentation, detection systems, and escape routes."
+        "title": "Site Visit",
+        "description": "Our qualified fire risk assessors visit your property to conduct a thorough inspection of the premises, covering fire hazards, ignition sources, structural protection, detection systems, and means of escape."
       },
       {
         "number": "02",
-        "title": "Risk Evaluation",
-        "description": "Systematic assessment of identified hazards against the people at risk, producing a clear risk rating and prioritised action plan."
+        "title": "Assessment & Analysis",
+        "description": "We evaluate all identified risks against the people at risk, assessing which hazards can be reduced, controlled, or eradicated to bring your premises into compliance."
       },
       {
         "number": "03",
-        "title": "Report & Remediation",
-        "description": "A comprehensive written report with practical recommendations, timescales, and ongoing support to help you achieve and maintain compliance."
+        "title": "Report & Action Plan",
+        "description": "You receive a comprehensive Fire Safety Risk Assessment document with a detailed explanation of our findings and a clear action plan for any improvements required to meet your legal requirements."
       }
     ]
   },
   "cta": {
     "heading": "Book Your Assessment",
-    "description": "Don't wait for an incident or enforcement notice. Our qualified fire risk assessors are ready to help you protect your premises and the people in them.",
+    "description": "Our qualified fire risk assessors are ready to help you comply with your legal duties and protect your premises. Don't wait for an incident or enforcement notice.",
     "buttonText": "Enquire Now"
   }
 }
