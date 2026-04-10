@@ -271,6 +271,20 @@ export default defineConfig({
             ],
           },
           {
+            type: 'object', name: 'sectors', label: 'Sectors (Optional)',
+            fields: [
+              { type: 'string', name: 'heading', label: 'Heading' },
+              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
+              {
+                type: 'object', name: 'items', label: 'Sector Items', list: true,
+                fields: [
+                  { type: 'string', name: 'name', label: 'Sector Name' },
+                  { type: 'string', name: 'icon', label: 'Material Icon Name' },
+                ],
+              },
+            ],
+          },
+          {
             type: 'object', name: 'approach', label: 'Approach',
             fields: [
               { type: 'string', name: 'heading', label: 'Heading' },

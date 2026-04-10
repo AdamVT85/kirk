@@ -73,6 +73,26 @@ export default function SolutionLanding() {
         </div>
       </section>
 
+      {/* Sectors (optional) */}
+      {content.sectors && (
+        <section className="py-32 px-8 md:px-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-16 max-w-3xl">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.sectors.heading}</h2>
+              <p className="text-on-surface-variant text-lg leading-relaxed font-light">{content.sectors.description}</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-px bg-outline-variant/20">
+              {content.sectors.items.map((sector, i) => (
+                <div key={i} className="bg-surface-container-low p-8 flex flex-col items-center text-center gap-4 group hover:bg-surface-container-high transition-colors duration-500">
+                  <span className="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform duration-300">{sector.icon}</span>
+                  <span className="text-[0.7rem] uppercase tracking-[0.2em] font-bold">{sector.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Approach */}
       <section className="py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">

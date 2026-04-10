@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Safety",
     "title": "Health, Safety & Environmental Compliance",
-    "subtitle": "Tailored HSE consultancy for SMBs.",
-    "description": "Kirk & Kirk provides comprehensive health, safety, and environmental consultancy designed specifically for small and medium-sized businesses. We help you meet your legal obligations, protect your people, and build a culture of safety that runs through every level of your organisation."
+    "subtitle": "Ensuring you're covered and minimising risk, no matter your size or type.",
+    "description": "Kirk & Kirk provides tailored health, safety, and environmental consultancy for SMBs. Our bespoke services draw on a wealth of experience and a proven track record of mitigating operational and intrinsic risks within companies across the UK."
   },
   "overview": {
-    "heading": "Compliance Without Complexity",
-    "description": "Navigating health, safety, and environmental regulations shouldn't consume your business. We cut through the complexity to deliver practical, proportionate solutions that keep you compliant, reduce risk, and let you focus on what you do best.",
+    "heading": "Bespoke HSE Consultancy",
+    "description": "Health, safety, and environmental compliance shouldn't consume your business. Our experienced consultants deliver practical, proportionate solutions that protect your people, satisfy your legal obligations, and let you focus on running your operation. Every recommendation is tailored to your sector, your site, and your risk profile.",
     "features": [
       {
         "icon": "policy",
@@ -16,14 +16,27 @@
       },
       {
         "icon": "checklist",
-        "title": "Auditing & Inspection",
-        "description": "Independent safety audits and workplace inspections to identify gaps, assess compliance, and provide actionable improvement plans."
+        "title": "Site Inspections & Audits",
+        "description": "Site-based inspections and second-party management audit services to verify compliance, identify gaps, and drive continuous improvement across your operations."
       },
       {
         "icon": "support_agent",
         "title": "Competent Person Service",
         "description": "Retained consultancy providing ongoing access to qualified health and safety advice, fulfilling your legal duty under the Management of Health and Safety at Work Regulations."
       }
+    ]
+  },
+  "sectors": {
+    "heading": "High-Risk Sector Expertise",
+    "description": "Our experienced team specialises in the sectors where getting it right matters most.",
+    "items": [
+      { "name": "Railway", "icon": "train" },
+      { "name": "Construction", "icon": "construction" },
+      { "name": "Outdoor Advertising", "icon": "campaign" },
+      { "name": "Transport & Logistics", "icon": "local_shipping" },
+      { "name": "Utilities", "icon": "bolt" },
+      { "name": "Telecommunications", "icon": "cell_tower" },
+      { "name": "Education", "icon": "school" }
     ]
   },
   "approach": {
@@ -41,14 +54,14 @@
       },
       {
         "number": "03",
-        "title": "Implementation Support",
-        "description": "Hands-on support to embed new processes, train your team, and ensure compliance is maintained long term."
+        "title": "Implementation & Audit",
+        "description": "Hands-on support to embed new processes, train your team, and ongoing site inspections and management audits to ensure compliance is maintained."
       }
     ]
   },
   "cta": {
-    "heading": "Protect Your People",
-    "description": "Get expert health, safety, and environmental advice tailored to your business. Our team is ready to help you build a safer, more compliant operation.",
+    "heading": "Get Covered",
+    "description": "Minimise risk and stay compliant without it consuming your business. Our team is ready to provide the tailored HSE support your operation needs.",
     "buttonText": "Enquire Now"
   }
 }
