@@ -76,14 +76,14 @@
     ]
   },
   "clientImpact": {
-    "heading": "Client Impact",
+    "heading": "Client Testimonials",
     "caseStudies": [
       {
         "type": "quote",
-        "label": "Case Study 01",
+        "label": "BAE Systems",
         "quote": "\"Kirk & Kirk didn't just provide a report; they rebuilt our operational DNA from the ground up.\"",
-        "author": "Director of Strategy",
-        "company": "Global Fintech Corp"
+        "author": "John Smith, Director of Strategy",
+        "company": "BAE Systems"
       },
       {
         "type": "highlight",
