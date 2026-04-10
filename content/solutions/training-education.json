@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Training",
     "title": "Training & Education",
-    "subtitle": "Industry-standard and bespoke training for your workforce.",
-    "description": "Kirk & Kirk provides industry-standard training packages and designs bespoke training courses to meet the specific needs of your company. We have established links with many leading training providers and can offer face-to-face IOSH, CIEH, and ISO accredited training courses delivered at your workplace."
+    "subtitle": "Industry-standard and bespoke training, delivered by our training partner TMS Insight.",
+    "description": "Kirk & Kirk's training and education services are delivered through our dedicated training partner, TMS Insight. Together we provide industry-standard training packages and design bespoke courses to meet the specific needs of your company, offering face-to-face IOSH, CIEH, and ISO accredited training at your workplace."
   },
   "overview": {
     "heading": "Accredited Training, Your Way",
-    "description": "Whether you need nationally accredited qualifications or bespoke courses built around your specific operations and hazards, we deliver practical training that your people will actually retain and apply. All courses can be delivered face-to-face at your workplace to suit your requirements.",
+    "description": "Whether you need nationally accredited qualifications or bespoke courses built around your specific operations and hazards, our training partner TMS Insight delivers practical training that your people will actually retain and apply. All courses can be delivered face-to-face at your workplace to suit your requirements.",
     "features": [
       {
         "icon": "workspace_premium",
@@ -74,7 +74,8 @@
   },
   "cta": {
     "heading": "Upskill Your Team",
-    "description": "From accredited first aid to bespoke safety courses, we'll design a training programme that works for your business and keeps your people competent and confident.",
-    "buttonText": "Enquire Now"
+    "description": "All training and education is delivered by TMS Insight, Kirk & Kirk's dedicated training partner. Visit their website to explore the full course catalogue and book your training.",
+    "buttonText": "Visit TMS Insight",
+    "buttonUrl": "https://www.tmsinsight.co.uk/"
   }
 }

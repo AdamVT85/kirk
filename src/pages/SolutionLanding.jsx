@@ -137,9 +137,15 @@ export default function SolutionLanding() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8">{content.cta.heading}</h2>
           <p className="text-on-surface-variant text-lg leading-relaxed font-light mb-12 max-w-2xl mx-auto">{content.cta.description}</p>
-          <Link to="/consultation" className="inline-block px-12 py-5 bg-primary text-on-primary-container font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm">
-            {content.cta.buttonText}
-          </Link>
+          {content.cta.buttonUrl ? (
+            <a href={content.cta.buttonUrl} target="_blank" rel="noopener noreferrer" className="inline-block px-12 py-5 bg-primary text-on-primary-container font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm">
+              {content.cta.buttonText}
+            </a>
+          ) : (
+            <Link to="/consultation" className="inline-block px-12 py-5 bg-primary text-on-primary-container font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm">
+              {content.cta.buttonText}
+            </Link>
+          )}
         </div>
       </section>
     </main>
