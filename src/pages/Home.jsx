@@ -149,35 +149,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Latest Intelligence */}
-        <section className="py-32 px-8 md:px-24 border-t border-outline-variant">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">{content.intelligence.heading}</h2>
-              <button className="flex items-center gap-4 text-primary group">
-                <span className="uppercase font-bold tracking-widest text-sm">View Archive</span>
-                <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-              </button>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant">
-              {content.intelligence.articles.map((article, i) => (
-                <div key={i} className="bg-surface group cursor-pointer overflow-hidden">
-                  <div className="relative h-[300px]">
-                    <img alt={article.title} className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-110 group-hover:brightness-75 transition-all duration-700" src={article.image} />
-                    <div className="absolute top-8 left-8 bg-surface px-4 py-1">
-                      <span className="text-[0.6rem] font-bold uppercase tracking-widest">{article.category}</span>
-                    </div>
-                  </div>
-                  <div className="p-12">
-                    <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">{article.title}</h3>
-                    <p className="text-on-surface-variant line-clamp-2 font-light">{article.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Final CTA */}
         <section className="py-48 px-8 md:px-24 bg-surface text-center">
           <div className="max-w-4xl mx-auto">
