@@ -10,7 +10,6 @@ export default function Layout() {
               Kirk & Kirk
             </Link>
             <div className="hidden md:flex gap-6">
-              <Link to="/" className="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300">Services</Link>
               <Link to="/consultation" className="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300">Contact</Link>
             </div>
           </div>
@@ -37,7 +36,6 @@ export default function Layout() {
           <div>
             <span className="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Navigation</span>
             <ul className="space-y-4">
-              <li><Link to="/" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Services</Link></li>
               <li><Link to="/consultation" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
