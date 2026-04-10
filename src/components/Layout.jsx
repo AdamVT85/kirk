@@ -57,12 +57,14 @@ export default function Layout() {
             </ul>
           </div>
         </div>
-        <div className="px-12 py-8 border-t border-[#353535] flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="text-[0.65rem] uppercase tracking-[0.3em] text-[#e5e2e1]/40">© 2024 Kirk & Kirk. Engineered Excellence.</span>
-          <div className="flex gap-4">
-            <div className="w-1 h-1 bg-primary"></div>
-            <div className="w-1 h-1 bg-outline-variant"></div>
-            <div className="w-1 h-1 bg-primary"></div>
+        <div className="px-12 py-10 border-t border-[#353535]">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <span className="text-[0.65rem] uppercase tracking-[0.3em] text-[#e5e2e1]/40">© 2024 Kirk & Kirk. Engineered Excellence.</span>
+            <div className="flex items-center gap-8">
+              <img src="/iosh-for-posts-1.jpg" alt="IOSH" className="h-10 object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/CQI-IRCA-Certified-Course-logo.jpg" alt="CQI IRCA Certified Course" className="h-10 object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/CTP-Preferred-Supplier-RGB-Colour-Logo-on-White-Background-002.png" alt="CTP Preferred Supplier" className="h-10 object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity" />
+            </div>
           </div>
         </div>
       </footer>
