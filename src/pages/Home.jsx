@@ -153,10 +153,7 @@ export default function Home() {
         <section className="py-48 px-8 md:px-24 bg-surface text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-12">{content.cta.heading}</h2>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-              <Link to="/consultation" className="px-12 py-5 bg-primary text-on-primary font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm w-full md:w-auto">{content.cta.primaryButton}</Link>
-              <Link to="/service" className="px-12 py-5 border border-outline-variant text-on-surface font-bold uppercase tracking-[0.2em] hover:bg-surface-container-high transition-all text-sm w-full md:w-auto">{content.cta.secondaryButton}</Link>
-            </div>
+            <Link to="/consultation" className="px-12 py-5 bg-primary text-on-primary font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm inline-block">{content.cta.primaryButton}</Link>
           </div>
         </section>
       </main>
