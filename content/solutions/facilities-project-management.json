@@ -2,27 +2,27 @@
   "hero": {
     "badge": "Operations",
     "title": "Facilities & Project Management",
-    "subtitle": "A single point of contact for your workplace operations.",
-    "description": "Kirk & Kirk offers a complete, boutique facilities management service — from the daily running of your workplace to managing projects from inception to completion. One point of contact, total accountability, no loose ends."
+    "subtitle": "A single point of contact for all your facility needs.",
+    "description": "Our aim is to provide you with the facilities management support you need to improve the daily running of your workplace and to reflect the image you want to create. We provide a complete range of services that relate to the activities necessary for your company to function."
   },
   "overview": {
-    "heading": "Your Operations, Our Expertise",
-    "description": "Managing a workplace involves hundreds of moving parts — maintenance, contractors, compliance, budgets, and projects competing for attention. Our facilities and project management service takes that complexity off your plate, delivering a professional, responsive service that keeps your operations running smoothly.",
+    "heading": "Boutique Service, Complete Coverage",
+    "description": "We understand that each project requires a different approach, uniquely tailored to your exact brief and business aspirations. As a boutique-sized company we can be more competitive and more flexible than our larger competitors. Most importantly, we can give your project individual hands-on care and our complete attention.",
     "features": [
       {
         "icon": "home_repair_service",
         "title": "Facilities Management",
-        "description": "Day-to-day management of your premises including planned preventative maintenance, contractor management, and compliance tracking."
+        "description": "A complete range of services for the daily running of your workplace — providing a single point of contact for all your facility needs so you can focus on your business."
       },
       {
         "icon": "construction",
         "title": "Project Management",
-        "description": "End-to-end management of refurbishment, fit-out, and construction projects — from brief and budget through to handover and defects."
+        "description": "A full range of services from inception to completion on projects ranging from new premises to the high-quality refurbishment of existing sites."
       },
       {
-        "icon": "contract",
-        "title": "Contractor Procurement",
-        "description": "Sourcing, vetting, and managing specialist contractors and suppliers, ensuring quality, compliance, and value for money."
+        "icon": "visibility",
+        "title": "Problem Anticipation",
+        "description": "The expertise to anticipate and deal with any problems before they arise, giving you a seamless project that fits the needs of your business."
       }
     ]
   },
@@ -31,24 +31,24 @@
     "steps": [
       {
         "number": "01",
-        "title": "Needs Assessment",
-        "description": "Understanding your operational requirements, existing contracts, budget parameters, and pain points to design a tailored management plan."
+        "title": "Understanding Your Brief",
+        "description": "Every project starts with a thorough understanding of your exact requirements, business aspirations, and the image you want your workplace to reflect."
       },
       {
         "number": "02",
-        "title": "Service Design",
-        "description": "Building a bespoke facilities or project management framework with clear scope, KPIs, reporting structures, and escalation procedures."
+        "title": "Tailored Delivery",
+        "description": "We pride ourselves on the quality of our work and our attention to detail. Each project receives a uniquely tailored approach with hands-on care from start to finish."
       },
       {
         "number": "03",
-        "title": "Delivery & Reporting",
-        "description": "Ongoing management with regular reporting, budget tracking, and continuous improvement to ensure your operations perform at their best."
+        "title": "Completion & Satisfaction",
+        "description": "Our reputation rides on the quality of our delivery and our client's satisfaction. We deliver the right solutions, on brief and on budget."
       }
     ]
   },
   "cta": {
-    "heading": "Simplify Your Operations",
-    "description": "Let us handle the complexity of running your workplace. From daily facilities management to major projects, we've got it covered.",
+    "heading": "Let's Talk",
+    "description": "Whether you need day-to-day facilities support or end-to-end project management, we're ready to provide the individual attention your workplace deserves.",
     "buttonText": "Enquire Now"
   }
 }
