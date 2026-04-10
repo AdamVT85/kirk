@@ -2,12 +2,12 @@
   "hero": {
     "badge": "Management",
     "title": "Integrated Management Systems",
-    "subtitle": "ISO 9001, ISO 14001, and ISO 45001 — integrated for efficiency.",
-    "description": "Kirk & Kirk offers an integrated approach to help your company establish, implement, and maintain management systems to ISO 9001 (Quality), ISO 14001 (Environmental), and ISO 45001 (Occupational Health & Safety) standards — reducing duplication and driving genuine operational improvement."
+    "subtitle": "ISO 9001, ISO 14001, and ISO 45001 — established, implemented, and maintained.",
+    "description": "Kirk & Kirk offers an integrated approach to enable your company to establish, implement, and maintain ISO 9001, ISO 14001, and ISO 45001 management systems in order to achieve third-party accreditation."
   },
   "overview": {
-    "heading": "One System, Three Standards",
-    "description": "Running separate management systems for quality, environment, and health & safety creates duplication, confusion, and administrative burden. Our integrated approach aligns all three standards into a single, coherent system that reflects how your business actually operates — saving time, reducing cost, and improving performance.",
+    "heading": "Flexible, Pragmatic, Value-Added",
+    "description": "Our flexible and pragmatic approach will create sustainable, value-added solutions no matter the size or nature of your business activities. We integrate quality, environmental, and health & safety management into a single coherent system that reflects how your business actually operates.",
     "features": [
       {
         "icon": "verified",
@@ -26,29 +26,40 @@
       }
     ]
   },
+  "sectors": {
+    "heading": "Third-Party Accreditations",
+    "description": "Beyond ISO certification, we can manage and assist your business to meet the standards required to obtain and maintain a range of third-party accreditations.",
+    "items": [
+      { "name": "Safe Contractor", "icon": "workspace_premium" },
+      { "name": "CHAS", "icon": "verified_user" },
+      { "name": "Construction Line", "icon": "construction" },
+      { "name": "FORS for TfL", "icon": "local_shipping" },
+      { "name": "RISQS", "icon": "train" }
+    ]
+  },
   "approach": {
     "heading": "Our Approach",
     "steps": [
       {
         "number": "01",
         "title": "Baseline Assessment",
-        "description": "Evaluating your existing processes, documentation, and performance against ISO requirements to identify gaps and opportunities for integration."
+        "description": "Evaluating your existing processes, documentation, and performance against ISO requirements and third-party accreditation standards to identify gaps and opportunities."
       },
       {
         "number": "02",
         "title": "System Development",
-        "description": "Designing and documenting an integrated management system that meets all three standards while reflecting your actual business processes."
+        "description": "Designing and documenting an integrated management system tailored to your business activities, bringing quality, environmental, and health & safety together in one framework."
       },
       {
         "number": "03",
-        "title": "Certification Support",
-        "description": "Preparing your team for audit, conducting internal audits, and supporting you through the certification process with your chosen certification body."
+        "title": "Accreditation Support",
+        "description": "Preparing your team for audit, conducting internal audits, and supporting you through the certification and accreditation process to achieve and maintain your standards."
       }
     ]
   },
   "cta": {
-    "heading": "Get Certified",
-    "description": "Achieve ISO certification with less overhead and more impact. Our consultants will guide you through every step of the integration and certification process.",
+    "heading": "Get Accredited",
+    "description": "Whether you need ISO certification, Safe Contractor, CHAS, or any other third-party accreditation, our pragmatic approach will get you there without unnecessary complexity.",
     "buttonText": "Enquire Now"
   }
 }
