@@ -193,54 +193,6 @@ export default defineConfig({
         ],
       },
       {
-        name: 'insights',
-        label: 'Insights Page',
-        path: 'content/insights',
-        format: 'json',
-        fields: [
-          {
-            type: 'object', name: 'hero', label: 'Hero Section',
-            fields: [
-              { type: 'string', name: 'badge', label: 'Badge' },
-              { type: 'string', name: 'titleLine1', label: 'Title Line 1' },
-              { type: 'string', name: 'titleLine2', label: 'Title Line 2' },
-              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
-            ],
-          },
-          { type: 'string', name: 'filters', label: 'Filter Categories', list: true },
-          {
-            type: 'object', name: 'featured', label: 'Featured Article',
-            fields: [
-              { type: 'string', name: 'badge', label: 'Badge' },
-              { type: 'string', name: 'category', label: 'Category' },
-              { type: 'string', name: 'readTime', label: 'Read Time' },
-              { type: 'string', name: 'title', label: 'Title' },
-              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
-              { type: 'string', name: 'linkText', label: 'Link Text' },
-              { type: 'image', name: 'image', label: 'Image' },
-            ],
-          },
-          {
-            type: 'object', name: 'gridArticles', label: 'Grid Articles', list: true,
-            fields: [
-              { type: 'string', name: 'category', label: 'Category' },
-              { type: 'string', name: 'date', label: 'Date' },
-              { type: 'string', name: 'title', label: 'Title' },
-              { type: 'image', name: 'image', label: 'Image' },
-            ],
-          },
-          {
-            type: 'object', name: 'newsletter', label: 'Newsletter Section',
-            fields: [
-              { type: 'string', name: 'titleLine1', label: 'Title Line 1' },
-              { type: 'string', name: 'titleLine2', label: 'Title Line 2' },
-              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
-              { type: 'string', name: 'buttonText', label: 'Button Text' },
-            ],
-          },
-        ],
-      },
-      {
         name: 'solutions',
         label: 'Solution Landing Pages',
         path: 'content/solutions',
@@ -318,71 +270,6 @@ export default defineConfig({
               { type: 'string', name: 'heading', label: 'Heading' },
               { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
               { type: 'string', name: 'buttonText', label: 'Button Text' },
-            ],
-          },
-        ],
-      },
-      {
-        name: 'service',
-        label: 'Service Page',
-        path: 'content/service',
-        format: 'json',
-        fields: [
-          {
-            type: 'object', name: 'hero', label: 'Hero Section',
-            fields: [
-              { type: 'string', name: 'badge', label: 'Badge' },
-              { type: 'string', name: 'titleLine1', label: 'Title Line 1' },
-              { type: 'string', name: 'titleLine2', label: 'Title Line 2' },
-              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
-              { type: 'image', name: 'backgroundImage', label: 'Background Image' },
-            ],
-          },
-          {
-            type: 'object', name: 'metrics', label: 'Metrics', list: true,
-            fields: [
-              { type: 'string', name: 'label', label: 'Label' },
-              { type: 'string', name: 'value', label: 'Value' },
-            ],
-          },
-          {
-            type: 'object', name: 'competencies', label: 'Core Competencies',
-            fields: [
-              { type: 'string', name: 'heading', label: 'Heading' },
-              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
-              { type: 'string', name: 'matrixLabel', label: 'Matrix Label' },
-              {
-                type: 'object', name: 'cards', label: 'Competency Cards', list: true,
-                fields: [
-                  { type: 'string', name: 'icon', label: 'Icon' },
-                  { type: 'string', name: 'title', label: 'Title' },
-                  { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
-                ],
-              },
-            ],
-          },
-          {
-            type: 'object', name: 'philosophy', label: 'Philosophy / Quote',
-            fields: [
-              { type: 'string', name: 'label', label: 'Section Label' },
-              { type: 'string', name: 'quote', label: 'Quote', ui: { component: 'textarea' } },
-              { type: 'string', name: 'highlightedPhrase', label: 'Highlighted Phrase' },
-              { type: 'string', name: 'authorName', label: 'Author Name' },
-              { type: 'string', name: 'authorTitle', label: 'Author Title' },
-              { type: 'image', name: 'authorImage', label: 'Author Image' },
-              { type: 'image', name: 'buildingImage', label: 'Building Image' },
-              { type: 'string', name: 'overlayText', label: 'Overlay Text' },
-            ],
-          },
-          {
-            type: 'object', name: 'consultation', label: 'Consultation Form',
-            fields: [
-              { type: 'string', name: 'heading', label: 'Heading' },
-              { type: 'string', name: 'headingHighlight', label: 'Heading Highlight' },
-              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
-              { type: 'string', name: 'phone', label: 'Phone' },
-              { type: 'string', name: 'email', label: 'Email' },
-              { type: 'string', name: 'submitButton', label: 'Submit Button Text' },
             ],
           },
         ],
