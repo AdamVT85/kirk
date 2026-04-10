@@ -86,9 +86,12 @@ export default function Home() {
         {/* Our Expertise */}
         <section className="py-32 px-8 md:px-24">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-20">
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.expertise.heading}</h2>
-              <p className="text-on-surface-variant max-w-2xl text-lg font-light">{content.expertise.description}</p>
+            <div className="mb-20 flex flex-col md:flex-row justify-between items-baseline gap-4">
+              <div>
+                <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.expertise.heading}</h2>
+                <p className="text-on-surface-variant max-w-2xl text-lg font-light">{content.expertise.description}</p>
+              </div>
+              <span className="text-primary font-mono text-sm tracking-widest">{content.expertise.counter}</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 border border-outline-variant">
               {content.expertise.metrics.map((metric, i) => (
@@ -106,8 +109,9 @@ export default function Home() {
 
         {/* Client Impact */}
         <section className="py-32 bg-surface-container-lowest overflow-hidden">
-          <div className="px-8 md:px-24 mb-16">
+          <div className="px-8 md:px-24 mb-16 flex flex-col md:flex-row justify-between items-baseline gap-4">
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">{content.clientImpact.heading}</h2>
+            <span className="text-primary font-mono text-sm tracking-widest">{content.clientImpact.counter}</span>
           </div>
           <div
             ref={scrollRef}
@@ -152,6 +156,7 @@ export default function Home() {
         {/* Final CTA */}
         <section className="py-48 px-8 md:px-24 bg-surface text-center">
           <div className="max-w-4xl mx-auto">
+            <span className="text-primary font-mono text-sm tracking-widest mb-8 block">{content.cta.counter}</span>
             <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-12">{content.cta.heading}</h2>
             <Link to="/consultation" className="px-12 py-5 bg-primary text-on-primary font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm inline-block">{content.cta.primaryButton}</Link>
           </div>
