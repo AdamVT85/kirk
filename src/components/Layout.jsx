@@ -54,8 +54,6 @@ export default function Layout() {
             <span className="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Connect</span>
             <ul className="space-y-4">
               <li><a href="https://linkedin.com/company/kirk-and-kirk-limited/" target="_blank" rel="noopener noreferrer" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">LinkedIn</a></li>
-              <li><Link to="/" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Twitter</Link></li>
-              <li><Link to="/" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Instagram</Link></li>
             </ul>
           </div>
         </div>
