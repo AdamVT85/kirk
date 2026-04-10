@@ -285,6 +285,20 @@ export default defineConfig({
             ],
           },
           {
+            type: 'object', name: 'firstAid', label: 'First Aid Courses (Optional)',
+            fields: [
+              { type: 'string', name: 'heading', label: 'Heading' },
+              { type: 'string', name: 'description', label: 'Description', ui: { component: 'textarea' } },
+              {
+                type: 'object', name: 'courses', label: 'Courses', list: true,
+                fields: [
+                  { type: 'string', name: 'title', label: 'Course Title' },
+                  { type: 'string', name: 'duration', label: 'Duration' },
+                ],
+              },
+            ],
+          },
+          {
             type: 'object', name: 'approach', label: 'Approach',
             fields: [
               { type: 'string', name: 'heading', label: 'Heading' },

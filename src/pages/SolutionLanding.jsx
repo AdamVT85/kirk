@@ -93,6 +93,27 @@ export default function SolutionLanding() {
         </section>
       )}
 
+      {/* First Aid (optional) */}
+      {content.firstAid && (
+        <section className="py-32 px-8 md:px-16 bg-surface-container-lowest">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-16 max-w-3xl">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.firstAid.heading}</h2>
+              <p className="text-on-surface-variant text-lg leading-relaxed font-light">{content.firstAid.description}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-outline-variant/20">
+              {content.firstAid.courses.map((course, i) => (
+                <div key={i} className="bg-surface-container-low p-8 group hover:bg-surface-container-high transition-colors duration-500">
+                  <span className="material-symbols-outlined text-primary text-3xl mb-4 block">emergency</span>
+                  <h3 className="text-sm font-bold uppercase tracking-tight mb-2">{course.title}</h3>
+                  <span className="text-[0.7rem] uppercase tracking-[0.2em] text-on-surface-variant opacity-60">{course.duration}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Approach */}
       <section className="py-32 px-8 md:px-16">
         <div className="max-w-7xl mx-auto">
