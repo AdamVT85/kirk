@@ -34,20 +34,20 @@ export default function Consultation() {
                 <div className="max-w-xl mx-auto lg:ml-0">
                     <h2 className="text-2xl font-bold uppercase tracking-tight mb-2">{content.form.heading}</h2>
                     <p className="text-on-surface-variant text-sm mb-12 font-light">{content.form.description}</p>
-                    <form className="space-y-8">
+                    <form action="https://formspree.io/f/duncan@kirkandkirk.co" method="POST" className="space-y-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="relative group">
                                 <label className="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">{content.form.fields.nameLabel}</label>
-                                <input className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20" placeholder={content.form.fields.namePlaceholder} type="text" />
+                                <input name="name" className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20" placeholder={content.form.fields.namePlaceholder} type="text" required />
                             </div>
                             <div className="relative group">
                                 <label className="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">{content.form.fields.emailLabel}</label>
-                                <input className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20" placeholder={content.form.fields.emailPlaceholder} type="email" />
+                                <input name="email" className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20" placeholder={content.form.fields.emailPlaceholder} type="email" required />
                             </div>
                         </div>
                         <div className="relative group">
                             <label className="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">{content.form.fields.subjectLabel}</label>
-                            <select className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface appearance-none">
+                            <select name="service" className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface appearance-none" required>
                                 {content.form.fields.subjectOptions.map((opt, i) => (
                                     <option key={i} className="bg-surface-container-high">{opt}</option>
                                 ))}
@@ -55,7 +55,7 @@ export default function Consultation() {
                         </div>
                         <div className="relative group">
                             <label className="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">{content.form.fields.messageLabel}</label>
-                            <textarea className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20 resize-none" placeholder={content.form.fields.messagePlaceholder} rows="4"></textarea>
+                            <textarea name="message" className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface/20 resize-none" placeholder={content.form.fields.messagePlaceholder} rows="4"></textarea>
                         </div>
                         <button className="group flex items-center gap-4 bg-primary text-on-primary px-10 py-5 font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-primary-container" type="submit">
                             {content.form.submitButton}
