@@ -65,7 +65,7 @@ export default function Home() {
               {content.solutions.cards.map((card, i) => (
                 <Link key={i} to={`/solutions/${card.slug}`} className={`${i === 0 ? 'md:col-span-8' : 'md:col-span-4'} bg-surface p-12 group hover:bg-surface-container transition-colors duration-500`}>
                   <span className="text-[0.7rem] uppercase tracking-[0.2em] text-primary-container mb-6 block">{card.label}</span>
-                  <h3 className={`${i === 0 ? 'text-4xl' : 'text-3xl'} font-bold mb-8 tracking-tight`}>{card.title}</h3>
+                  <h3 className={`${i === 0 ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'} font-bold mb-8 tracking-tight`}>{card.title}</h3>
                   <p className={`text-on-surface-variant ${i === 0 ? 'max-w-md' : ''} mb-12 leading-relaxed`}>{card.description}</p>
                   <div className="w-12 h-12 border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
                     <span className="material-symbols-outlined">{card.icon}</span>
