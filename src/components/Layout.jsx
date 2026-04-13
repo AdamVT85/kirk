@@ -56,16 +56,17 @@ export default function Layout() {
               <li><a href="https://linkedin.com/company/kirk-and-kirk-limited/" target="_blank" rel="noopener noreferrer" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">LinkedIn</a></li>
             </ul>
           </div>
-        </div>
-        <div className="px-12 py-10 border-t border-[#353535]">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <span className="text-[0.65rem] uppercase tracking-[0.3em] text-[#e5e2e1]/40">© 2026 Kirk & Kirk. Trusted HSEQ Partners.</span>
-            <div className="flex items-center gap-6">
-              <div className="bg-white rounded px-3 py-2"><img src="/iosh-for-posts-1.jpg" alt="IOSH" className="h-8 object-contain" /></div>
-              <div className="bg-white rounded px-3 py-2"><img src="/CQI-IRCA-Certified-Course-logo.jpg" alt="CQI IRCA Certified Course" className="h-8 object-contain" /></div>
-              <div className="bg-white rounded px-3 py-2"><img src="/CTP-Preferred-Supplier-RGB-Colour-Logo-on-White-Background-002.png" alt="CTP Preferred Supplier" className="h-8 object-contain" /></div>
+          <div>
+            <span className="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Accreditations</span>
+            <div className="flex flex-col gap-4 items-start">
+              <div className="bg-white rounded px-4 py-3"><img src="/iosh-for-posts-1.jpg" alt="IOSH" className="h-16 object-contain" /></div>
+              <div className="bg-white rounded px-4 py-3"><img src="/CQI-IRCA-Certified-Course-logo.jpg" alt="CQI IRCA Certified Course" className="h-16 object-contain" /></div>
+              <div className="bg-white rounded px-4 py-3"><img src="/CTP-Preferred-Supplier-RGB-Colour-Logo-on-White-Background-002.png" alt="CTP Preferred Supplier" className="h-16 object-contain" /></div>
             </div>
           </div>
+        </div>
+        <div className="px-12 py-10 border-t border-[#353535]">
+          <span className="text-[0.65rem] uppercase tracking-[0.3em] text-[#e5e2e1]/40">© 2026 Kirk & Kirk. Trusted HSEQ Partners.</span>
         </div>
       </footer>
     </>
