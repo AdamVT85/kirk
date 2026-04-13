@@ -33,7 +33,7 @@ export default function Home() {
             <div className="inline-block border border-outline-variant px-4 py-1 mb-8">
               <span className="text-[0.7rem] uppercase tracking-[0.3em] font-medium text-primary">{content.hero.badge}</span>
             </div>
-            <h1 className="text-[clamp(3rem,10vw,8rem)] leading-[0.9] font-black tracking-tighter uppercase mb-12">
+            <h1 className="text-[clamp(2rem,9vw,8rem)] leading-[0.9] font-black tracking-tighter uppercase mb-12">
               {content.hero.titleLine1}<br />{content.hero.titleLine2}
             </h1>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
@@ -75,8 +75,8 @@ export default function Home() {
               <div className="md:col-span-8 bg-surface overflow-hidden relative min-h-[400px]">
                 <img alt="Modern minimalist architectural structure" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700" src={content.solutions.featureImage} />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
-                <div className="absolute bottom-12 left-12">
-                  <h3 className="text-5xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
+                <div className="absolute bottom-12 left-12 right-12">
+                  <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
                 </div>
               </div>
             </div>
