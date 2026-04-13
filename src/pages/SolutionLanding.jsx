@@ -42,7 +42,7 @@ export default function SolutionLanding() {
           <div className="inline-block border border-outline-variant px-4 py-1 mb-6">
             <span className="text-[0.75rem] uppercase tracking-[0.3em] font-medium text-primary">{content.hero.badge}</span>
           </div>
-          <h1 className="text-5xl md:text-[6rem] font-black leading-[0.85] tracking-tighter uppercase mb-8">
+          <h1 className="text-[clamp(2rem,9vw,6rem)] font-black leading-[0.85] tracking-tighter uppercase mb-8">
             {content.hero.title}
           </h1>
           <p className="text-2xl md:text-3xl font-light text-on-surface-variant max-w-2xl leading-relaxed mb-6">
