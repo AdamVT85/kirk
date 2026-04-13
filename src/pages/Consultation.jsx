@@ -47,7 +47,7 @@ export default function Consultation() {
                         </div>
                         <div className="relative group">
                             <label className="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">{content.form.fields.subjectLabel}</label>
-                            <select name="service" className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface appearance-none" required>
+                            <select name="service" className="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface text-sm md:text-base appearance-none" required>
                                 {content.form.fields.subjectOptions.map((opt, i) => (
                                     <option key={i} className="bg-surface-container-high">{opt}</option>
                                 ))}
