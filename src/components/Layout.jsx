@@ -30,7 +30,7 @@ export default function Layout() {
           <div className="md:col-span-1">
             <div className="text-3xl font-black tracking-tighter text-[#e5e2e1] mb-8">Kirk & Kirk</div>
             <p className="text-[#e5e2e1]/60 font-light text-sm leading-relaxed max-w-xs">
-              Pioneering operational architecture for the next era of global industry. Precision at every layer.
+              Tailored HSEQ consultancy, fire risk assessment, training and management systems for SMBs across the UK.
             </p>
           </div>
           <div>
