@@ -7,11 +7,8 @@ export default function Layout() {
         <div className="flex justify-between items-center px-8 py-4 w-full max-w-none">
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center" aria-label="Kirk & Kirk — Professional Management Consultancy">
-              <img src="/kirk-kirk-logo.jpg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[260px] md:w-[350px] h-auto" />
+              <img src="/kirk-kirk-logo.jpg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[200px] md:w-[250px] h-auto" />
             </Link>
-            <div className="hidden md:flex gap-6">
-              <Link to="/consultation" className="font-['Inter'] tracking-tighter uppercase font-medium text-[0.75rem] text-[#e5e2e1] opacity-70 hover:opacity-100 hover:text-[#adc7ff] transition-all duration-300">Contact</Link>
-            </div>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/consultation">
