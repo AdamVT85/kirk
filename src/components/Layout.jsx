@@ -61,13 +61,17 @@ export default function Layout() {
             <p className="text-[#e5e2e1]/60 text-xs leading-relaxed mb-6">
               Chartered H&amp;S, Environmental and Quality Specialists through IOSH, ISEP and CQI. Accredited fire risk professionals on the NFRAR.
             </p>
-            <div className="flex flex-col gap-4 items-start mb-6">
-              <div className="bg-white rounded px-4 py-3"><img src="/iosh-for-posts-1.jpg" alt="IOSH" className="h-16 object-contain" /></div>
-              <div className="bg-white rounded px-4 py-3"><img src="/CQI-IRCA-Certified-Course-logo.jpg" alt="CQI IRCA Certified Course" className="h-16 object-contain" /></div>
+            <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="bg-white rounded px-3 py-2 flex items-center justify-center h-20"><img src="/iosh-for-posts-1.jpg" alt="IOSH" className="max-h-full max-w-full object-contain" /></div>
+              <div className="bg-white rounded px-3 py-2 flex items-center justify-center h-20"><img src="/CQI-IRCA-Certified-Course-logo.jpg" alt="CQI IRCA Certified Course" className="max-h-full max-w-full object-contain" /></div>
+              <div className="bg-white rounded px-3 py-2 flex items-center justify-center h-20"><img src="/oshcr-logo.png" alt="OSHCR" className="max-h-full max-w-full object-contain" /></div>
+              <div className="bg-white rounded px-3 py-2 flex items-center justify-center h-20"><img src="/ifsm-affiliate-member.png" alt="IFSM Affiliate Member" className="max-h-full max-w-full object-contain" /></div>
+              <div className="bg-white rounded px-3 py-2 flex items-center justify-center h-20"><img src="/fpa-logo.png" alt="Fire Protection Association" className="max-h-full max-w-full object-contain" /></div>
+              <div className="bg-white rounded px-3 py-2 flex items-center justify-center h-20"><img src="/bsi-iso-9001.png" alt="BSI ISO 9001 Certified" className="max-h-full max-w-full object-contain" /></div>
             </div>
-            <span className="block text-[#e5e2e1]/40 text-[0.65rem] uppercase tracking-[0.2em] mb-3">Memberships & Registers</span>
+            <span className="block text-[#e5e2e1]/40 text-[0.65rem] uppercase tracking-[0.2em] mb-3">Also Registered With</span>
             <div className="flex flex-wrap gap-2">
-              {['ISEP', 'NFRAR', 'OHSCR', 'IFSM', 'FPA', 'BSI'].map((name) => (
+              {['ISEP', 'NFRAR'].map((name) => (
                 <span key={name} className="inline-block px-3 py-1.5 text-[0.65rem] uppercase tracking-widest border border-[#353535] text-[#e5e2e1]/70">
                   {name}
                 </span>
