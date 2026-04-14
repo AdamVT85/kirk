@@ -1,39 +1,60 @@
 {
   "hero": {
-    "badge": "Fire Risk",
-    "title": "Fire Risk Assessment & Safety Management",
-    "subtitle": "Professional fire risk assessments for residential and commercial premises.",
-    "description": "Kirk & Kirk conducts professional Fire Risk Assessments for both residential and commercial premises to ensure that you comply with your legal duties and meet insurance requirements."
+    "badge": "Fire Safety",
+    "title": "Fire Safety Management & Assessment",
+    "subtitle": "End-to-end fire safety for commercial, industrial and residential premises — including high-rise buildings (HRBs).",
+    "description": "Kirk & Kirk are accredited fire risk professionals on the National Fire Risk Assessment Register (NFRAR). We deliver fire risk assessments, fire strategies, physical fire safety surveys and the policies, procedures and emergency plans that keep your people safe and your buildings legally compliant."
   },
   "overview": {
-    "heading": "Your Legal Duty",
-    "description": "Under the Regulatory Reform (Fire Safety) Order 2005, it is your responsibility as an employer or landlord to assess fire safety risks, implement measures to fight, detect, and give warning of fire, plan exit routes, and keep those routes clear of obstructions to ensure the safe evacuation of the building.",
+    "heading": "Our Fire Safety Services",
+    "description": "From the first risk assessment to ongoing maintenance of fire extinguishers and doors, we provide a complete fire safety service for commercial, industrial and residential buildings — including high-rise buildings (HRBs) — under the Regulatory Reform (Fire Safety) Order 2005 and the Building Safety Act.",
     "features": [
       {
-        "icon": "search",
-        "title": "Identification",
-        "description": "Thorough identification of fire hazards present in your premises and all persons who may be at risk."
-      },
-      {
         "icon": "assessment",
-        "title": "Evaluation",
-        "description": "A rigorous evaluation of identified risks to determine which can be reduced, controlled, or eradicated entirely."
+        "title": "Fire Risk Assessments",
+        "description": "Fire risk assessments for commercial, industrial and residential buildings, including high-rise buildings (HRBs), carried out by NFRAR-accredited assessors."
       },
       {
-        "icon": "description",
-        "title": "Reporting & Action Plan",
-        "description": "A detailed recording and explanation of our findings along with a prioritised action plan for any improvements required to achieve compliance."
+        "icon": "architecture",
+        "title": "Fire Strategies",
+        "description": "Bespoke fire strategies for commercial, industrial and residential buildings including HRBs — from new-build design review to existing-building upgrades."
+      },
+      {
+        "icon": "fire_extinguisher",
+        "title": "Fire Extinguishers",
+        "description": "Installation, inspection and maintenance of fire extinguishers to keep your portable firefighting equipment compliant and ready to use."
+      },
+      {
+        "icon": "door_front",
+        "title": "Fire Door Surveys",
+        "description": "Detailed fire door surveys and inspections to verify integrity, certification and suitability against current fire safety legislation."
+      },
+      {
+        "icon": "grid_view",
+        "title": "Fire Compartmentation",
+        "description": "Fire compartmentation surveys and inspections to confirm your building's passive fire protection is intact and performing as designed."
+      },
+      {
+        "icon": "directions_run",
+        "title": "Emergency Plans & PEEPs",
+        "description": "Fire emergency plans including Personal Emergency Evacuation Plans (PEEPs) so every occupant — including those needing assistance — can evacuate safely."
+      },
+      {
+        "icon": "policy",
+        "title": "Fire Policies & Procedures",
+        "description": "Site-specific fire policies and fire procedures that support your duty holder obligations and sit neatly alongside your wider HSEQ documentation."
       }
     ]
   },
   "sectors": {
-    "heading": "Who Does the Law Apply To?",
-    "description": "The Regulatory Reform Order 2005 places fire safety responsibilities on a wide range of duty holders. If any of the following apply to you, a fire risk assessment is a legal requirement.",
+    "heading": "Who We Support",
+    "description": "We support duty holders across the built environment. If any of the following apply, a fire risk assessment is a legal requirement under the Regulatory Reform (Fire Safety) Order 2005.",
     "items": [
-      { "name": "Business Premises", "icon": "store" },
+      { "name": "Commercial Buildings", "icon": "store" },
+      { "name": "Industrial Premises", "icon": "factory" },
+      { "name": "Residential & HRBs", "icon": "apartment" },
       { "name": "Employers & Self-Employed", "icon": "badge" },
       { "name": "Mixed-Use Dwellings", "icon": "home_work" },
-      { "name": "Charities & Voluntary Orgs", "icon": "volunteer_activism" },
       { "name": "Paying Guest Accommodation", "icon": "hotel" }
     ]
   },
@@ -43,23 +64,23 @@
       {
         "number": "01",
         "title": "Site Visit",
-        "description": "Our qualified fire risk assessors visit your property to conduct a thorough inspection of the premises, covering fire hazards, ignition sources, structural protection, detection systems, and means of escape."
+        "description": "Our NFRAR-accredited fire risk assessors visit your property to inspect fire hazards, ignition sources, structural protection, detection systems, compartmentation and means of escape."
       },
       {
         "number": "02",
         "title": "Assessment & Analysis",
-        "description": "We evaluate all identified risks against the people at risk, assessing which hazards can be reduced, controlled, or eradicated to bring your premises into compliance."
+        "description": "We evaluate the risks against the people present, assessing which hazards can be reduced, controlled or eradicated to bring your premises into compliance."
       },
       {
         "number": "03",
         "title": "Report & Action Plan",
-        "description": "You receive a comprehensive Fire Safety Risk Assessment document with a detailed explanation of our findings and a clear action plan for any improvements required to meet your legal requirements."
+        "description": "You receive a comprehensive Fire Safety Risk Assessment with a clear, prioritised action plan for any improvements required to meet your legal obligations."
       }
     ]
   },
   "cta": {
     "heading": "Book Your Assessment",
-    "description": "Our qualified fire risk assessors are ready to help you comply with your legal duties and protect your premises. Don't wait for an incident or enforcement notice.",
+    "description": "Our NFRAR-accredited fire risk assessors are ready to help you comply with your legal duties and protect your premises. Don't wait for an incident or enforcement notice.",
     "buttonText": "Enquire Now"
   }
 }

@@ -3,7 +3,7 @@
     "badge": "Safety",
     "title": "Health, Safety & Environmental Compliance",
     "subtitle": "Ensuring you're covered and minimising risk, no matter your size or type.",
-    "description": "Kirk & Kirk provides tailored health, safety, and environmental consultancy for SMBs. Our bespoke services draw on a wealth of experience and a proven track record of mitigating operational and intrinsic risks within companies across the UK."
+    "description": "Kirk & Kirk provides tailored health, safety and environmental consultancy to businesses across the UK and Ireland. We are chartered specialists through IOSH, ISEP and CQI, with deep experience in railways (including Network Rail, LUL, DLR and RFLI), RISQS certification support, construction, utilities, engineering and manufacturing."
   },
   "overview": {
     "heading": "Bespoke HSE Consultancy",
@@ -28,15 +28,14 @@
   },
   "sectors": {
     "heading": "High-Risk Sector Expertise",
-    "description": "Our experienced team specialises in the sectors where getting it right matters most.",
+    "description": "We specialise across the railways — including Network Rail, LUL, DLR and RFLI — and support companies through RISQS certification. We also work across construction, utilities, engineering and manufacturing.",
     "items": [
-      { "name": "Railway", "icon": "train" },
+      { "name": "Railways (NR, LUL, DLR, RFLI)", "icon": "train" },
+      { "name": "RISQS Certification", "icon": "verified" },
       { "name": "Construction", "icon": "construction" },
-      { "name": "Outdoor Advertising", "icon": "campaign" },
-      { "name": "Transport & Logistics", "icon": "local_shipping" },
       { "name": "Utilities", "icon": "bolt" },
-      { "name": "Telecommunications", "icon": "cell_tower" },
-      { "name": "Education", "icon": "school" }
+      { "name": "Engineering", "icon": "precision_manufacturing" },
+      { "name": "Manufacturing", "icon": "factory" }
     ]
   },
   "approach": {

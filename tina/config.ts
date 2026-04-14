@@ -40,6 +40,17 @@ export default defineConfig({
           },
           {
             type: 'object',
+            name: 'credentials',
+            label: 'Credentials Strip',
+            fields: [
+              { type: 'string', name: 'heading', label: 'Heading' },
+              { type: 'string', name: 'lines', label: 'Credential Lines', list: true, ui: { component: 'textarea' } },
+              { type: 'string', name: 'sectorsLabel', label: 'Sectors Label' },
+              { type: 'string', name: 'sectors', label: 'Sectors', list: true },
+            ],
+          },
+          {
+            type: 'object',
             name: 'solutions',
             label: 'Strategic Solutions',
             fields: [
@@ -88,6 +99,7 @@ export default defineConfig({
             name: 'clientImpact',
             label: 'Client Impact',
             fields: [
+              { type: 'boolean', name: 'enabled', label: 'Show Testimonials Section' },
               { type: 'string', name: 'heading', label: 'Section Heading' },
               {
                 type: 'object',

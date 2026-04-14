@@ -54,6 +54,40 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Credentials Strip */}
+        {content.credentials && (
+          <section className="py-20 px-8 md:px-24 bg-surface-container-lowest border-y border-outline-variant/40">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+              <div className="md:col-span-5">
+                <h2 className="text-2xl md:text-3xl font-black tracking-tighter uppercase leading-tight">
+                  {content.credentials.heading}
+                </h2>
+              </div>
+              <div className="md:col-span-7 space-y-6">
+                {content.credentials.lines?.map((line, i) => (
+                  <p key={i} className="text-on-surface-variant text-base md:text-lg font-light leading-relaxed">
+                    {line}
+                  </p>
+                ))}
+                {content.credentials.sectors?.length > 0 && (
+                  <div className="pt-6">
+                    <span className="block text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-4">
+                      {content.credentials.sectorsLabel}
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {content.credentials.sectors.map((sector, i) => (
+                        <span key={i} className="inline-block px-3 py-2 text-xs uppercase tracking-widest border border-outline-variant text-on-surface-variant">
+                          {sector}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Strategic Solutions */}
         <section className="py-32 px-8 md:px-24 bg-surface-container-low">
           <div className="max-w-7xl mx-auto">
@@ -108,6 +142,7 @@ export default function Home() {
         </section>
 
         {/* Client Impact */}
+        {content.clientImpact?.enabled && content.clientImpact?.caseStudies?.length > 0 && (
         <section className="py-32 bg-surface-container-lowest overflow-hidden">
           <div className="px-8 md:px-24 mb-16 flex flex-col md:flex-row justify-between items-baseline gap-4">
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">{content.clientImpact.heading}</h2>
@@ -152,6 +187,7 @@ export default function Home() {
             })}
           </div>
         </section>
+        )}
 
         {/* Final CTA */}
         <section className="py-48 px-8 md:px-24 bg-surface text-center">

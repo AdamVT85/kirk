@@ -30,7 +30,7 @@ export default function Layout() {
           <div className="md:col-span-1">
             <div className="text-3xl font-black tracking-tighter text-[#e5e2e1] mb-8">Kirk & Kirk</div>
             <p className="text-[#e5e2e1]/60 font-light text-sm leading-relaxed max-w-xs">
-              Tailored HSEQ consultancy, fire risk assessment, training and management systems for SMBs across the UK.
+              Chartered HSEQ and fire safety specialists serving businesses across the UK and Ireland since 2012.
             </p>
           </div>
           <div>
@@ -58,10 +58,20 @@ export default function Layout() {
           </div>
           <div>
             <span className="block text-[#adc7ff] font-bold text-[0.75rem] uppercase tracking-widest mb-8">Accreditations</span>
-            <div className="flex flex-col gap-4 items-start">
+            <p className="text-[#e5e2e1]/60 text-xs leading-relaxed mb-6">
+              Chartered H&amp;S, Environmental and Quality Specialists through IOSH, ISEP and CQI. Accredited fire risk professionals on the NFRAR.
+            </p>
+            <div className="flex flex-col gap-4 items-start mb-6">
               <div className="bg-white rounded px-4 py-3"><img src="/iosh-for-posts-1.jpg" alt="IOSH" className="h-16 object-contain" /></div>
               <div className="bg-white rounded px-4 py-3"><img src="/CQI-IRCA-Certified-Course-logo.jpg" alt="CQI IRCA Certified Course" className="h-16 object-contain" /></div>
-              <div className="bg-white rounded px-4 py-3"><img src="/CTP-Preferred-Supplier-RGB-Colour-Logo-on-White-Background-002.png" alt="CTP Preferred Supplier" className="h-16 object-contain" /></div>
+            </div>
+            <span className="block text-[#e5e2e1]/40 text-[0.65rem] uppercase tracking-[0.2em] mb-3">Memberships & Registers</span>
+            <div className="flex flex-wrap gap-2">
+              {['ISEP', 'NFRAR', 'OHSCR', 'IFSM', 'FPA', 'BSI'].map((name) => (
+                <span key={name} className="inline-block px-3 py-1.5 text-[0.65rem] uppercase tracking-widest border border-[#353535] text-[#e5e2e1]/70">
+                  {name}
+                </span>
+              ))}
             </div>
           </div>
         </div>

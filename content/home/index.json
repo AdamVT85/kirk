@@ -1,29 +1,45 @@
 {
   "hero": {
-    "badge": "Operational Excellence",
+    "badge": "Business Continuity & Disaster Recovery",
     "titleLine1": "HSEQ CONSULTANCY",
     "titleLine2": "INTEGRATED RISK & COMPLIANCE.",
     "description": "Stay safe, stay compliant, stay ahead — without it consuming your business. Trusted partners who carry the complexity so you don't have to.",
-    "established": "Est. 2001",
-    "cornerBox": "PROVIDING CONSULTANCY SERVICES FOR 25 YEARS"
+    "established": "Est. 2012",
+    "cornerBox": "PROVIDING CONSULTANCY SERVICES SINCE 2012"
+  },
+  "credentials": {
+    "heading": "Chartered HSEQ Specialists",
+    "lines": [
+      "Chartered Health & Safety, Environmental and Quality Specialists through IOSH, ISEP and CQI.",
+      "Accredited fire risk professionals on the National Fire Risk Assessment Register (NFRAR)."
+    ],
+    "sectorsLabel": "Specialist Sectors",
+    "sectors": [
+      "Railways — Network Rail, LUL, DLR, RFLI",
+      "RISQS certification support",
+      "Construction",
+      "Utilities",
+      "Engineering",
+      "Manufacturing"
+    ]
   },
   "solutions": {
     "heading": "CONSULTANCY SERVICES",
     "counter": "01 / OUR EXPERTISE",
     "cards": [
       {
-        "label": "SAFETY",
-        "title": "Health, Safety and Environmental Compliance",
-        "description": "Kirk and Kirk Provided tailored health, safety, and environmental consultancy for SMBs.",
-        "icon": "health_and_safety",
-        "slug": "health-safety-environmental"
-      },
-      {
-        "label": "Fire Risk",
-        "title": "Assessment & Fire Safety Management",
-        "description": "Conducting professional Fire Risk Assessments for both residential and commercial premises",
+        "label": "Fire Safety",
+        "title": "Fire Safety Management & Assessment",
+        "description": "Fire risk assessments, fire strategies, door & compartmentation surveys, extinguisher service, emergency plans and PEEPs — for commercial, industrial, residential and high-rise buildings (HRBs).",
         "icon": "fire_check",
         "slug": "fire-risk-assessment"
+      },
+      {
+        "label": "SAFETY",
+        "title": "Health, Safety and Environmental Compliance",
+        "description": "Tailored HSE consultancy across rail, construction, utilities, engineering and manufacturing — including RISQS certification support.",
+        "icon": "health_and_safety",
+        "slug": "health-safety-environmental"
       },
       {
         "label": "OPERATIONS",
@@ -35,32 +51,32 @@
       {
         "label": "Management",
         "title": "Integrated Management Systems",
-        "description": "offer an integrated approach to enable your company to establish, implement and maintain ISO 9001, ISO 14001 and ISO 45001 management systems.",
+        "description": "An integrated approach to help your company establish, implement and maintain ISO 9001, ISO 14001 and ISO 45001 management systems.",
         "icon": "engineering",
         "slug": "integrated-management-systems"
       },
       {
         "label": "RISK",
-        "title": "Risk Management",
-        "description": "Identify and evaluate risks which could result in financial or programmatic losses to your organisation, and apply appropriate responses to them.  ",
+        "title": "Risk Management & Business Continuity",
+        "description": "Identify and evaluate risks to your organisation, plus business continuity and disaster recovery planning to keep you operating when the unexpected happens.",
         "icon": "warning",
         "slug": "risk-management"
       },
       {
         "label": "Training",
         "title": "Training and Education",
-        "description": "Providing industry standard training packages or designing bespoke training courses to meet the specific needs of your company.  ",
+        "description": "Industry-standard training packages and bespoke courses designed around the specific needs of your company.",
         "icon": "school",
         "slug": "training-education"
       }
     ],
     "featureImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAhL6AgjSgtBOgPDXQj_D7lzLivVdDIz-uNsU-rSByA7yNkYrId4ZyjvEHunO72lS3OF5Ta_RvD8qt7WJTCYXdAYYsWxriK4mqnHQ1HJDQxP3Q-dwdYr-6Us5le8Gr8lALh0onLj9xwVHGuTvuxYfUUDlg_rmnZh_mnjGtLnyuIUoaUuS-kohRH3qQhaTFBMtLemL72L-gzoRmqqoMZXLI5nWg9i3VuZFtC673AC-cHsHjvCvdPAOyMgRTNPqlBl1kfYAbUU5AybhM",
-    "featureTitle": "Operational Excellence"
+    "featureTitle": "Business Continuity & Disaster Recovery"
   },
   "expertise": {
     "counter": "02 / TRACK RECORD",
     "heading": "Our Experience",
-    "description": "Over 25 years we've worked with hundreds of companies to achieve significant measurable improvements to their operations.",
+    "description": "Since 2012 we've worked with companies across the UK and Ireland to deliver measurable improvements in health, safety, fire, environment and quality — with deep specialism in railways, construction, utilities, engineering and manufacturing.",
     "metrics": [
       {
         "value": "200+",
@@ -69,44 +85,24 @@
         "highlight": true
       },
       {
-        "value": "12",
-        "title": "Different Countries",
-        "subtitle": "Working Internationally",
+        "value": "UK & IE",
+        "title": "Operating region",
+        "subtitle": "UK and Ireland coverage",
         "highlight": false
       },
       {
-        "value": "25",
+        "value": "14",
         "title": "Years of experience",
-        "subtitle": "We can help you",
+        "subtitle": "Trusted since 2012",
         "highlight": true
       }
     ]
   },
   "clientImpact": {
+    "enabled": false,
     "counter": "03 / TESTIMONIALS",
     "heading": "Client Testimonials",
-    "caseStudies": [
-      {
-        "type": "quote",
-        "label": "BAE Systems",
-        "quote": "\"Kirk & Kirk didn't just provide a report; they rebuilt our operational DNA from the ground up.\"",
-        "author": "John Smith, Director of Strategy",
-        "company": "BAE Systems"
-      },
-      {
-        "type": "highlight",
-        "label": "Case Study 02",
-        "headline": "RADICAL DIGITAL TRANSFORMATION FOR EUROPE'S LEADING LOGISTICS NETWORK.",
-        "outcome": "Outcome: 65% Reduced Latency"
-      },
-      {
-        "type": "quote",
-        "label": "Case Study 03",
-        "quote": "\"The precision of their venture architecture allowed us to scale into 4 new markets in 6 months.\"",
-        "author": "VP Operations",
-        "company": "Pioneering HealthTech"
-      }
-    ]
+    "caseStudies": []
   },
   "intelligence": {
     "heading": "Latest Intelligence",
