@@ -88,7 +88,7 @@ export default function SolutionLanding() {
           {!content.courseCategories && content.overview.features && (
             <div className="flex flex-wrap justify-center border border-outline-variant/20">
               {content.overview.features.map((feature, i) => (
-                <div key={i} className="p-8 md:p-12 w-1/2 md:w-1/3 border-b md:border-b-0 md:border-r border-outline-variant/20 last:border-r-0 [&:nth-child(2n)]:border-r-0 md:[&:nth-child(2n)]:border-r md:[&:nth-child(3n)]:border-r-0">
+                <div key={i} className="p-12 w-full md:w-1/3 border-b md:border-b-0 md:border-r border-outline-variant/20 last:border-r-0 md:[&:nth-child(3n)]:border-r-0">
                   <span className="material-symbols-outlined text-primary text-4xl mb-8 block">{feature.icon}</span>
                   <h3 className="text-xl font-bold uppercase tracking-tight mb-4">{feature.title}</h3>
                   <p className="text-on-surface-variant text-sm leading-relaxed opacity-70">{feature.description}</p>
