@@ -26,10 +26,10 @@ export default function Home() {
   };
 
   return (
-    <main className="relative overflow-hidden pt-12 md:pt-0">
+    <main className="relative overflow-hidden">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex flex-col justify-end pb-16 md:justify-center px-8 md:px-24 blueprint-grid">
-          <div className="max-w-7xl w-full pt-8 md:pt-32">
+        <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-24 blueprint-grid">
+          <div className="max-w-7xl w-full pt-16 md:pt-32">
             <div className="inline-block border border-outline-variant px-4 py-1 mb-8">
               <span className="text-[0.7rem] uppercase tracking-[0.3em] font-medium text-primary">{content.hero.badge}</span>
             </div>
