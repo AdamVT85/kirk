@@ -108,7 +108,7 @@ export default function SolutionLanding() {
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.sectors.heading}</h2>
               <p className="text-on-surface-variant text-lg leading-relaxed font-light">{content.sectors.description}</p>
             </div>
-            <div className="flex flex-wrap gap-px bg-outline-variant/20">
+            <div className="flex flex-wrap justify-center gap-px bg-outline-variant/20">
               {content.sectors.items.map((sector, i) => (
                 <div key={i} className="bg-surface-container-low p-8 flex flex-col items-center text-center gap-4 basis-[calc(50%-1px)] md:basis-[calc(33.333%-1px)] lg:flex-1">
                   <span className="material-symbols-outlined text-primary text-3xl">{sector.icon}</span>
