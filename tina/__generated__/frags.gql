@@ -9,6 +9,13 @@ fragment HomeParts on Home {
     established
     cornerBox
   }
+  credentials {
+    __typename
+    heading
+    lines
+    sectorsLabel
+    sectors
+  }
   solutions {
     __typename
     heading
@@ -19,6 +26,7 @@ fragment HomeParts on Home {
       title
       description
       icon
+      slug
     }
     featureImage
     featureTitle
@@ -37,6 +45,7 @@ fragment HomeParts on Home {
   }
   clientImpact {
     __typename
+    enabled
     heading
     caseStudies {
       __typename
@@ -106,87 +115,60 @@ fragment ConsultationParts on Consultation {
   }
 }
 
-fragment InsightsParts on Insights {
+fragment SolutionsParts on Solutions {
   __typename
   hero {
     __typename
     badge
-    titleLine1
-    titleLine2
-    description
-  }
-  filters
-  featured {
-    __typename
-    badge
-    category
-    readTime
     title
+    subtitle
     description
-    linkText
-    image
   }
-  gridArticles {
-    __typename
-    category
-    date
-    title
-    image
-  }
-  newsletter {
-    __typename
-    titleLine1
-    titleLine2
-    description
-    buttonText
-  }
-}
-
-fragment ServiceParts on Service {
-  __typename
-  hero {
-    __typename
-    badge
-    titleLine1
-    titleLine2
-    description
-    backgroundImage
-  }
-  metrics {
-    __typename
-    label
-    value
-  }
-  competencies {
+  overview {
     __typename
     heading
     description
-    matrixLabel
-    cards {
+    features {
       __typename
       icon
       title
       description
     }
   }
-  philosophy {
-    __typename
-    label
-    quote
-    highlightedPhrase
-    authorName
-    authorTitle
-    authorImage
-    buildingImage
-    overlayText
-  }
-  consultation {
+  sectors {
     __typename
     heading
-    headingHighlight
     description
-    phone
-    email
-    submitButton
+    items {
+      __typename
+      name
+      icon
+    }
+  }
+  firstAid {
+    __typename
+    heading
+    description
+    courses {
+      __typename
+      title
+      duration
+    }
+  }
+  approach {
+    __typename
+    heading
+    steps {
+      __typename
+      number
+      title
+      description
+    }
+  }
+  cta {
+    __typename
+    heading
+    description
+    buttonText
   }
 }

@@ -108,8 +108,8 @@ query consultationConnection($before: String, $after: String, $first: Float, $la
   }
 }
 
-query insights($relativePath: String!) {
-  insights(relativePath: $relativePath) {
+query solutions($relativePath: String!) {
+  solutions(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -122,12 +122,12 @@ query insights($relativePath: String!) {
       }
       id
     }
-    ...InsightsParts
+    ...SolutionsParts
   }
 }
 
-query insightsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: InsightsFilter) {
-  insightsConnection(
+query solutionsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SolutionsFilter) {
+  solutionsConnection(
     before: $before
     after: $after
     first: $first
@@ -157,62 +157,7 @@ query insightsConnection($before: String, $after: String, $first: Float, $last: 
           }
           id
         }
-        ...InsightsParts
-      }
-    }
-  }
-}
-
-query service($relativePath: String!) {
-  service(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        hasReferences
-        breadcrumbs
-        path
-        relativePath
-        extension
-      }
-      id
-    }
-    ...ServiceParts
-  }
-}
-
-query serviceConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ServiceFilter) {
-  serviceConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            hasReferences
-            breadcrumbs
-            path
-            relativePath
-            extension
-          }
-          id
-        }
-        ...ServiceParts
+        ...SolutionsParts
       }
     }
   }

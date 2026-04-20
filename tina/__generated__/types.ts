@@ -86,10 +86,8 @@ export type Query = {
   homeConnection: HomeConnection;
   consultation: Consultation;
   consultationConnection: ConsultationConnection;
-  insights: Insights;
-  insightsConnection: InsightsConnection;
-  service: Service;
-  serviceConnection: ServiceConnection;
+  solutions: Solutions;
+  solutionsConnection: SolutionsConnection;
 };
 
 
@@ -144,40 +142,24 @@ export type QueryConsultationConnectionArgs = {
 };
 
 
-export type QueryInsightsArgs = {
+export type QuerySolutionsArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-export type QueryInsightsConnectionArgs = {
+export type QuerySolutionsConnectionArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<InsightsFilter>;
-};
-
-
-export type QueryServiceArgs = {
-  relativePath?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-export type QueryServiceConnectionArgs = {
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<ServiceFilter>;
+  filter?: InputMaybe<SolutionsFilter>;
 };
 
 export type DocumentFilter = {
   home?: InputMaybe<HomeFilter>;
   consultation?: InputMaybe<ConsultationFilter>;
-  insights?: InputMaybe<InsightsFilter>;
-  service?: InputMaybe<ServiceFilter>;
+  solutions?: InputMaybe<SolutionsFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -217,7 +199,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Home | Consultation | Insights | Service | Folder;
+export type DocumentNode = Home | Consultation | Solutions | Folder;
 
 export type HomeHero = {
   __typename?: 'HomeHero';
@@ -229,12 +211,21 @@ export type HomeHero = {
   cornerBox?: Maybe<Scalars['String']['output']>;
 };
 
+export type HomeCredentials = {
+  __typename?: 'HomeCredentials';
+  heading?: Maybe<Scalars['String']['output']>;
+  lines?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  sectorsLabel?: Maybe<Scalars['String']['output']>;
+  sectors?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
 export type HomeSolutionsCards = {
   __typename?: 'HomeSolutionsCards';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   icon?: Maybe<Scalars['String']['output']>;
+  slug?: Maybe<Scalars['String']['output']>;
 };
 
 export type HomeSolutions = {
@@ -274,6 +265,7 @@ export type HomeClientImpactCaseStudies = {
 
 export type HomeClientImpact = {
   __typename?: 'HomeClientImpact';
+  enabled?: Maybe<Scalars['Boolean']['output']>;
   heading?: Maybe<Scalars['String']['output']>;
   caseStudies?: Maybe<Array<Maybe<HomeClientImpactCaseStudies>>>;
 };
@@ -302,6 +294,7 @@ export type HomeCta = {
 export type Home = Node & Document & {
   __typename?: 'Home';
   hero?: Maybe<HomeHero>;
+  credentials?: Maybe<HomeCredentials>;
   solutions?: Maybe<HomeSolutions>;
   expertise?: Maybe<HomeExpertise>;
   clientImpact?: Maybe<HomeClientImpact>;
@@ -328,11 +321,19 @@ export type HomeHeroFilter = {
   cornerBox?: InputMaybe<StringFilter>;
 };
 
+export type HomeCredentialsFilter = {
+  heading?: InputMaybe<StringFilter>;
+  lines?: InputMaybe<StringFilter>;
+  sectorsLabel?: InputMaybe<StringFilter>;
+  sectors?: InputMaybe<StringFilter>;
+};
+
 export type HomeSolutionsCardsFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   icon?: InputMaybe<StringFilter>;
+  slug?: InputMaybe<StringFilter>;
 };
 
 export type ImageFilter = {
@@ -379,6 +380,7 @@ export type HomeClientImpactCaseStudiesFilter = {
 };
 
 export type HomeClientImpactFilter = {
+  enabled?: InputMaybe<BooleanFilter>;
   heading?: InputMaybe<StringFilter>;
   caseStudies?: InputMaybe<HomeClientImpactCaseStudiesFilter>;
 };
@@ -403,6 +405,7 @@ export type HomeCtaFilter = {
 
 export type HomeFilter = {
   hero?: InputMaybe<HomeHeroFilter>;
+  credentials?: InputMaybe<HomeCredentialsFilter>;
   solutions?: InputMaybe<HomeSolutionsFilter>;
   expertise?: InputMaybe<HomeExpertiseFilter>;
   clientImpact?: InputMaybe<HomeClientImpactFilter>;
@@ -532,234 +535,165 @@ export type ConsultationConnection = Connection & {
   edges?: Maybe<Array<Maybe<ConsultationConnectionEdges>>>;
 };
 
-export type InsightsHero = {
-  __typename?: 'InsightsHero';
+export type SolutionsHero = {
+  __typename?: 'SolutionsHero';
   badge?: Maybe<Scalars['String']['output']>;
-  titleLine1?: Maybe<Scalars['String']['output']>;
-  titleLine2?: Maybe<Scalars['String']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-};
-
-export type InsightsFeatured = {
-  __typename?: 'InsightsFeatured';
-  badge?: Maybe<Scalars['String']['output']>;
-  category?: Maybe<Scalars['String']['output']>;
-  readTime?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  linkText?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
 };
 
-export type InsightsGridArticles = {
-  __typename?: 'InsightsGridArticles';
-  category?: Maybe<Scalars['String']['output']>;
-  date?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
-};
-
-export type InsightsNewsletter = {
-  __typename?: 'InsightsNewsletter';
-  titleLine1?: Maybe<Scalars['String']['output']>;
-  titleLine2?: Maybe<Scalars['String']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  buttonText?: Maybe<Scalars['String']['output']>;
-};
-
-export type Insights = Node & Document & {
-  __typename?: 'Insights';
-  hero?: Maybe<InsightsHero>;
-  filters?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  featured?: Maybe<InsightsFeatured>;
-  gridArticles?: Maybe<Array<Maybe<InsightsGridArticles>>>;
-  newsletter?: Maybe<InsightsNewsletter>;
-  id: Scalars['ID']['output'];
-  _sys: SystemInfo;
-  _values: Scalars['JSON']['output'];
-};
-
-export type InsightsHeroFilter = {
-  badge?: InputMaybe<StringFilter>;
-  titleLine1?: InputMaybe<StringFilter>;
-  titleLine2?: InputMaybe<StringFilter>;
-  description?: InputMaybe<StringFilter>;
-};
-
-export type InsightsFeaturedFilter = {
-  badge?: InputMaybe<StringFilter>;
-  category?: InputMaybe<StringFilter>;
-  readTime?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-  description?: InputMaybe<StringFilter>;
-  linkText?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
-};
-
-export type InsightsGridArticlesFilter = {
-  category?: InputMaybe<StringFilter>;
-  date?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
-};
-
-export type InsightsNewsletterFilter = {
-  titleLine1?: InputMaybe<StringFilter>;
-  titleLine2?: InputMaybe<StringFilter>;
-  description?: InputMaybe<StringFilter>;
-  buttonText?: InputMaybe<StringFilter>;
-};
-
-export type InsightsFilter = {
-  hero?: InputMaybe<InsightsHeroFilter>;
-  filters?: InputMaybe<StringFilter>;
-  featured?: InputMaybe<InsightsFeaturedFilter>;
-  gridArticles?: InputMaybe<InsightsGridArticlesFilter>;
-  newsletter?: InputMaybe<InsightsNewsletterFilter>;
-};
-
-export type InsightsConnectionEdges = {
-  __typename?: 'InsightsConnectionEdges';
-  cursor: Scalars['String']['output'];
-  node?: Maybe<Insights>;
-};
-
-export type InsightsConnection = Connection & {
-  __typename?: 'InsightsConnection';
-  pageInfo: PageInfo;
-  totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<InsightsConnectionEdges>>>;
-};
-
-export type ServiceHero = {
-  __typename?: 'ServiceHero';
-  badge?: Maybe<Scalars['String']['output']>;
-  titleLine1?: Maybe<Scalars['String']['output']>;
-  titleLine2?: Maybe<Scalars['String']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  backgroundImage?: Maybe<Scalars['String']['output']>;
-};
-
-export type ServiceMetrics = {
-  __typename?: 'ServiceMetrics';
-  label?: Maybe<Scalars['String']['output']>;
-  value?: Maybe<Scalars['String']['output']>;
-};
-
-export type ServiceCompetenciesCards = {
-  __typename?: 'ServiceCompetenciesCards';
+export type SolutionsOverviewFeatures = {
+  __typename?: 'SolutionsOverviewFeatures';
   icon?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
 };
 
-export type ServiceCompetencies = {
-  __typename?: 'ServiceCompetencies';
+export type SolutionsOverview = {
+  __typename?: 'SolutionsOverview';
   heading?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  matrixLabel?: Maybe<Scalars['String']['output']>;
-  cards?: Maybe<Array<Maybe<ServiceCompetenciesCards>>>;
+  features?: Maybe<Array<Maybe<SolutionsOverviewFeatures>>>;
 };
 
-export type ServicePhilosophy = {
-  __typename?: 'ServicePhilosophy';
-  label?: Maybe<Scalars['String']['output']>;
-  quote?: Maybe<Scalars['String']['output']>;
-  highlightedPhrase?: Maybe<Scalars['String']['output']>;
-  authorName?: Maybe<Scalars['String']['output']>;
-  authorTitle?: Maybe<Scalars['String']['output']>;
-  authorImage?: Maybe<Scalars['String']['output']>;
-  buildingImage?: Maybe<Scalars['String']['output']>;
-  overlayText?: Maybe<Scalars['String']['output']>;
+export type SolutionsSectorsItems = {
+  __typename?: 'SolutionsSectorsItems';
+  name?: Maybe<Scalars['String']['output']>;
+  icon?: Maybe<Scalars['String']['output']>;
 };
 
-export type ServiceConsultation = {
-  __typename?: 'ServiceConsultation';
+export type SolutionsSectors = {
+  __typename?: 'SolutionsSectors';
   heading?: Maybe<Scalars['String']['output']>;
-  headingHighlight?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  phone?: Maybe<Scalars['String']['output']>;
-  email?: Maybe<Scalars['String']['output']>;
-  submitButton?: Maybe<Scalars['String']['output']>;
+  items?: Maybe<Array<Maybe<SolutionsSectorsItems>>>;
 };
 
-export type Service = Node & Document & {
-  __typename?: 'Service';
-  hero?: Maybe<ServiceHero>;
-  metrics?: Maybe<Array<Maybe<ServiceMetrics>>>;
-  competencies?: Maybe<ServiceCompetencies>;
-  philosophy?: Maybe<ServicePhilosophy>;
-  consultation?: Maybe<ServiceConsultation>;
+export type SolutionsFirstAidCourses = {
+  __typename?: 'SolutionsFirstAidCourses';
+  title?: Maybe<Scalars['String']['output']>;
+  duration?: Maybe<Scalars['String']['output']>;
+};
+
+export type SolutionsFirstAid = {
+  __typename?: 'SolutionsFirstAid';
+  heading?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+  courses?: Maybe<Array<Maybe<SolutionsFirstAidCourses>>>;
+};
+
+export type SolutionsApproachSteps = {
+  __typename?: 'SolutionsApproachSteps';
+  number?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+};
+
+export type SolutionsApproach = {
+  __typename?: 'SolutionsApproach';
+  heading?: Maybe<Scalars['String']['output']>;
+  steps?: Maybe<Array<Maybe<SolutionsApproachSteps>>>;
+};
+
+export type SolutionsCta = {
+  __typename?: 'SolutionsCta';
+  heading?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+  buttonText?: Maybe<Scalars['String']['output']>;
+};
+
+export type Solutions = Node & Document & {
+  __typename?: 'Solutions';
+  hero?: Maybe<SolutionsHero>;
+  overview?: Maybe<SolutionsOverview>;
+  sectors?: Maybe<SolutionsSectors>;
+  firstAid?: Maybe<SolutionsFirstAid>;
+  approach?: Maybe<SolutionsApproach>;
+  cta?: Maybe<SolutionsCta>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
 };
 
-export type ServiceHeroFilter = {
+export type SolutionsHeroFilter = {
   badge?: InputMaybe<StringFilter>;
-  titleLine1?: InputMaybe<StringFilter>;
-  titleLine2?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  backgroundImage?: InputMaybe<ImageFilter>;
 };
 
-export type ServiceMetricsFilter = {
-  label?: InputMaybe<StringFilter>;
-  value?: InputMaybe<StringFilter>;
-};
-
-export type ServiceCompetenciesCardsFilter = {
+export type SolutionsOverviewFeaturesFilter = {
   icon?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
 };
 
-export type ServiceCompetenciesFilter = {
+export type SolutionsOverviewFilter = {
   heading?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  matrixLabel?: InputMaybe<StringFilter>;
-  cards?: InputMaybe<ServiceCompetenciesCardsFilter>;
+  features?: InputMaybe<SolutionsOverviewFeaturesFilter>;
 };
 
-export type ServicePhilosophyFilter = {
-  label?: InputMaybe<StringFilter>;
-  quote?: InputMaybe<StringFilter>;
-  highlightedPhrase?: InputMaybe<StringFilter>;
-  authorName?: InputMaybe<StringFilter>;
-  authorTitle?: InputMaybe<StringFilter>;
-  authorImage?: InputMaybe<ImageFilter>;
-  buildingImage?: InputMaybe<ImageFilter>;
-  overlayText?: InputMaybe<StringFilter>;
+export type SolutionsSectorsItemsFilter = {
+  name?: InputMaybe<StringFilter>;
+  icon?: InputMaybe<StringFilter>;
 };
 
-export type ServiceConsultationFilter = {
+export type SolutionsSectorsFilter = {
   heading?: InputMaybe<StringFilter>;
-  headingHighlight?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  phone?: InputMaybe<StringFilter>;
-  email?: InputMaybe<StringFilter>;
-  submitButton?: InputMaybe<StringFilter>;
+  items?: InputMaybe<SolutionsSectorsItemsFilter>;
 };
 
-export type ServiceFilter = {
-  hero?: InputMaybe<ServiceHeroFilter>;
-  metrics?: InputMaybe<ServiceMetricsFilter>;
-  competencies?: InputMaybe<ServiceCompetenciesFilter>;
-  philosophy?: InputMaybe<ServicePhilosophyFilter>;
-  consultation?: InputMaybe<ServiceConsultationFilter>;
+export type SolutionsFirstAidCoursesFilter = {
+  title?: InputMaybe<StringFilter>;
+  duration?: InputMaybe<StringFilter>;
 };
 
-export type ServiceConnectionEdges = {
-  __typename?: 'ServiceConnectionEdges';
+export type SolutionsFirstAidFilter = {
+  heading?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+  courses?: InputMaybe<SolutionsFirstAidCoursesFilter>;
+};
+
+export type SolutionsApproachStepsFilter = {
+  number?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+};
+
+export type SolutionsApproachFilter = {
+  heading?: InputMaybe<StringFilter>;
+  steps?: InputMaybe<SolutionsApproachStepsFilter>;
+};
+
+export type SolutionsCtaFilter = {
+  heading?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+  buttonText?: InputMaybe<StringFilter>;
+};
+
+export type SolutionsFilter = {
+  hero?: InputMaybe<SolutionsHeroFilter>;
+  overview?: InputMaybe<SolutionsOverviewFilter>;
+  sectors?: InputMaybe<SolutionsSectorsFilter>;
+  firstAid?: InputMaybe<SolutionsFirstAidFilter>;
+  approach?: InputMaybe<SolutionsApproachFilter>;
+  cta?: InputMaybe<SolutionsCtaFilter>;
+};
+
+export type SolutionsConnectionEdges = {
+  __typename?: 'SolutionsConnectionEdges';
   cursor: Scalars['String']['output'];
-  node?: Maybe<Service>;
+  node?: Maybe<Solutions>;
 };
 
-export type ServiceConnection = Connection & {
-  __typename?: 'ServiceConnection';
+export type SolutionsConnection = Connection & {
+  __typename?: 'SolutionsConnection';
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<ServiceConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<SolutionsConnectionEdges>>>;
 };
 
 export type Mutation = {
@@ -773,10 +707,8 @@ export type Mutation = {
   createHome: Home;
   updateConsultation: Consultation;
   createConsultation: Consultation;
-  updateInsights: Insights;
-  createInsights: Insights;
-  updateService: Service;
-  createService: Service;
+  updateSolutions: Solutions;
+  createSolutions: Solutions;
 };
 
 
@@ -837,42 +769,28 @@ export type MutationCreateConsultationArgs = {
 };
 
 
-export type MutationUpdateInsightsArgs = {
+export type MutationUpdateSolutionsArgs = {
   relativePath: Scalars['String']['input'];
-  params: InsightsMutation;
+  params: SolutionsMutation;
 };
 
 
-export type MutationCreateInsightsArgs = {
+export type MutationCreateSolutionsArgs = {
   relativePath: Scalars['String']['input'];
-  params: InsightsMutation;
-};
-
-
-export type MutationUpdateServiceArgs = {
-  relativePath: Scalars['String']['input'];
-  params: ServiceMutation;
-};
-
-
-export type MutationCreateServiceArgs = {
-  relativePath: Scalars['String']['input'];
-  params: ServiceMutation;
+  params: SolutionsMutation;
 };
 
 export type DocumentUpdateMutation = {
   home?: InputMaybe<HomeMutation>;
   consultation?: InputMaybe<ConsultationMutation>;
-  insights?: InputMaybe<InsightsMutation>;
-  service?: InputMaybe<ServiceMutation>;
+  solutions?: InputMaybe<SolutionsMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
   home?: InputMaybe<HomeMutation>;
   consultation?: InputMaybe<ConsultationMutation>;
-  insights?: InputMaybe<InsightsMutation>;
-  service?: InputMaybe<ServiceMutation>;
+  solutions?: InputMaybe<SolutionsMutation>;
 };
 
 export type HomeHeroMutation = {
@@ -884,11 +802,19 @@ export type HomeHeroMutation = {
   cornerBox?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type HomeCredentialsMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  lines?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  sectorsLabel?: InputMaybe<Scalars['String']['input']>;
+  sectors?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type HomeSolutionsCardsMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   icon?: InputMaybe<Scalars['String']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type HomeSolutionsMutation = {
@@ -923,6 +849,7 @@ export type HomeClientImpactCaseStudiesMutation = {
 };
 
 export type HomeClientImpactMutation = {
+  enabled?: InputMaybe<Scalars['Boolean']['input']>;
   heading?: InputMaybe<Scalars['String']['input']>;
   caseStudies?: InputMaybe<Array<InputMaybe<HomeClientImpactCaseStudiesMutation>>>;
 };
@@ -947,6 +874,7 @@ export type HomeCtaMutation = {
 
 export type HomeMutation = {
   hero?: InputMaybe<HomeHeroMutation>;
+  credentials?: InputMaybe<HomeCredentialsMutation>;
   solutions?: InputMaybe<HomeSolutionsMutation>;
   expertise?: InputMaybe<HomeExpertiseMutation>;
   clientImpact?: InputMaybe<HomeClientImpactMutation>;
@@ -997,113 +925,85 @@ export type ConsultationMutation = {
   metrics?: InputMaybe<Array<InputMaybe<ConsultationMetricsMutation>>>;
 };
 
-export type InsightsHeroMutation = {
+export type SolutionsHeroMutation = {
   badge?: InputMaybe<Scalars['String']['input']>;
-  titleLine1?: InputMaybe<Scalars['String']['input']>;
-  titleLine2?: InputMaybe<Scalars['String']['input']>;
-  description?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type InsightsFeaturedMutation = {
-  badge?: InputMaybe<Scalars['String']['input']>;
-  category?: InputMaybe<Scalars['String']['input']>;
-  readTime?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  linkText?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type InsightsGridArticlesMutation = {
-  category?: InputMaybe<Scalars['String']['input']>;
-  date?: InputMaybe<Scalars['String']['input']>;
-  title?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type InsightsNewsletterMutation = {
-  titleLine1?: InputMaybe<Scalars['String']['input']>;
-  titleLine2?: InputMaybe<Scalars['String']['input']>;
-  description?: InputMaybe<Scalars['String']['input']>;
-  buttonText?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type InsightsMutation = {
-  hero?: InputMaybe<InsightsHeroMutation>;
-  filters?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  featured?: InputMaybe<InsightsFeaturedMutation>;
-  gridArticles?: InputMaybe<Array<InputMaybe<InsightsGridArticlesMutation>>>;
-  newsletter?: InputMaybe<InsightsNewsletterMutation>;
-};
-
-export type ServiceHeroMutation = {
-  badge?: InputMaybe<Scalars['String']['input']>;
-  titleLine1?: InputMaybe<Scalars['String']['input']>;
-  titleLine2?: InputMaybe<Scalars['String']['input']>;
-  description?: InputMaybe<Scalars['String']['input']>;
-  backgroundImage?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type ServiceMetricsMutation = {
-  label?: InputMaybe<Scalars['String']['input']>;
-  value?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type ServiceCompetenciesCardsMutation = {
+export type SolutionsOverviewFeaturesMutation = {
   icon?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ServiceCompetenciesMutation = {
+export type SolutionsOverviewMutation = {
   heading?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  matrixLabel?: InputMaybe<Scalars['String']['input']>;
-  cards?: InputMaybe<Array<InputMaybe<ServiceCompetenciesCardsMutation>>>;
+  features?: InputMaybe<Array<InputMaybe<SolutionsOverviewFeaturesMutation>>>;
 };
 
-export type ServicePhilosophyMutation = {
-  label?: InputMaybe<Scalars['String']['input']>;
-  quote?: InputMaybe<Scalars['String']['input']>;
-  highlightedPhrase?: InputMaybe<Scalars['String']['input']>;
-  authorName?: InputMaybe<Scalars['String']['input']>;
-  authorTitle?: InputMaybe<Scalars['String']['input']>;
-  authorImage?: InputMaybe<Scalars['String']['input']>;
-  buildingImage?: InputMaybe<Scalars['String']['input']>;
-  overlayText?: InputMaybe<Scalars['String']['input']>;
+export type SolutionsSectorsItemsMutation = {
+  name?: InputMaybe<Scalars['String']['input']>;
+  icon?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ServiceConsultationMutation = {
+export type SolutionsSectorsMutation = {
   heading?: InputMaybe<Scalars['String']['input']>;
-  headingHighlight?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  phone?: InputMaybe<Scalars['String']['input']>;
-  email?: InputMaybe<Scalars['String']['input']>;
-  submitButton?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<SolutionsSectorsItemsMutation>>>;
 };
 
-export type ServiceMutation = {
-  hero?: InputMaybe<ServiceHeroMutation>;
-  metrics?: InputMaybe<Array<InputMaybe<ServiceMetricsMutation>>>;
-  competencies?: InputMaybe<ServiceCompetenciesMutation>;
-  philosophy?: InputMaybe<ServicePhilosophyMutation>;
-  consultation?: InputMaybe<ServiceConsultationMutation>;
+export type SolutionsFirstAidCoursesMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  duration?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type HomePartsFragment = { __typename: 'Home', hero?: { __typename: 'HomeHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, established?: string | null, cornerBox?: string | null } | null, solutions?: { __typename: 'HomeSolutions', heading?: string | null, counter?: string | null, featureImage?: string | null, featureTitle?: string | null, cards?: Array<{ __typename: 'HomeSolutionsCards', label?: string | null, title?: string | null, description?: string | null, icon?: string | null } | null> | null } | null, expertise?: { __typename: 'HomeExpertise', heading?: string | null, description?: string | null, metrics?: Array<{ __typename: 'HomeExpertiseMetrics', value?: string | null, title?: string | null, subtitle?: string | null, highlight?: boolean | null } | null> | null } | null, clientImpact?: { __typename: 'HomeClientImpact', heading?: string | null, caseStudies?: Array<{ __typename: 'HomeClientImpactCaseStudies', type?: string | null, label?: string | null, quote?: string | null, headline?: string | null, author?: string | null, company?: string | null, outcome?: string | null } | null> | null } | null, intelligence?: { __typename: 'HomeIntelligence', heading?: string | null, articles?: Array<{ __typename: 'HomeIntelligenceArticles', category?: string | null, title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, cta?: { __typename: 'HomeCta', heading?: string | null, primaryButton?: string | null, secondaryButton?: string | null } | null };
+export type SolutionsFirstAidMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  courses?: InputMaybe<Array<InputMaybe<SolutionsFirstAidCoursesMutation>>>;
+};
+
+export type SolutionsApproachStepsMutation = {
+  number?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SolutionsApproachMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  steps?: InputMaybe<Array<InputMaybe<SolutionsApproachStepsMutation>>>;
+};
+
+export type SolutionsCtaMutation = {
+  heading?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  buttonText?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SolutionsMutation = {
+  hero?: InputMaybe<SolutionsHeroMutation>;
+  overview?: InputMaybe<SolutionsOverviewMutation>;
+  sectors?: InputMaybe<SolutionsSectorsMutation>;
+  firstAid?: InputMaybe<SolutionsFirstAidMutation>;
+  approach?: InputMaybe<SolutionsApproachMutation>;
+  cta?: InputMaybe<SolutionsCtaMutation>;
+};
+
+export type HomePartsFragment = { __typename: 'Home', hero?: { __typename: 'HomeHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, established?: string | null, cornerBox?: string | null } | null, credentials?: { __typename: 'HomeCredentials', heading?: string | null, lines?: Array<string | null> | null, sectorsLabel?: string | null, sectors?: Array<string | null> | null } | null, solutions?: { __typename: 'HomeSolutions', heading?: string | null, counter?: string | null, featureImage?: string | null, featureTitle?: string | null, cards?: Array<{ __typename: 'HomeSolutionsCards', label?: string | null, title?: string | null, description?: string | null, icon?: string | null, slug?: string | null } | null> | null } | null, expertise?: { __typename: 'HomeExpertise', heading?: string | null, description?: string | null, metrics?: Array<{ __typename: 'HomeExpertiseMetrics', value?: string | null, title?: string | null, subtitle?: string | null, highlight?: boolean | null } | null> | null } | null, clientImpact?: { __typename: 'HomeClientImpact', enabled?: boolean | null, heading?: string | null, caseStudies?: Array<{ __typename: 'HomeClientImpactCaseStudies', type?: string | null, label?: string | null, quote?: string | null, headline?: string | null, author?: string | null, company?: string | null, outcome?: string | null } | null> | null } | null, intelligence?: { __typename: 'HomeIntelligence', heading?: string | null, articles?: Array<{ __typename: 'HomeIntelligenceArticles', category?: string | null, title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, cta?: { __typename: 'HomeCta', heading?: string | null, primaryButton?: string | null, secondaryButton?: string | null } | null };
 
 export type ConsultationPartsFragment = { __typename: 'Consultation', hero?: { __typename: 'ConsultationHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, cornerIcon?: string | null, cornerText?: string | null } | null, form?: { __typename: 'ConsultationForm', heading?: string | null, description?: string | null, submitButton?: string | null } | null, imagery?: { __typename: 'ConsultationImagery', heroImage?: string | null, decorativeLabel?: string | null } | null, offices?: { __typename: 'ConsultationOffices', primary?: { __typename: 'ConsultationOfficesPrimary', label?: string | null, address?: string | null, phone?: string | null } | null } | null, metrics?: Array<{ __typename: 'ConsultationMetrics', value?: string | null, label?: string | null, highlight?: boolean | null } | null> | null };
 
-export type InsightsPartsFragment = { __typename: 'Insights', filters?: Array<string | null> | null, hero?: { __typename: 'InsightsHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null } | null, featured?: { __typename: 'InsightsFeatured', badge?: string | null, category?: string | null, readTime?: string | null, title?: string | null, description?: string | null, linkText?: string | null, image?: string | null } | null, gridArticles?: Array<{ __typename: 'InsightsGridArticles', category?: string | null, date?: string | null, title?: string | null, image?: string | null } | null> | null, newsletter?: { __typename: 'InsightsNewsletter', titleLine1?: string | null, titleLine2?: string | null, description?: string | null, buttonText?: string | null } | null };
-
-export type ServicePartsFragment = { __typename: 'Service', hero?: { __typename: 'ServiceHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, backgroundImage?: string | null } | null, metrics?: Array<{ __typename: 'ServiceMetrics', label?: string | null, value?: string | null } | null> | null, competencies?: { __typename: 'ServiceCompetencies', heading?: string | null, description?: string | null, matrixLabel?: string | null, cards?: Array<{ __typename: 'ServiceCompetenciesCards', icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, philosophy?: { __typename: 'ServicePhilosophy', label?: string | null, quote?: string | null, highlightedPhrase?: string | null, authorName?: string | null, authorTitle?: string | null, authorImage?: string | null, buildingImage?: string | null, overlayText?: string | null } | null, consultation?: { __typename: 'ServiceConsultation', heading?: string | null, headingHighlight?: string | null, description?: string | null, phone?: string | null, email?: string | null, submitButton?: string | null } | null };
+export type SolutionsPartsFragment = { __typename: 'Solutions', hero?: { __typename: 'SolutionsHero', badge?: string | null, title?: string | null, subtitle?: string | null, description?: string | null } | null, overview?: { __typename: 'SolutionsOverview', heading?: string | null, description?: string | null, features?: Array<{ __typename: 'SolutionsOverviewFeatures', icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, sectors?: { __typename: 'SolutionsSectors', heading?: string | null, description?: string | null, items?: Array<{ __typename: 'SolutionsSectorsItems', name?: string | null, icon?: string | null } | null> | null } | null, firstAid?: { __typename: 'SolutionsFirstAid', heading?: string | null, description?: string | null, courses?: Array<{ __typename: 'SolutionsFirstAidCourses', title?: string | null, duration?: string | null } | null> | null } | null, approach?: { __typename: 'SolutionsApproach', heading?: string | null, steps?: Array<{ __typename: 'SolutionsApproachSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'SolutionsCta', heading?: string | null, description?: string | null, buttonText?: string | null } | null };
 
 export type HomeQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'HomeHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, established?: string | null, cornerBox?: string | null } | null, solutions?: { __typename: 'HomeSolutions', heading?: string | null, counter?: string | null, featureImage?: string | null, featureTitle?: string | null, cards?: Array<{ __typename: 'HomeSolutionsCards', label?: string | null, title?: string | null, description?: string | null, icon?: string | null } | null> | null } | null, expertise?: { __typename: 'HomeExpertise', heading?: string | null, description?: string | null, metrics?: Array<{ __typename: 'HomeExpertiseMetrics', value?: string | null, title?: string | null, subtitle?: string | null, highlight?: boolean | null } | null> | null } | null, clientImpact?: { __typename: 'HomeClientImpact', heading?: string | null, caseStudies?: Array<{ __typename: 'HomeClientImpactCaseStudies', type?: string | null, label?: string | null, quote?: string | null, headline?: string | null, author?: string | null, company?: string | null, outcome?: string | null } | null> | null } | null, intelligence?: { __typename: 'HomeIntelligence', heading?: string | null, articles?: Array<{ __typename: 'HomeIntelligenceArticles', category?: string | null, title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, cta?: { __typename: 'HomeCta', heading?: string | null, primaryButton?: string | null, secondaryButton?: string | null } | null } };
+export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'HomeHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, established?: string | null, cornerBox?: string | null } | null, credentials?: { __typename: 'HomeCredentials', heading?: string | null, lines?: Array<string | null> | null, sectorsLabel?: string | null, sectors?: Array<string | null> | null } | null, solutions?: { __typename: 'HomeSolutions', heading?: string | null, counter?: string | null, featureImage?: string | null, featureTitle?: string | null, cards?: Array<{ __typename: 'HomeSolutionsCards', label?: string | null, title?: string | null, description?: string | null, icon?: string | null, slug?: string | null } | null> | null } | null, expertise?: { __typename: 'HomeExpertise', heading?: string | null, description?: string | null, metrics?: Array<{ __typename: 'HomeExpertiseMetrics', value?: string | null, title?: string | null, subtitle?: string | null, highlight?: boolean | null } | null> | null } | null, clientImpact?: { __typename: 'HomeClientImpact', enabled?: boolean | null, heading?: string | null, caseStudies?: Array<{ __typename: 'HomeClientImpactCaseStudies', type?: string | null, label?: string | null, quote?: string | null, headline?: string | null, author?: string | null, company?: string | null, outcome?: string | null } | null> | null } | null, intelligence?: { __typename: 'HomeIntelligence', heading?: string | null, articles?: Array<{ __typename: 'HomeIntelligenceArticles', category?: string | null, title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, cta?: { __typename: 'HomeCta', heading?: string | null, primaryButton?: string | null, secondaryButton?: string | null } | null } };
 
 export type HomeConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1115,7 +1015,7 @@ export type HomeConnectionQueryVariables = Exact<{
 }>;
 
 
-export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'HomeHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, established?: string | null, cornerBox?: string | null } | null, solutions?: { __typename: 'HomeSolutions', heading?: string | null, counter?: string | null, featureImage?: string | null, featureTitle?: string | null, cards?: Array<{ __typename: 'HomeSolutionsCards', label?: string | null, title?: string | null, description?: string | null, icon?: string | null } | null> | null } | null, expertise?: { __typename: 'HomeExpertise', heading?: string | null, description?: string | null, metrics?: Array<{ __typename: 'HomeExpertiseMetrics', value?: string | null, title?: string | null, subtitle?: string | null, highlight?: boolean | null } | null> | null } | null, clientImpact?: { __typename: 'HomeClientImpact', heading?: string | null, caseStudies?: Array<{ __typename: 'HomeClientImpactCaseStudies', type?: string | null, label?: string | null, quote?: string | null, headline?: string | null, author?: string | null, company?: string | null, outcome?: string | null } | null> | null } | null, intelligence?: { __typename: 'HomeIntelligence', heading?: string | null, articles?: Array<{ __typename: 'HomeIntelligenceArticles', category?: string | null, title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, cta?: { __typename: 'HomeCta', heading?: string | null, primaryButton?: string | null, secondaryButton?: string | null } | null } | null } | null> | null } };
+export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'HomeHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, established?: string | null, cornerBox?: string | null } | null, credentials?: { __typename: 'HomeCredentials', heading?: string | null, lines?: Array<string | null> | null, sectorsLabel?: string | null, sectors?: Array<string | null> | null } | null, solutions?: { __typename: 'HomeSolutions', heading?: string | null, counter?: string | null, featureImage?: string | null, featureTitle?: string | null, cards?: Array<{ __typename: 'HomeSolutionsCards', label?: string | null, title?: string | null, description?: string | null, icon?: string | null, slug?: string | null } | null> | null } | null, expertise?: { __typename: 'HomeExpertise', heading?: string | null, description?: string | null, metrics?: Array<{ __typename: 'HomeExpertiseMetrics', value?: string | null, title?: string | null, subtitle?: string | null, highlight?: boolean | null } | null> | null } | null, clientImpact?: { __typename: 'HomeClientImpact', enabled?: boolean | null, heading?: string | null, caseStudies?: Array<{ __typename: 'HomeClientImpactCaseStudies', type?: string | null, label?: string | null, quote?: string | null, headline?: string | null, author?: string | null, company?: string | null, outcome?: string | null } | null> | null } | null, intelligence?: { __typename: 'HomeIntelligence', heading?: string | null, articles?: Array<{ __typename: 'HomeIntelligenceArticles', category?: string | null, title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, cta?: { __typename: 'HomeCta', heading?: string | null, primaryButton?: string | null, secondaryButton?: string | null } | null } | null } | null> | null } };
 
 export type ConsultationQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1136,43 +1036,24 @@ export type ConsultationConnectionQueryVariables = Exact<{
 
 export type ConsultationConnectionQuery = { __typename?: 'Query', consultationConnection: { __typename?: 'ConsultationConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ConsultationConnectionEdges', cursor: string, node?: { __typename: 'Consultation', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'ConsultationHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, cornerIcon?: string | null, cornerText?: string | null } | null, form?: { __typename: 'ConsultationForm', heading?: string | null, description?: string | null, submitButton?: string | null } | null, imagery?: { __typename: 'ConsultationImagery', heroImage?: string | null, decorativeLabel?: string | null } | null, offices?: { __typename: 'ConsultationOffices', primary?: { __typename: 'ConsultationOfficesPrimary', label?: string | null, address?: string | null, phone?: string | null } | null } | null, metrics?: Array<{ __typename: 'ConsultationMetrics', value?: string | null, label?: string | null, highlight?: boolean | null } | null> | null } | null } | null> | null } };
 
-export type InsightsQueryVariables = Exact<{
+export type SolutionsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type InsightsQuery = { __typename?: 'Query', insights: { __typename: 'Insights', id: string, filters?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'InsightsHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null } | null, featured?: { __typename: 'InsightsFeatured', badge?: string | null, category?: string | null, readTime?: string | null, title?: string | null, description?: string | null, linkText?: string | null, image?: string | null } | null, gridArticles?: Array<{ __typename: 'InsightsGridArticles', category?: string | null, date?: string | null, title?: string | null, image?: string | null } | null> | null, newsletter?: { __typename: 'InsightsNewsletter', titleLine1?: string | null, titleLine2?: string | null, description?: string | null, buttonText?: string | null } | null } };
+export type SolutionsQuery = { __typename?: 'Query', solutions: { __typename: 'Solutions', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'SolutionsHero', badge?: string | null, title?: string | null, subtitle?: string | null, description?: string | null } | null, overview?: { __typename: 'SolutionsOverview', heading?: string | null, description?: string | null, features?: Array<{ __typename: 'SolutionsOverviewFeatures', icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, sectors?: { __typename: 'SolutionsSectors', heading?: string | null, description?: string | null, items?: Array<{ __typename: 'SolutionsSectorsItems', name?: string | null, icon?: string | null } | null> | null } | null, firstAid?: { __typename: 'SolutionsFirstAid', heading?: string | null, description?: string | null, courses?: Array<{ __typename: 'SolutionsFirstAidCourses', title?: string | null, duration?: string | null } | null> | null } | null, approach?: { __typename: 'SolutionsApproach', heading?: string | null, steps?: Array<{ __typename: 'SolutionsApproachSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'SolutionsCta', heading?: string | null, description?: string | null, buttonText?: string | null } | null } };
 
-export type InsightsConnectionQueryVariables = Exact<{
+export type SolutionsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<InsightsFilter>;
+  filter?: InputMaybe<SolutionsFilter>;
 }>;
 
 
-export type InsightsConnectionQuery = { __typename?: 'Query', insightsConnection: { __typename?: 'InsightsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'InsightsConnectionEdges', cursor: string, node?: { __typename: 'Insights', id: string, filters?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'InsightsHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null } | null, featured?: { __typename: 'InsightsFeatured', badge?: string | null, category?: string | null, readTime?: string | null, title?: string | null, description?: string | null, linkText?: string | null, image?: string | null } | null, gridArticles?: Array<{ __typename: 'InsightsGridArticles', category?: string | null, date?: string | null, title?: string | null, image?: string | null } | null> | null, newsletter?: { __typename: 'InsightsNewsletter', titleLine1?: string | null, titleLine2?: string | null, description?: string | null, buttonText?: string | null } | null } | null } | null> | null } };
-
-export type ServiceQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
-}>;
-
-
-export type ServiceQuery = { __typename?: 'Query', service: { __typename: 'Service', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'ServiceHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, backgroundImage?: string | null } | null, metrics?: Array<{ __typename: 'ServiceMetrics', label?: string | null, value?: string | null } | null> | null, competencies?: { __typename: 'ServiceCompetencies', heading?: string | null, description?: string | null, matrixLabel?: string | null, cards?: Array<{ __typename: 'ServiceCompetenciesCards', icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, philosophy?: { __typename: 'ServicePhilosophy', label?: string | null, quote?: string | null, highlightedPhrase?: string | null, authorName?: string | null, authorTitle?: string | null, authorImage?: string | null, buildingImage?: string | null, overlayText?: string | null } | null, consultation?: { __typename: 'ServiceConsultation', heading?: string | null, headingHighlight?: string | null, description?: string | null, phone?: string | null, email?: string | null, submitButton?: string | null } | null } };
-
-export type ServiceConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<ServiceFilter>;
-}>;
-
-
-export type ServiceConnectionQuery = { __typename?: 'Query', serviceConnection: { __typename?: 'ServiceConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ServiceConnectionEdges', cursor: string, node?: { __typename: 'Service', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'ServiceHero', badge?: string | null, titleLine1?: string | null, titleLine2?: string | null, description?: string | null, backgroundImage?: string | null } | null, metrics?: Array<{ __typename: 'ServiceMetrics', label?: string | null, value?: string | null } | null> | null, competencies?: { __typename: 'ServiceCompetencies', heading?: string | null, description?: string | null, matrixLabel?: string | null, cards?: Array<{ __typename: 'ServiceCompetenciesCards', icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, philosophy?: { __typename: 'ServicePhilosophy', label?: string | null, quote?: string | null, highlightedPhrase?: string | null, authorName?: string | null, authorTitle?: string | null, authorImage?: string | null, buildingImage?: string | null, overlayText?: string | null } | null, consultation?: { __typename: 'ServiceConsultation', heading?: string | null, headingHighlight?: string | null, description?: string | null, phone?: string | null, email?: string | null, submitButton?: string | null } | null } | null } | null> | null } };
+export type SolutionsConnectionQuery = { __typename?: 'Query', solutionsConnection: { __typename?: 'SolutionsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SolutionsConnectionEdges', cursor: string, node?: { __typename: 'Solutions', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'SolutionsHero', badge?: string | null, title?: string | null, subtitle?: string | null, description?: string | null } | null, overview?: { __typename: 'SolutionsOverview', heading?: string | null, description?: string | null, features?: Array<{ __typename: 'SolutionsOverviewFeatures', icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, sectors?: { __typename: 'SolutionsSectors', heading?: string | null, description?: string | null, items?: Array<{ __typename: 'SolutionsSectorsItems', name?: string | null, icon?: string | null } | null> | null } | null, firstAid?: { __typename: 'SolutionsFirstAid', heading?: string | null, description?: string | null, courses?: Array<{ __typename: 'SolutionsFirstAidCourses', title?: string | null, duration?: string | null } | null> | null } | null, approach?: { __typename: 'SolutionsApproach', heading?: string | null, steps?: Array<{ __typename: 'SolutionsApproachSteps', number?: string | null, title?: string | null, description?: string | null } | null> | null } | null, cta?: { __typename: 'SolutionsCta', heading?: string | null, description?: string | null, buttonText?: string | null } | null } | null } | null> | null } };
 
 export const HomePartsFragmentDoc = gql`
     fragment HomeParts on Home {
@@ -1186,6 +1067,13 @@ export const HomePartsFragmentDoc = gql`
     established
     cornerBox
   }
+  credentials {
+    __typename
+    heading
+    lines
+    sectorsLabel
+    sectors
+  }
   solutions {
     __typename
     heading
@@ -1196,6 +1084,7 @@ export const HomePartsFragmentDoc = gql`
       title
       description
       icon
+      slug
     }
     featureImage
     featureTitle
@@ -1214,6 +1103,7 @@ export const HomePartsFragmentDoc = gql`
   }
   clientImpact {
     __typename
+    enabled
     heading
     caseStudies {
       __typename
@@ -1284,90 +1174,62 @@ export const ConsultationPartsFragmentDoc = gql`
   }
 }
     `;
-export const InsightsPartsFragmentDoc = gql`
-    fragment InsightsParts on Insights {
+export const SolutionsPartsFragmentDoc = gql`
+    fragment SolutionsParts on Solutions {
   __typename
   hero {
     __typename
     badge
-    titleLine1
-    titleLine2
-    description
-  }
-  filters
-  featured {
-    __typename
-    badge
-    category
-    readTime
     title
+    subtitle
     description
-    linkText
-    image
   }
-  gridArticles {
-    __typename
-    category
-    date
-    title
-    image
-  }
-  newsletter {
-    __typename
-    titleLine1
-    titleLine2
-    description
-    buttonText
-  }
-}
-    `;
-export const ServicePartsFragmentDoc = gql`
-    fragment ServiceParts on Service {
-  __typename
-  hero {
-    __typename
-    badge
-    titleLine1
-    titleLine2
-    description
-    backgroundImage
-  }
-  metrics {
-    __typename
-    label
-    value
-  }
-  competencies {
+  overview {
     __typename
     heading
     description
-    matrixLabel
-    cards {
+    features {
       __typename
       icon
       title
       description
     }
   }
-  philosophy {
-    __typename
-    label
-    quote
-    highlightedPhrase
-    authorName
-    authorTitle
-    authorImage
-    buildingImage
-    overlayText
-  }
-  consultation {
+  sectors {
     __typename
     heading
-    headingHighlight
     description
-    phone
-    email
-    submitButton
+    items {
+      __typename
+      name
+      icon
+    }
+  }
+  firstAid {
+    __typename
+    heading
+    description
+    courses {
+      __typename
+      title
+      duration
+    }
+  }
+  approach {
+    __typename
+    heading
+    steps {
+      __typename
+      number
+      title
+      description
+    }
+  }
+  cta {
+    __typename
+    heading
+    description
+    buttonText
   }
 }
     `;
@@ -1485,9 +1347,9 @@ export const ConsultationConnectionDocument = gql`
   }
 }
     ${ConsultationPartsFragmentDoc}`;
-export const InsightsDocument = gql`
-    query insights($relativePath: String!) {
-  insights(relativePath: $relativePath) {
+export const SolutionsDocument = gql`
+    query solutions($relativePath: String!) {
+  solutions(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -1500,13 +1362,13 @@ export const InsightsDocument = gql`
       }
       id
     }
-    ...InsightsParts
+    ...SolutionsParts
   }
 }
-    ${InsightsPartsFragmentDoc}`;
-export const InsightsConnectionDocument = gql`
-    query insightsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: InsightsFilter) {
-  insightsConnection(
+    ${SolutionsPartsFragmentDoc}`;
+export const SolutionsConnectionDocument = gql`
+    query solutionsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SolutionsFilter) {
+  solutionsConnection(
     before: $before
     after: $after
     first: $first
@@ -1536,69 +1398,12 @@ export const InsightsConnectionDocument = gql`
           }
           id
         }
-        ...InsightsParts
+        ...SolutionsParts
       }
     }
   }
 }
-    ${InsightsPartsFragmentDoc}`;
-export const ServiceDocument = gql`
-    query service($relativePath: String!) {
-  service(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        hasReferences
-        breadcrumbs
-        path
-        relativePath
-        extension
-      }
-      id
-    }
-    ...ServiceParts
-  }
-}
-    ${ServicePartsFragmentDoc}`;
-export const ServiceConnectionDocument = gql`
-    query serviceConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ServiceFilter) {
-  serviceConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            hasReferences
-            breadcrumbs
-            path
-            relativePath
-            extension
-          }
-          id
-        }
-        ...ServiceParts
-      }
-    }
-  }
-}
-    ${ServicePartsFragmentDoc}`;
+    ${SolutionsPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -1614,17 +1419,11 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
     consultationConnection(variables?: ConsultationConnectionQueryVariables, options?: C): Promise<{data: ConsultationConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ConsultationConnectionQueryVariables, query: string}> {
         return requester<{data: ConsultationConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ConsultationConnectionQueryVariables, query: string}, ConsultationConnectionQueryVariables>(ConsultationConnectionDocument, variables, options);
       },
-    insights(variables: InsightsQueryVariables, options?: C): Promise<{data: InsightsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InsightsQueryVariables, query: string}> {
-        return requester<{data: InsightsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InsightsQueryVariables, query: string}, InsightsQueryVariables>(InsightsDocument, variables, options);
+    solutions(variables: SolutionsQueryVariables, options?: C): Promise<{data: SolutionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SolutionsQueryVariables, query: string}> {
+        return requester<{data: SolutionsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SolutionsQueryVariables, query: string}, SolutionsQueryVariables>(SolutionsDocument, variables, options);
       },
-    insightsConnection(variables?: InsightsConnectionQueryVariables, options?: C): Promise<{data: InsightsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InsightsConnectionQueryVariables, query: string}> {
-        return requester<{data: InsightsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: InsightsConnectionQueryVariables, query: string}, InsightsConnectionQueryVariables>(InsightsConnectionDocument, variables, options);
-      },
-    service(variables: ServiceQueryVariables, options?: C): Promise<{data: ServiceQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ServiceQueryVariables, query: string}> {
-        return requester<{data: ServiceQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ServiceQueryVariables, query: string}, ServiceQueryVariables>(ServiceDocument, variables, options);
-      },
-    serviceConnection(variables?: ServiceConnectionQueryVariables, options?: C): Promise<{data: ServiceConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ServiceConnectionQueryVariables, query: string}> {
-        return requester<{data: ServiceConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ServiceConnectionQueryVariables, query: string}, ServiceConnectionQueryVariables>(ServiceConnectionDocument, variables, options);
+    solutionsConnection(variables?: SolutionsConnectionQueryVariables, options?: C): Promise<{data: SolutionsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SolutionsConnectionQueryVariables, query: string}> {
+        return requester<{data: SolutionsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SolutionsConnectionQueryVariables, query: string}, SolutionsConnectionQueryVariables>(SolutionsConnectionDocument, variables, options);
       }
     };
   }

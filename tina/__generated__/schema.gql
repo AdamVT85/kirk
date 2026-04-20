@@ -58,17 +58,14 @@ type Query {
   homeConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: HomeFilter): HomeConnection!
   consultation(relativePath: String): Consultation!
   consultationConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ConsultationFilter): ConsultationConnection!
-  insights(relativePath: String): Insights!
-  insightsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: InsightsFilter): InsightsConnection!
-  service(relativePath: String): Service!
-  serviceConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ServiceFilter): ServiceConnection!
+  solutions(relativePath: String): Solutions!
+  solutionsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SolutionsFilter): SolutionsConnection!
 }
 
 input DocumentFilter {
   home: HomeFilter
   consultation: ConsultationFilter
-  insights: InsightsFilter
-  service: ServiceFilter
+  solutions: SolutionsFilter
 }
 
 type DocumentConnectionEdges {
@@ -94,7 +91,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Home | Consultation | Insights | Service | Folder
+union DocumentNode = Home | Consultation | Solutions | Folder
 
 type HomeHero {
   badge: String
@@ -105,11 +102,19 @@ type HomeHero {
   cornerBox: String
 }
 
+type HomeCredentials {
+  heading: String
+  lines: [String]
+  sectorsLabel: String
+  sectors: [String]
+}
+
 type HomeSolutionsCards {
   label: String
   title: String
   description: String
   icon: String
+  slug: String
 }
 
 type HomeSolutions {
@@ -144,6 +149,7 @@ type HomeClientImpactCaseStudies {
 }
 
 type HomeClientImpact {
+  enabled: Boolean
   heading: String
   caseStudies: [HomeClientImpactCaseStudies]
 }
@@ -168,6 +174,7 @@ type HomeCta {
 
 type Home implements Node & Document {
   hero: HomeHero
+  credentials: HomeCredentials
   solutions: HomeSolutions
   expertise: HomeExpertise
   clientImpact: HomeClientImpact
@@ -194,11 +201,19 @@ input HomeHeroFilter {
   cornerBox: StringFilter
 }
 
+input HomeCredentialsFilter {
+  heading: StringFilter
+  lines: StringFilter
+  sectorsLabel: StringFilter
+  sectors: StringFilter
+}
+
 input HomeSolutionsCardsFilter {
   label: StringFilter
   title: StringFilter
   description: StringFilter
   icon: StringFilter
+  slug: StringFilter
 }
 
 input ImageFilter {
@@ -245,6 +260,7 @@ input HomeClientImpactCaseStudiesFilter {
 }
 
 input HomeClientImpactFilter {
+  enabled: BooleanFilter
   heading: StringFilter
   caseStudies: HomeClientImpactCaseStudiesFilter
 }
@@ -269,6 +285,7 @@ input HomeCtaFilter {
 
 input HomeFilter {
   hero: HomeHeroFilter
+  credentials: HomeCredentialsFilter
   solutions: HomeSolutionsFilter
   expertise: HomeExpertiseFilter
   clientImpact: HomeClientImpactFilter
@@ -387,218 +404,152 @@ type ConsultationConnection implements Connection {
   edges: [ConsultationConnectionEdges]
 }
 
-type InsightsHero {
+type SolutionsHero {
   badge: String
-  titleLine1: String
-  titleLine2: String
-  description: String
-}
-
-type InsightsFeatured {
-  badge: String
-  category: String
-  readTime: String
   title: String
+  subtitle: String
   description: String
-  linkText: String
-  image: String
 }
 
-type InsightsGridArticles {
-  category: String
-  date: String
-  title: String
-  image: String
-}
-
-type InsightsNewsletter {
-  titleLine1: String
-  titleLine2: String
-  description: String
-  buttonText: String
-}
-
-type Insights implements Node & Document {
-  hero: InsightsHero
-  filters: [String]
-  featured: InsightsFeatured
-  gridArticles: [InsightsGridArticles]
-  newsletter: InsightsNewsletter
-  id: ID!
-  _sys: SystemInfo!
-  _values: JSON!
-}
-
-input InsightsHeroFilter {
-  badge: StringFilter
-  titleLine1: StringFilter
-  titleLine2: StringFilter
-  description: StringFilter
-}
-
-input InsightsFeaturedFilter {
-  badge: StringFilter
-  category: StringFilter
-  readTime: StringFilter
-  title: StringFilter
-  description: StringFilter
-  linkText: StringFilter
-  image: ImageFilter
-}
-
-input InsightsGridArticlesFilter {
-  category: StringFilter
-  date: StringFilter
-  title: StringFilter
-  image: ImageFilter
-}
-
-input InsightsNewsletterFilter {
-  titleLine1: StringFilter
-  titleLine2: StringFilter
-  description: StringFilter
-  buttonText: StringFilter
-}
-
-input InsightsFilter {
-  hero: InsightsHeroFilter
-  filters: StringFilter
-  featured: InsightsFeaturedFilter
-  gridArticles: InsightsGridArticlesFilter
-  newsletter: InsightsNewsletterFilter
-}
-
-type InsightsConnectionEdges {
-  cursor: String!
-  node: Insights
-}
-
-type InsightsConnection implements Connection {
-  pageInfo: PageInfo!
-  totalCount: Float!
-  edges: [InsightsConnectionEdges]
-}
-
-type ServiceHero {
-  badge: String
-  titleLine1: String
-  titleLine2: String
-  description: String
-  backgroundImage: String
-}
-
-type ServiceMetrics {
-  label: String
-  value: String
-}
-
-type ServiceCompetenciesCards {
+type SolutionsOverviewFeatures {
   icon: String
   title: String
   description: String
 }
 
-type ServiceCompetencies {
+type SolutionsOverview {
   heading: String
   description: String
-  matrixLabel: String
-  cards: [ServiceCompetenciesCards]
+  features: [SolutionsOverviewFeatures]
 }
 
-type ServicePhilosophy {
-  label: String
-  quote: String
-  highlightedPhrase: String
-  authorName: String
-  authorTitle: String
-  authorImage: String
-  buildingImage: String
-  overlayText: String
+type SolutionsSectorsItems {
+  name: String
+  icon: String
 }
 
-type ServiceConsultation {
+type SolutionsSectors {
   heading: String
-  headingHighlight: String
   description: String
-  phone: String
-  email: String
-  submitButton: String
+  items: [SolutionsSectorsItems]
 }
 
-type Service implements Node & Document {
-  hero: ServiceHero
-  metrics: [ServiceMetrics]
-  competencies: ServiceCompetencies
-  philosophy: ServicePhilosophy
-  consultation: ServiceConsultation
+type SolutionsFirstAidCourses {
+  title: String
+  duration: String
+}
+
+type SolutionsFirstAid {
+  heading: String
+  description: String
+  courses: [SolutionsFirstAidCourses]
+}
+
+type SolutionsApproachSteps {
+  number: String
+  title: String
+  description: String
+}
+
+type SolutionsApproach {
+  heading: String
+  steps: [SolutionsApproachSteps]
+}
+
+type SolutionsCta {
+  heading: String
+  description: String
+  buttonText: String
+}
+
+type Solutions implements Node & Document {
+  hero: SolutionsHero
+  overview: SolutionsOverview
+  sectors: SolutionsSectors
+  firstAid: SolutionsFirstAid
+  approach: SolutionsApproach
+  cta: SolutionsCta
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
 }
 
-input ServiceHeroFilter {
+input SolutionsHeroFilter {
   badge: StringFilter
-  titleLine1: StringFilter
-  titleLine2: StringFilter
+  title: StringFilter
+  subtitle: StringFilter
   description: StringFilter
-  backgroundImage: ImageFilter
 }
 
-input ServiceMetricsFilter {
-  label: StringFilter
-  value: StringFilter
-}
-
-input ServiceCompetenciesCardsFilter {
+input SolutionsOverviewFeaturesFilter {
   icon: StringFilter
   title: StringFilter
   description: StringFilter
 }
 
-input ServiceCompetenciesFilter {
+input SolutionsOverviewFilter {
   heading: StringFilter
   description: StringFilter
-  matrixLabel: StringFilter
-  cards: ServiceCompetenciesCardsFilter
+  features: SolutionsOverviewFeaturesFilter
 }
 
-input ServicePhilosophyFilter {
-  label: StringFilter
-  quote: StringFilter
-  highlightedPhrase: StringFilter
-  authorName: StringFilter
-  authorTitle: StringFilter
-  authorImage: ImageFilter
-  buildingImage: ImageFilter
-  overlayText: StringFilter
+input SolutionsSectorsItemsFilter {
+  name: StringFilter
+  icon: StringFilter
 }
 
-input ServiceConsultationFilter {
+input SolutionsSectorsFilter {
   heading: StringFilter
-  headingHighlight: StringFilter
   description: StringFilter
-  phone: StringFilter
-  email: StringFilter
-  submitButton: StringFilter
+  items: SolutionsSectorsItemsFilter
 }
 
-input ServiceFilter {
-  hero: ServiceHeroFilter
-  metrics: ServiceMetricsFilter
-  competencies: ServiceCompetenciesFilter
-  philosophy: ServicePhilosophyFilter
-  consultation: ServiceConsultationFilter
+input SolutionsFirstAidCoursesFilter {
+  title: StringFilter
+  duration: StringFilter
 }
 
-type ServiceConnectionEdges {
+input SolutionsFirstAidFilter {
+  heading: StringFilter
+  description: StringFilter
+  courses: SolutionsFirstAidCoursesFilter
+}
+
+input SolutionsApproachStepsFilter {
+  number: StringFilter
+  title: StringFilter
+  description: StringFilter
+}
+
+input SolutionsApproachFilter {
+  heading: StringFilter
+  steps: SolutionsApproachStepsFilter
+}
+
+input SolutionsCtaFilter {
+  heading: StringFilter
+  description: StringFilter
+  buttonText: StringFilter
+}
+
+input SolutionsFilter {
+  hero: SolutionsHeroFilter
+  overview: SolutionsOverviewFilter
+  sectors: SolutionsSectorsFilter
+  firstAid: SolutionsFirstAidFilter
+  approach: SolutionsApproachFilter
+  cta: SolutionsCtaFilter
+}
+
+type SolutionsConnectionEdges {
   cursor: String!
-  node: Service
+  node: Solutions
 }
 
-type ServiceConnection implements Connection {
+type SolutionsConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
-  edges: [ServiceConnectionEdges]
+  edges: [SolutionsConnectionEdges]
 }
 
 type Mutation {
@@ -611,25 +562,21 @@ type Mutation {
   createHome(relativePath: String!, params: HomeMutation!): Home!
   updateConsultation(relativePath: String!, params: ConsultationMutation!): Consultation!
   createConsultation(relativePath: String!, params: ConsultationMutation!): Consultation!
-  updateInsights(relativePath: String!, params: InsightsMutation!): Insights!
-  createInsights(relativePath: String!, params: InsightsMutation!): Insights!
-  updateService(relativePath: String!, params: ServiceMutation!): Service!
-  createService(relativePath: String!, params: ServiceMutation!): Service!
+  updateSolutions(relativePath: String!, params: SolutionsMutation!): Solutions!
+  createSolutions(relativePath: String!, params: SolutionsMutation!): Solutions!
 }
 
 input DocumentUpdateMutation {
   home: HomeMutation
   consultation: ConsultationMutation
-  insights: InsightsMutation
-  service: ServiceMutation
+  solutions: SolutionsMutation
   relativePath: String
 }
 
 input DocumentMutation {
   home: HomeMutation
   consultation: ConsultationMutation
-  insights: InsightsMutation
-  service: ServiceMutation
+  solutions: SolutionsMutation
 }
 
 input HomeHeroMutation {
@@ -641,11 +588,19 @@ input HomeHeroMutation {
   cornerBox: String
 }
 
+input HomeCredentialsMutation {
+  heading: String
+  lines: [String]
+  sectorsLabel: String
+  sectors: [String]
+}
+
 input HomeSolutionsCardsMutation {
   label: String
   title: String
   description: String
   icon: String
+  slug: String
 }
 
 input HomeSolutionsMutation {
@@ -680,6 +635,7 @@ input HomeClientImpactCaseStudiesMutation {
 }
 
 input HomeClientImpactMutation {
+  enabled: Boolean
   heading: String
   caseStudies: [HomeClientImpactCaseStudiesMutation]
 }
@@ -704,6 +660,7 @@ input HomeCtaMutation {
 
 input HomeMutation {
   hero: HomeHeroMutation
+  credentials: HomeCredentialsMutation
   solutions: HomeSolutionsMutation
   expertise: HomeExpertiseMutation
   clientImpact: HomeClientImpactMutation
@@ -754,97 +711,71 @@ input ConsultationMutation {
   metrics: [ConsultationMetricsMutation]
 }
 
-input InsightsHeroMutation {
+input SolutionsHeroMutation {
   badge: String
-  titleLine1: String
-  titleLine2: String
-  description: String
-}
-
-input InsightsFeaturedMutation {
-  badge: String
-  category: String
-  readTime: String
   title: String
+  subtitle: String
   description: String
-  linkText: String
-  image: String
 }
 
-input InsightsGridArticlesMutation {
-  category: String
-  date: String
-  title: String
-  image: String
-}
-
-input InsightsNewsletterMutation {
-  titleLine1: String
-  titleLine2: String
-  description: String
-  buttonText: String
-}
-
-input InsightsMutation {
-  hero: InsightsHeroMutation
-  filters: [String]
-  featured: InsightsFeaturedMutation
-  gridArticles: [InsightsGridArticlesMutation]
-  newsletter: InsightsNewsletterMutation
-}
-
-input ServiceHeroMutation {
-  badge: String
-  titleLine1: String
-  titleLine2: String
-  description: String
-  backgroundImage: String
-}
-
-input ServiceMetricsMutation {
-  label: String
-  value: String
-}
-
-input ServiceCompetenciesCardsMutation {
+input SolutionsOverviewFeaturesMutation {
   icon: String
   title: String
   description: String
 }
 
-input ServiceCompetenciesMutation {
+input SolutionsOverviewMutation {
   heading: String
   description: String
-  matrixLabel: String
-  cards: [ServiceCompetenciesCardsMutation]
+  features: [SolutionsOverviewFeaturesMutation]
 }
 
-input ServicePhilosophyMutation {
-  label: String
-  quote: String
-  highlightedPhrase: String
-  authorName: String
-  authorTitle: String
-  authorImage: String
-  buildingImage: String
-  overlayText: String
+input SolutionsSectorsItemsMutation {
+  name: String
+  icon: String
 }
 
-input ServiceConsultationMutation {
+input SolutionsSectorsMutation {
   heading: String
-  headingHighlight: String
   description: String
-  phone: String
-  email: String
-  submitButton: String
+  items: [SolutionsSectorsItemsMutation]
 }
 
-input ServiceMutation {
-  hero: ServiceHeroMutation
-  metrics: [ServiceMetricsMutation]
-  competencies: ServiceCompetenciesMutation
-  philosophy: ServicePhilosophyMutation
-  consultation: ServiceConsultationMutation
+input SolutionsFirstAidCoursesMutation {
+  title: String
+  duration: String
+}
+
+input SolutionsFirstAidMutation {
+  heading: String
+  description: String
+  courses: [SolutionsFirstAidCoursesMutation]
+}
+
+input SolutionsApproachStepsMutation {
+  number: String
+  title: String
+  description: String
+}
+
+input SolutionsApproachMutation {
+  heading: String
+  steps: [SolutionsApproachStepsMutation]
+}
+
+input SolutionsCtaMutation {
+  heading: String
+  description: String
+  buttonText: String
+}
+
+input SolutionsMutation {
+  hero: SolutionsHeroMutation
+  overview: SolutionsOverviewMutation
+  sectors: SolutionsSectorsMutation
+  firstAid: SolutionsFirstAidMutation
+  approach: SolutionsApproachMutation
+  cta: SolutionsCtaMutation
 }
 
 schema {

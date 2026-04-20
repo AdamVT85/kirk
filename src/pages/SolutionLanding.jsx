@@ -21,6 +21,30 @@ function useSolutionContent(slug) {
   return content;
 }
 
+function CourseChipsInline({ categories }) {
+  const sorted = [...categories].sort((a, b) => a.courses.length - b.courses.length);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+      {sorted.map((category, i) => (
+        <div key={i} className={category.courses.length >= 4 ? 'md:col-span-2' : ''}>
+          <a href={category.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mb-4 group">
+            <span className="material-symbols-outlined text-primary text-lg">{category.icon}</span>
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] group-hover:text-primary transition-colors">{category.name}</h3>
+          </a>
+          <div className="flex flex-wrap gap-2">
+            {category.courses.map((course, j) => (
+              <a key={j} href={course.url} target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-outline-variant/30 text-xs text-on-surface-variant hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-200">
+                {course.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function SolutionLanding() {
   const { slug } = useParams();
   const content = useSolutionContent(slug);
@@ -57,19 +81,22 @@ export default function SolutionLanding() {
       {/* Overview & Features */}
       <section className="py-32 px-8 md:px-16 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20 max-w-3xl">
+          <div className="mb-16 max-w-3xl">
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.overview.heading}</h2>
             <p className="text-on-surface-variant text-lg leading-relaxed font-light">{content.overview.description}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant/20">
-            {content.overview.features.map((feature, i) => (
-              <div key={i} className={`group p-12 ${i < content.overview.features.length - 1 ? 'border-b md:border-b-0 md:border-r border-outline-variant/20' : ''} hover:bg-surface-container-high transition-colors duration-500`}>
-                <span className="material-symbols-outlined text-primary text-4xl mb-8 block">{feature.icon}</span>
-                <h3 className="text-xl font-bold uppercase tracking-tight mb-4">{feature.title}</h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed opacity-70 group-hover:opacity-100 transition-opacity">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+          {!content.courseCategories && content.overview.features && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant/20">
+              {content.overview.features.map((feature, i) => (
+                <div key={i} className={`group p-12 ${i < content.overview.features.length - 1 ? 'border-b md:border-b-0 md:border-r border-outline-variant/20' : ''} hover:bg-surface-container-high transition-colors duration-500`}>
+                  <span className="material-symbols-outlined text-primary text-4xl mb-8 block">{feature.icon}</span>
+                  <h3 className="text-xl font-bold uppercase tracking-tight mb-4">{feature.title}</h3>
+                  <p className="text-on-surface-variant text-sm leading-relaxed opacity-70 group-hover:opacity-100 transition-opacity">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {content.courseCategories && <CourseChipsInline categories={content.courseCategories.categories} />}
         </div>
       </section>
 
@@ -93,8 +120,8 @@ export default function SolutionLanding() {
         </section>
       )}
 
-      {/* First Aid (optional) */}
-      {content.firstAid && (
+      {/* First Aid (optional — hidden when courseCategories present) */}
+      {content.firstAid && !content.courseCategories && (
         <section className="py-32 px-8 md:px-16 bg-surface-container-lowest">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16 max-w-3xl">

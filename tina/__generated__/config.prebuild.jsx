@@ -38,6 +38,17 @@ var config_default = defineConfig({
           },
           {
             type: "object",
+            name: "credentials",
+            label: "Credentials Strip",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "lines", label: "Credential Lines", list: true, ui: { component: "textarea" } },
+              { type: "string", name: "sectorsLabel", label: "Sectors Label" },
+              { type: "string", name: "sectors", label: "Sectors", list: true }
+            ]
+          },
+          {
+            type: "object",
             name: "solutions",
             label: "Strategic Solutions",
             fields: [
@@ -52,7 +63,8 @@ var config_default = defineConfig({
                   { type: "string", name: "label", label: "Label" },
                   { type: "string", name: "title", label: "Title" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-                  { type: "string", name: "icon", label: "Material Icon Name" }
+                  { type: "string", name: "icon", label: "Material Icon Name" },
+                  { type: "string", name: "slug", label: "URL Slug" }
                 ]
               },
               { type: "image", name: "featureImage", label: "Feature Image" },
@@ -85,6 +97,7 @@ var config_default = defineConfig({
             name: "clientImpact",
             label: "Client Impact",
             fields: [
+              { type: "boolean", name: "enabled", label: "Show Testimonials Section" },
               { type: "string", name: "heading", label: "Section Heading" },
               {
                 type: "object",
@@ -203,9 +216,9 @@ var config_default = defineConfig({
         ]
       },
       {
-        name: "insights",
-        label: "Insights Page",
-        path: "content/insights",
+        name: "solutions",
+        label: "Solution Landing Pages",
+        path: "content/solutions",
         format: "json",
         fields: [
           {
@@ -214,94 +227,25 @@ var config_default = defineConfig({
             label: "Hero Section",
             fields: [
               { type: "string", name: "badge", label: "Badge" },
-              { type: "string", name: "titleLine1", label: "Title Line 1" },
-              { type: "string", name: "titleLine2", label: "Title Line 2" },
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "subtitle", label: "Subtitle" },
               { type: "string", name: "description", label: "Description", ui: { component: "textarea" } }
             ]
           },
-          { type: "string", name: "filters", label: "Filter Categories", list: true },
           {
             type: "object",
-            name: "featured",
-            label: "Featured Article",
-            fields: [
-              { type: "string", name: "badge", label: "Badge" },
-              { type: "string", name: "category", label: "Category" },
-              { type: "string", name: "readTime", label: "Read Time" },
-              { type: "string", name: "title", label: "Title" },
-              { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-              { type: "string", name: "linkText", label: "Link Text" },
-              { type: "image", name: "image", label: "Image" }
-            ]
-          },
-          {
-            type: "object",
-            name: "gridArticles",
-            label: "Grid Articles",
-            list: true,
-            fields: [
-              { type: "string", name: "category", label: "Category" },
-              { type: "string", name: "date", label: "Date" },
-              { type: "string", name: "title", label: "Title" },
-              { type: "image", name: "image", label: "Image" }
-            ]
-          },
-          {
-            type: "object",
-            name: "newsletter",
-            label: "Newsletter Section",
-            fields: [
-              { type: "string", name: "titleLine1", label: "Title Line 1" },
-              { type: "string", name: "titleLine2", label: "Title Line 2" },
-              { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-              { type: "string", name: "buttonText", label: "Button Text" }
-            ]
-          }
-        ]
-      },
-      {
-        name: "service",
-        label: "Service Page",
-        path: "content/service",
-        format: "json",
-        fields: [
-          {
-            type: "object",
-            name: "hero",
-            label: "Hero Section",
-            fields: [
-              { type: "string", name: "badge", label: "Badge" },
-              { type: "string", name: "titleLine1", label: "Title Line 1" },
-              { type: "string", name: "titleLine2", label: "Title Line 2" },
-              { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-              { type: "image", name: "backgroundImage", label: "Background Image" }
-            ]
-          },
-          {
-            type: "object",
-            name: "metrics",
-            label: "Metrics",
-            list: true,
-            fields: [
-              { type: "string", name: "label", label: "Label" },
-              { type: "string", name: "value", label: "Value" }
-            ]
-          },
-          {
-            type: "object",
-            name: "competencies",
-            label: "Core Competencies",
+            name: "overview",
+            label: "Overview",
             fields: [
               { type: "string", name: "heading", label: "Heading" },
               { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-              { type: "string", name: "matrixLabel", label: "Matrix Label" },
               {
                 type: "object",
-                name: "cards",
-                label: "Competency Cards",
+                name: "features",
+                label: "Features",
                 list: true,
                 fields: [
-                  { type: "string", name: "icon", label: "Icon" },
+                  { type: "string", name: "icon", label: "Material Icon Name" },
                   { type: "string", name: "title", label: "Title" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } }
                 ]
@@ -310,30 +254,69 @@ var config_default = defineConfig({
           },
           {
             type: "object",
-            name: "philosophy",
-            label: "Philosophy / Quote",
+            name: "sectors",
+            label: "Sectors (Optional)",
             fields: [
-              { type: "string", name: "label", label: "Section Label" },
-              { type: "string", name: "quote", label: "Quote", ui: { component: "textarea" } },
-              { type: "string", name: "highlightedPhrase", label: "Highlighted Phrase" },
-              { type: "string", name: "authorName", label: "Author Name" },
-              { type: "string", name: "authorTitle", label: "Author Title" },
-              { type: "image", name: "authorImage", label: "Author Image" },
-              { type: "image", name: "buildingImage", label: "Building Image" },
-              { type: "string", name: "overlayText", label: "Overlay Text" }
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "items",
+                label: "Sector Items",
+                list: true,
+                fields: [
+                  { type: "string", name: "name", label: "Sector Name" },
+                  { type: "string", name: "icon", label: "Material Icon Name" }
+                ]
+              }
             ]
           },
           {
             type: "object",
-            name: "consultation",
-            label: "Consultation Form",
+            name: "firstAid",
+            label: "First Aid Courses (Optional)",
             fields: [
               { type: "string", name: "heading", label: "Heading" },
-              { type: "string", name: "headingHighlight", label: "Heading Highlight" },
               { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-              { type: "string", name: "phone", label: "Phone" },
-              { type: "string", name: "email", label: "Email" },
-              { type: "string", name: "submitButton", label: "Submit Button Text" }
+              {
+                type: "object",
+                name: "courses",
+                label: "Courses",
+                list: true,
+                fields: [
+                  { type: "string", name: "title", label: "Course Title" },
+                  { type: "string", name: "duration", label: "Duration" }
+                ]
+              }
+            ]
+          },
+          {
+            type: "object",
+            name: "approach",
+            label: "Approach",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              {
+                type: "object",
+                name: "steps",
+                label: "Steps",
+                list: true,
+                fields: [
+                  { type: "string", name: "number", label: "Step Number" },
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } }
+                ]
+              }
+            ]
+          },
+          {
+            type: "object",
+            name: "cta",
+            label: "Call to Action",
+            fields: [
+              { type: "string", name: "heading", label: "Heading" },
+              { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
+              { type: "string", name: "buttonText", label: "Button Text" }
             ]
           }
         ]
