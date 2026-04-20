@@ -3,7 +3,7 @@ import content from '../../content/consultation/index.json';
 
 export default function Consultation() {
   return (
-    <main className="pt-24 min-h-screen">
+    <main className="pt-32 min-h-screen">
         {/* Hero Section */}
         <section className="px-8 md:px-16 pt-12 pb-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-l border-outline-variant/30">
@@ -77,7 +77,7 @@ export default function Consultation() {
 
                 {/* Office Details */}
                 <div className="grid grid-cols-2 blueprint-grid border-t border-outline-variant/30">
-                    <div className="p-12 border-r border-outline-variant/30 group hover:bg-surface-container-lowest transition-colors">
+                    <div className="p-12 border-r border-outline-variant/30">
                         <h4 className="text-[0.65rem] uppercase tracking-widest text-primary mb-6">{content.offices.primary.label}</h4>
                         <address className="not-italic text-sm leading-relaxed font-light opacity-80 whitespace-pre-line">
                             {content.offices.primary.address}
@@ -87,7 +87,7 @@ export default function Consultation() {
                             <span className="text-xs font-mono">{content.offices.primary.phone}</span>
                         </div>
                     </div>
-                    <div className="p-12 group hover:bg-surface-container-lowest transition-colors">
+                    <div className="p-12">
                         <h4 className="text-[0.65rem] uppercase tracking-widest text-primary mb-6">{content.offices.global.label}</h4>
                         <div className="space-y-4">
                             {content.offices.global.locations.map((loc, i) => (

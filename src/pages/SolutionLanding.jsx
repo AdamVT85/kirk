@@ -51,14 +51,14 @@ export default function SolutionLanding() {
 
   if (!content) {
     return (
-      <main className="pt-24 min-h-screen flex items-center justify-center">
+      <main className="pt-32 min-h-screen flex items-center justify-center">
         <p className="text-on-surface-variant uppercase tracking-widest text-sm">Loading...</p>
       </main>
     );
   }
 
   return (
-    <main className="pt-24">
+    <main className="pt-32">
       {/* Hero */}
       <section className="relative min-h-[70vh] flex flex-col justify-end px-8 md:px-16 pb-24 blueprint-grid">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
@@ -86,12 +86,12 @@ export default function SolutionLanding() {
             <p className="text-on-surface-variant text-lg leading-relaxed font-light">{content.overview.description}</p>
           </div>
           {!content.courseCategories && content.overview.features && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant/20">
+            <div className="flex flex-wrap justify-center border border-outline-variant/20">
               {content.overview.features.map((feature, i) => (
-                <div key={i} className={`group p-12 ${i < content.overview.features.length - 1 ? 'border-b md:border-b-0 md:border-r border-outline-variant/20' : ''} hover:bg-surface-container-high transition-colors duration-500`}>
+                <div key={i} className="p-12 w-full md:w-1/3 border-b md:border-b-0 md:border-r border-outline-variant/20 last:border-r-0 md:[&:nth-child(3n)]:border-r-0">
                   <span className="material-symbols-outlined text-primary text-4xl mb-8 block">{feature.icon}</span>
                   <h3 className="text-xl font-bold uppercase tracking-tight mb-4">{feature.title}</h3>
-                  <p className="text-on-surface-variant text-sm leading-relaxed opacity-70 group-hover:opacity-100 transition-opacity">{feature.description}</p>
+                  <p className="text-on-surface-variant text-sm leading-relaxed opacity-70">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -108,10 +108,10 @@ export default function SolutionLanding() {
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-6">{content.sectors.heading}</h2>
               <p className="text-on-surface-variant text-lg leading-relaxed font-light">{content.sectors.description}</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-px bg-outline-variant/20">
+            <div className="flex flex-wrap gap-px bg-outline-variant/20">
               {content.sectors.items.map((sector, i) => (
-                <div key={i} className="bg-surface-container-low p-8 min-w-0 flex flex-col items-center text-center gap-4 group hover:bg-surface-container-high transition-colors duration-500">
-                  <span className="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform duration-300">{sector.icon}</span>
+                <div key={i} className="bg-surface-container-low p-8 flex flex-col items-center text-center gap-4 basis-[calc(50%-1px)] md:basis-[calc(33.333%-1px)] lg:flex-1">
+                  <span className="material-symbols-outlined text-primary text-3xl">{sector.icon}</span>
                   <span className="text-[0.7rem] uppercase tracking-[0.2em] font-bold break-words">{sector.name}</span>
                 </div>
               ))}
@@ -130,7 +130,7 @@ export default function SolutionLanding() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-outline-variant/20">
               {content.firstAid.courses.map((course, i) => (
-                <div key={i} className="bg-surface-container-low p-8 group hover:bg-surface-container-high transition-colors duration-500">
+                <div key={i} className="bg-surface-container-low p-8">
                   <span className="material-symbols-outlined text-primary text-3xl mb-4 block">emergency</span>
                   <h3 className="text-sm font-bold uppercase tracking-tight mb-2">{course.title}</h3>
                   <span className="text-[0.7rem] uppercase tracking-[0.2em] text-on-surface-variant opacity-60">{course.duration}</span>
