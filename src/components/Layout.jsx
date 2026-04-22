@@ -7,7 +7,7 @@ export default function Layout() {
         <div className="flex justify-between items-center px-4 md:px-8 py-4 w-full max-w-none">
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center" aria-label="Kirk & Kirk — Professional Management Consultancy">
-              <img src="/kirk-kirk-logo.jpg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[140px] md:w-[250px] h-auto" />
+              <img src="/kirk-kirk-logo.svg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[140px] md:w-[250px] h-auto" />
             </Link>
           </div>
           <div className="flex items-center gap-4">
@@ -25,7 +25,7 @@ export default function Layout() {
       <footer className="w-full border-t border-[#353535] rounded-none bg-[#0e0e0e]">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 px-12 py-24 w-full">
           <div className="md:col-span-1">
-            <img src="/kirk-kirk-logo.jpg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[350px] max-w-full h-auto mb-8" />
+            <img src="/kirk-kirk-logo.svg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[350px] max-w-full h-auto mb-8" />
             <p className="text-[#e5e2e1]/60 font-light text-sm leading-relaxed max-w-xs">
               Chartered HSEQ and fire safety specialists serving businesses across the UK and Ireland since 2012.
             </p>
