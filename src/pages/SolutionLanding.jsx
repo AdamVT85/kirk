@@ -4,7 +4,8 @@ import { useParams, Link } from 'react-router-dom';
 const solutions = {
   'health-safety-environmental': () => import('../../content/solutions/health-safety-environmental.json'),
   'fire-risk-assessment': () => import('../../content/solutions/fire-risk-assessment.json'),
-  'facilities-project-management': () => import('../../content/solutions/facilities-project-management.json'),
+  'facilities-management': () => import('../../content/solutions/facilities-management.json'),
+  'project-management-principal-designer': () => import('../../content/solutions/project-management-principal-designer.json'),
   'integrated-management-systems': () => import('../../content/solutions/integrated-management-systems.json'),
   'risk-management': () => import('../../content/solutions/risk-management.json'),
   'training-education': () => import('../../content/solutions/training-education.json'),

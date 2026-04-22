@@ -106,11 +106,11 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
-              <div className="md:col-span-8 bg-surface overflow-hidden relative min-h-[400px]">
+              <div className="md:col-span-4 bg-surface overflow-hidden relative min-h-[400px]">
                 <img alt="Modern minimalist architectural structure" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700" src={content.solutions.featureImage} />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
                 <div className="absolute bottom-12 left-12 right-12">
-                  <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
+                  <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
                 </div>
               </div>
             </div>

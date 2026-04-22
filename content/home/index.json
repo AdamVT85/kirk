@@ -42,11 +42,18 @@
         "slug": "health-safety-environmental"
       },
       {
-        "label": "OPERATIONS",
-        "title": "Facilities and Project Management",
-        "description": "A complete, boutique facilities management service — a single point of contact for the daily running of your workplace and for projects from inception to completion.",
-        "icon": "assignment_globe",
-        "slug": "facilities-project-management"
+        "label": "Workplace",
+        "title": "Facilities Management",
+        "description": "A boutique facilities management service — a single point of contact for the daily running of your workplace, so you can focus on your business.",
+        "icon": "home_repair_service",
+        "slug": "facilities-management"
+      },
+      {
+        "label": "Construction",
+        "title": "Project Management & Principal Designer Support",
+        "description": "End-to-end project management for new premises and refurbishments, with CDM 2015 Principal Designer duties and pre-construction H&S coordination built in.",
+        "icon": "architecture",
+        "slug": "project-management-principal-designer"
       },
       {
         "label": "Management",

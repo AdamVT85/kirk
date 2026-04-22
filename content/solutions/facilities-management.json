@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "Workplace Operations",
+    "title": "Facilities Management",
+    "subtitle": "A single point of contact for the daily running of your workplace.",
+    "description": "We provide the facilities management support you need to keep your premises running smoothly — so you can focus on your business. A complete, boutique service tailored to the image you want to project and the way your people work."
+  },
+  "overview": {
+    "heading": "Boutique Service, Complete Coverage",
+    "description": "Every workplace is different. As a boutique-sized partner we are more flexible and more responsive than larger providers, while still giving your building and your people the individual, hands-on attention they deserve.",
+    "features": [
+      {
+        "icon": "home_repair_service",
+        "title": "Hard FM & Maintenance",
+        "description": "Planned and reactive maintenance across mechanical, electrical and building fabric. Statutory inspections, servicing and compliance evidence kept in one place."
+      },
+      {
+        "icon": "cleaning_services",
+        "title": "Soft FM Services",
+        "description": "Cleaning, security, waste, landscaping and front-of-house arranged through a single supplier relationship — with SLAs and performance reporting you can actually read."
+      },
+      {
+        "icon": "verified",
+        "title": "Statutory Compliance",
+        "description": "Fire safety, water hygiene, asbestos, PAT, lifts and pressure systems — a structured compliance calendar with records ready for insurers, auditors or landlords."
+      },
+      {
+        "icon": "handshake",
+        "title": "Supplier & Contract Management",
+        "description": "We select, brief and manage your supply chain — writing specifications, running tenders, holding contractors to their SLAs and challenging cost."
+      },
+      {
+        "icon": "space_dashboard",
+        "title": "Space & Move Planning",
+        "description": "Churn, reconfigurations, desk planning and small works coordinated without disrupting your operation. Practical project work to keep the workplace working."
+      },
+      {
+        "icon": "visibility",
+        "title": "Problem Anticipation",
+        "description": "We look ahead on your behalf — spotting compliance cliffs, lease obligations and end-of-life equipment before they become urgent, expensive problems."
+      }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Audit & Baseline",
+        "description": "We walk the building, review your current contracts, compliance records and supplier performance, and baseline exactly what 'good' looks like for your site."
+      },
+      {
+        "number": "02",
+        "title": "Tailored Service Plan",
+        "description": "We build a service model around your actual needs — hours of operation, risk profile, budget and culture — rather than forcing you into a generic FM package."
+      },
+      {
+        "number": "03",
+        "title": "Day-to-Day Delivery",
+        "description": "One point of contact for everything building-related. Compliance handled quietly, suppliers managed properly, issues triaged before they reach you."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Let's Talk",
+    "description": "Whether you need a full outsourced FM partner or targeted support in specific areas, we'll tailor our service to the way your workplace actually runs.",
+    "buttonText": "Enquire Now"
+  }
+}

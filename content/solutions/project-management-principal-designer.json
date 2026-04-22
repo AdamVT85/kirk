@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "Construction & CDM",
+    "title": "Project Management & Principal Designer Support",
+    "subtitle": "End-to-end project delivery with CDM 2015 coordination built in.",
+    "description": "From new premises to the refurbishment of existing sites, we run your construction projects from inception to completion — and act as Principal Designer, or advise your appointed PD, on pre-construction health & safety. Practical coordination, proportionate documentation, defensible decisions."
+  },
+  "overview": {
+    "heading": "Projects Delivered, CDM Discharged",
+    "description": "Every project is different, and every CDM appointment carries real legal weight. We pair hands-on project management with specialist knowledge of the Construction (Design and Management) Regulations 2015 — so you get a delivery partner who understands both the programme and the paperwork.",
+    "features": [
+      {
+        "icon": "architecture",
+        "title": "Principal Designer (CDM 2015)",
+        "description": "Taking the Principal Designer role on your project — planning, managing, monitoring and coordinating health & safety through the pre-construction phase, and coordinating the design team to design out risk."
+      },
+      {
+        "icon": "engineering",
+        "title": "Principal Designer Support",
+        "description": "Where another party is formally appointed as PD, we provide specialist H&S input, pre-construction information, design risk workshops and competence assurance — filling the capability gap without taking the legal role."
+      },
+      {
+        "icon": "assignment",
+        "title": "Pre-Construction Information",
+        "description": "Production and issue of proportionate, genuinely useful PCI packs — so tenderers price the job correctly and the Principal Contractor inherits a clean baseline for the construction phase plan."
+      },
+      {
+        "icon": "construction",
+        "title": "Project Management",
+        "description": "Full PM service from inception to handover for fit-outs, refurbishments and new premises — scope, budget, programme, stakeholder management and quality, with a single accountable point of contact."
+      },
+      {
+        "icon": "handshake",
+        "title": "Procurement & Tender Support",
+        "description": "Writing specifications, running tenders, evaluating contractors on competence as well as cost, and drafting the right form of contract for the risk profile of the job."
+      },
+      {
+        "icon": "folder_special",
+        "title": "Health & Safety File",
+        "description": "Collating, structuring and handing over a Health & Safety File your future duty holder — and the next project team — will actually be able to use."
+      }
+    ]
+  },
+  "approach": {
+    "heading": "Our Approach",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Brief & Scope",
+        "description": "We start with a thorough understanding of your project — the business reason, the programme drivers, the site constraints, and where the real risks sit for the client under CDM."
+      },
+      {
+        "number": "02",
+        "title": "Coordinate & Control",
+        "description": "Through pre-construction we coordinate the design team to eliminate or reduce risk, issue the PCI, assure competence of appointees, and keep design decisions, programme and budget aligned."
+      },
+      {
+        "number": "03",
+        "title": "Deliver & Hand Over",
+        "description": "Into construction we monitor change against the PD role, support the Principal Contractor, and close the project out with a Health & Safety File and commissioning evidence that stand up to scrutiny."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Start Your Project Right",
+    "description": "Whether you need a Principal Designer appointed, end-to-end project management, or specialist CDM support for your in-house team, we'll scope the right level of involvement for your project.",
+    "buttonText": "Enquire Now"
+  }
+}
