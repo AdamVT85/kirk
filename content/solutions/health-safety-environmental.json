@@ -45,6 +45,11 @@
         "description": "Pre-qualification, onboarding and ongoing performance assurance of your supply chain — ensuring contractors you rely on are competent, insured and compliant before they step on site."
       },
       {
+        "icon": "workspace_premium",
+        "title": "Third-Party Certification Support",
+        "description": "Pre-qualification and renewal support for SSIP schemes — Safe Contractor, CHAS and Construction Line — plus sector accreditations: FORS for fleet operators, RISQS for rail suppliers and Achilles for utilities. We write the responses, gather the evidence and keep your status current between audits."
+      },
+      {
         "icon": "checklist",
         "title": "Auditing & Inspection",
         "description": "First-party internal audits and second-party supplier and contractor audits, plus site-based inspections — structured, evidence-based assurance aligned to ISO 9001, 14001 and 45001 audit criteria."
