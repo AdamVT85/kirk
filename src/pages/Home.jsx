@@ -83,6 +83,20 @@ export default function Home() {
                     </div>
                   </div>
                 )}
+                {content.credentials.clients?.length > 0 && (
+                  <div className="pt-6">
+                    <span className="block text-[0.65rem] uppercase tracking-[0.3em] text-primary mb-4">
+                      {content.credentials.clientsLabel}
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {content.credentials.clients.map((client, i) => (
+                        <span key={i} className="inline-block px-3 py-2 text-xs uppercase tracking-widest border border-outline-variant text-on-surface-variant">
+                          {client}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -106,11 +120,11 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
-              <div className="md:col-span-4 bg-surface overflow-hidden relative min-h-[400px]">
+              <div className="md:col-span-8 bg-surface overflow-hidden relative min-h-[400px]">
                 <img alt="Modern minimalist architectural structure" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700" src={content.solutions.featureImage} />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
                 <div className="absolute bottom-12 left-12 right-12">
-                  <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
+                  <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
                 </div>
               </div>
             </div>

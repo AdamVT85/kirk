@@ -47,6 +47,8 @@ export default defineConfig({
               { type: 'string', name: 'lines', label: 'Credential Lines', list: true, ui: { component: 'textarea' } },
               { type: 'string', name: 'sectorsLabel', label: 'Sectors Label' },
               { type: 'string', name: 'sectors', label: 'Sectors', list: true },
+              { type: 'string', name: 'clientsLabel', label: 'Clients Label' },
+              { type: 'string', name: 'clients', label: 'Previous Clients', list: true },
             ],
           },
           {

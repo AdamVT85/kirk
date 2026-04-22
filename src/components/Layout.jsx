@@ -38,7 +38,6 @@ export default function Layout() {
               <li><Link to="/solutions/facilities-management" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Facilities Management</Link></li>
               <li><Link to="/solutions/project-management-principal-designer" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Project Management & Principal Designer Support</Link></li>
               <li><Link to="/solutions/integrated-management-systems" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Integrated Management Systems</Link></li>
-              <li><Link to="/solutions/risk-management" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Risk Management</Link></li>
               <li><Link to="/solutions/training-education" className="text-[#e5e2e1]/60 hover:text-[#4a8eff] transition-colors duration-200">Training & Education</Link></li>
             </ul>
           </div>

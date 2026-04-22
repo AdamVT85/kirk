@@ -2,40 +2,107 @@
   "hero": {
     "badge": "Safety",
     "title": "Health, Safety & Environmental Compliance",
-    "subtitle": "Ensuring you're covered and minimising risk, no matter your size or type.",
-    "description": "Kirk & Kirk provides tailored health, safety and environmental consultancy to businesses across the UK and Ireland. We are chartered specialists through IOSH, ISEP and CQI, with deep experience in railways (including Network Rail, LUL, DLR and RFLI), RISQS certification support, construction, utilities, engineering and manufacturing."
+    "subtitle": "Comprehensive HSEQ, risk, environmental and sustainability consultancy — covered and compliant, without consuming your business.",
+    "description": "Kirk & Kirk provides tailored health, safety, environmental and sustainability consultancy to businesses across the UK and Ireland. We are chartered specialists through IOSH, ISEP and CQI, with deep experience in railways (including Network Rail, LUL, DLR and RFLI), RISQS certification support, construction, utilities, engineering and manufacturing."
   },
   "overview": {
-    "heading": "Bespoke HSE Consultancy",
-    "description": "Health, safety, and environmental compliance shouldn't consume your business. Our experienced consultants deliver practical, proportionate solutions that protect your people, satisfy your legal obligations, and let you focus on running your operation. Every recommendation is tailored to your sector, your site, and your risk profile.",
+    "heading": "End-to-End HSE, Risk & Sustainability Consultancy",
+    "description": "Health, safety, environmental and sustainability obligations shouldn't consume your business. Our chartered specialists deliver practical, proportionate solutions across the full HSEQ landscape — from day-to-day compliance through enterprise risk, business continuity and carbon reporting to sustainability strategy. Every recommendation is tailored to your sector, your site and your risk profile.",
     "features": [
       {
         "icon": "policy",
-        "title": "Policy & Documentation",
-        "description": "Development of bespoke health and safety policies, risk assessments, method statements, and safe systems of work tailored to your operations."
+        "title": "HSEQ Management",
+        "description": "Development of bespoke health, safety, environmental and quality policies, procedures, plans and manuals — tailored to your operations and kept current as your business evolves."
+      },
+      {
+        "icon": "fact_check",
+        "title": "Risk Assessment & SSOWs",
+        "description": "Task-level risk assessments and Safe Systems of Work for routine and non-routine activities — written for the people doing the job, not just for the file."
+      },
+      {
+        "icon": "shield",
+        "title": "Risk Management",
+        "description": "Enterprise and project-level risk management — identifying, evaluating and controlling operational, financial and strategic risks so you can make confident, defensible decisions."
+      },
+      {
+        "icon": "settings_backup_restore",
+        "title": "Business Continuity & Disaster Recovery",
+        "description": "Business continuity and disaster recovery planning — scenario analysis, recovery time objectives and tested response plans so the unexpected doesn't stop you operating."
+      },
+      {
+        "icon": "construction",
+        "title": "CDM Compliance",
+        "description": "Client, Designer and Principal Designer duties under the Construction (Design and Management) Regulations 2015 — pre-construction information, design risk management and Health & Safety File support."
+      },
+      {
+        "icon": "dangerous",
+        "title": "Asbestos Management",
+        "description": "Duty-to-manage compliance under the Control of Asbestos Regulations 2012 — management surveys, refurbishment/demolition surveys, asbestos registers and written management plans."
+      },
+      {
+        "icon": "handshake",
+        "title": "Supplier & Contractor Assurance",
+        "description": "Pre-qualification, onboarding and ongoing performance assurance of your supply chain — ensuring contractors you rely on are competent, insured and compliant before they step on site."
       },
       {
         "icon": "checklist",
-        "title": "Site Inspections & Audits",
-        "description": "Site-based inspections and second-party management audit services to verify compliance, identify gaps, and drive continuous improvement across your operations."
+        "title": "Auditing & Inspection",
+        "description": "First-party internal audits and second-party supplier and contractor audits, plus site-based inspections — structured, evidence-based assurance aligned to ISO 9001, 14001 and 45001 audit criteria."
+      },
+      {
+        "icon": "report",
+        "title": "Incident Reporting & Investigation",
+        "description": "RIDDOR reporting, root-cause investigation and structured learning from near-misses, injuries and dangerous occurrences — with corrective actions that actually prevent recurrence."
+      },
+      {
+        "icon": "build",
+        "title": "Work Equipment Checks",
+        "description": "PUWER and LOLER inspections across work equipment — ladders, harnesses, lanyards and EET — ensuring gear in service is certified, in date and fit for purpose."
       },
       {
         "icon": "support_agent",
         "title": "Competent Person Service",
         "description": "Retained consultancy providing ongoing access to qualified health and safety advice, fulfilling your legal duty under the Management of Health and Safety at Work Regulations."
+      },
+      {
+        "icon": "eco",
+        "title": "Environmental Consultancy & Assessment",
+        "description": "Environmental assessments, impact studies, compliance audits and permit support — practical advice across waste, emissions, pollution prevention and wider environmental obligations."
+      },
+      {
+        "icon": "co2",
+        "title": "Carbon Footprinting",
+        "description": "Scope 1, 2 and 3 carbon footprinting aligned with the GHG Protocol and ISO 14064 — a defensible baseline to underpin net-zero strategy, reporting and customer disclosures."
+      },
+      {
+        "icon": "bar_chart",
+        "title": "Streamlined Energy & Carbon Reporting (SECR)",
+        "description": "SECR compliance for qualifying large UK companies and LLPs — energy use, GHG emissions and intensity metrics collated, calculated and reported inside your directors' report."
+      },
+      {
+        "icon": "recycling",
+        "title": "Circular Economy Strategy",
+        "description": "Practical circular economy strategy — designing out waste, keeping materials in use and regenerating natural systems, with measurable actions tied to your business model."
+      },
+      {
+        "icon": "forest",
+        "title": "Sustainability Consultancy",
+        "description": "Broader sustainability advice — materiality, target-setting, ESG reporting, supply-chain engagement and credible climate-related disclosures aligned with TCFD/ISSB."
       }
     ]
   },
   "sectors": {
     "heading": "High-Risk Sector Expertise",
-    "description": "We specialise across the railways — including Network Rail, LUL, DLR and RFLI — and support companies through RISQS certification. We also work across construction, utilities, engineering and manufacturing.",
+    "description": "We specialise across the railways — including Network Rail, LUL, DLR and RFLI — and support companies through RISQS certification. We also work across construction, utilities, engineering, manufacturing, outdoor media and educational establishments.",
     "items": [
       { "name": "Railways (NR, LUL, DLR, RFLI)", "icon": "train" },
       { "name": "RISQS Certification", "icon": "verified" },
       { "name": "Construction", "icon": "construction" },
       { "name": "Utilities", "icon": "bolt" },
       { "name": "Engineering", "icon": "precision_manufacturing" },
-      { "name": "Manufacturing", "icon": "factory" }
+      { "name": "Manufacturing", "icon": "factory" },
+      { "name": "Outdoor Media", "icon": "campaign" },
+      { "name": "Educational Establishments", "icon": "school" }
     ]
   },
   "approach": {
@@ -44,23 +111,23 @@
       {
         "number": "01",
         "title": "Gap Analysis",
-        "description": "A thorough review of your current health, safety, and environmental arrangements against regulatory requirements and industry best practice."
+        "description": "A thorough review of your current health, safety, environmental and sustainability arrangements against regulatory requirements and industry best practice."
       },
       {
         "number": "02",
         "title": "Solution Design",
-        "description": "Practical, proportionate recommendations and documentation tailored to your business size, sector, and risk profile."
+        "description": "Practical, proportionate recommendations and documentation tailored to your business size, sector and risk profile — from single interventions to fully outsourced competent-person support."
       },
       {
         "number": "03",
         "title": "Implementation & Audit",
-        "description": "Hands-on support to embed new processes, train your team, and ongoing site inspections and management audits to ensure compliance is maintained."
+        "description": "Hands-on support to embed new processes, train your team, and ongoing site inspections and management audits to ensure compliance is maintained over time."
       }
     ]
   },
   "cta": {
     "heading": "Get Covered",
-    "description": "Minimise risk and stay compliant without it consuming your business. Our team is ready to provide the tailored HSE support your operation needs.",
+    "description": "Whatever you need — routine HSEQ compliance, risk management, business continuity, carbon reporting or sustainability consultancy — our team is ready to tailor the right level of support for your operation.",
     "buttonText": "Enquire Now"
   }
 }

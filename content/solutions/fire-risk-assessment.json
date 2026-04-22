@@ -43,6 +43,11 @@
         "icon": "policy",
         "title": "Fire Policies & Procedures",
         "description": "Site-specific fire policies and fire procedures that support your duty holder obligations and sit neatly alongside your wider HSEQ documentation."
+      },
+      {
+        "icon": "dangerous",
+        "title": "DSEAR Assessments",
+        "description": "Dangerous Substances and Explosive Atmospheres Regulations 2002 (DSEAR) assessments for sites handling flammable liquids, gases, dusts or other energetic materials — hazardous-area classification, ignition-source control and protective measures."
       }
     ]
   },

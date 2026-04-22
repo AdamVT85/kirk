@@ -7,7 +7,6 @@ const solutions = {
   'facilities-management': () => import('../../content/solutions/facilities-management.json'),
   'project-management-principal-designer': () => import('../../content/solutions/project-management-principal-designer.json'),
   'integrated-management-systems': () => import('../../content/solutions/integrated-management-systems.json'),
-  'risk-management': () => import('../../content/solutions/risk-management.json'),
   'training-education': () => import('../../content/solutions/training-education.json'),
 };
 

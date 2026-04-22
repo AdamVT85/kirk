@@ -20,7 +20,29 @@
       "Construction",
       "Utilities",
       "Engineering",
-      "Manufacturing"
+      "Manufacturing",
+      "Outdoor Media",
+      "Educational Establishments"
+    ],
+    "clientsLabel": "Selected Clients",
+    "clients": [
+      "SGN Gas",
+      "Thames Water",
+      "McNicholas",
+      "BT Openreach",
+      "MPB Structures Ltd",
+      "Morgan Sindall",
+      "Henny Ltd",
+      "Global Outdoor Media Ltd",
+      "Ocean Outdoor UK",
+      "Magway Ltd",
+      "Raven Housing",
+      "Solution Rail Ltd",
+      "RTG Rail",
+      "London Borough of Hillingdon",
+      "Titchfield Group",
+      "Praxis 42",
+      "Soyang Europe"
     ]
   },
   "solutions": {
@@ -61,13 +83,6 @@
         "description": "An integrated approach to help your company establish, implement and maintain ISO 9001, ISO 14001 and ISO 45001 management systems.",
         "icon": "engineering",
         "slug": "integrated-management-systems"
-      },
-      {
-        "label": "RISK",
-        "title": "Risk Management & Business Continuity",
-        "description": "Identify and evaluate risks to your organisation, plus business continuity and disaster recovery planning to keep you operating when the unexpected happens.",
-        "icon": "warning",
-        "slug": "risk-management"
       },
       {
         "label": "Training",

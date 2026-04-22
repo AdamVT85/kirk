@@ -2,33 +2,58 @@
   "hero": {
     "badge": "Management",
     "title": "Integrated Management Systems",
-    "subtitle": "ISO 9001, ISO 14001, and ISO 45001 — established, implemented, and maintained.",
-    "description": "Kirk & Kirk offers an integrated approach to enable your company to establish, implement, and maintain ISO 9001, ISO 14001, and ISO 45001 management systems in order to achieve third-party accreditation."
+    "subtitle": "A full suite of ISO and BS management system standards — established, implemented, and maintained.",
+    "description": "Kirk & Kirk offers an integrated approach to enable your company to establish, implement and maintain ISO 9001, ISO 14001, ISO 45001, ISO 22301, ISO 50001, ISO 14064, ISO 14068 and BS 99001 management systems — all aligned, audit-ready and working as one."
   },
   "overview": {
     "heading": "Flexible, Pragmatic, Value-Added",
-    "description": "Our flexible and pragmatic approach will create sustainable, value-added solutions no matter the size or nature of your business activities. We integrate quality, environmental, and health & safety management into a single coherent system that reflects how your business actually operates.",
+    "description": "Our flexible and pragmatic approach creates sustainable, value-added solutions no matter the size or nature of your business activities. We integrate quality, environmental, health & safety, energy, business continuity and sector-specific standards into a single coherent system that reflects how your business actually operates — not a bolt-on exercise for the auditor.",
     "features": [
       {
         "icon": "verified",
         "title": "ISO 9001 — Quality",
-        "description": "Establishing quality management systems that drive customer satisfaction, consistent delivery, and continuous improvement across your operations."
+        "description": "Establishing quality management systems that drive customer satisfaction, consistent delivery and continuous improvement across your operations."
       },
       {
         "icon": "eco",
         "title": "ISO 14001 — Environmental",
-        "description": "Implementing environmental management systems that reduce your impact, ensure regulatory compliance, and demonstrate your commitment to sustainability."
+        "description": "Implementing environmental management systems that reduce your impact, ensure regulatory compliance and demonstrate credible commitment to sustainability."
       },
       {
         "icon": "health_and_safety",
         "title": "ISO 45001 — Health & Safety",
-        "description": "Building occupational health and safety management systems that protect your workforce, reduce incidents, and create a proactive safety culture."
+        "description": "Building occupational health and safety management systems that protect your workforce, reduce incidents and create a proactive safety culture."
+      },
+      {
+        "icon": "settings_backup_restore",
+        "title": "ISO 22301 — Business Continuity",
+        "description": "Business continuity management systems that keep you operating through disruption — structured incident response, recovery time objectives and tested resilience aligned with the international standard."
+      },
+      {
+        "icon": "bolt",
+        "title": "ISO 50001 — Energy Management",
+        "description": "Energy management systems that drive down consumption and carbon cost, embed structured energy reviews and underpin SECR reporting and wider net-zero commitments."
+      },
+      {
+        "icon": "co2",
+        "title": "ISO 14064 — GHG Accounting",
+        "description": "Greenhouse gas quantification, reporting and verification at organisation and project level — the backbone for credible carbon footprints, science-based targets and climate disclosures."
+      },
+      {
+        "icon": "balance",
+        "title": "ISO 14068 — Carbon Neutrality",
+        "description": "Carbon neutrality management aligned with ISO 14068-1:2023 — quantification, mitigation hierarchy, residual offsetting and credible declaration of carbon-neutral status."
+      },
+      {
+        "icon": "foundation",
+        "title": "BS 99001 — Built Environment Quality",
+        "description": "Sector-specific quality management for the built environment — a BS 99001 framework that adapts ISO 9001 to construction, design and related services."
       }
     ]
   },
   "sectors": {
     "heading": "Third-Party Accreditations",
-    "description": "Beyond ISO certification, we can manage and assist your business to meet the standards required to obtain and maintain a range of third-party accreditations.",
+    "description": "Beyond ISO and BS certification, we can manage and assist your business to meet the standards required to obtain and maintain a range of third-party accreditations.",
     "items": [
       { "name": "Safe Contractor", "icon": "workspace_premium" },
       { "name": "CHAS", "icon": "verified_user" },
@@ -43,23 +68,23 @@
       {
         "number": "01",
         "title": "Baseline Assessment",
-        "description": "Evaluating your existing processes, documentation, and performance against ISO requirements and third-party accreditation standards to identify gaps and opportunities."
+        "description": "Evaluating your existing processes, documentation and performance against each applicable standard to identify gaps and opportunities for genuine integration."
       },
       {
         "number": "02",
         "title": "System Development",
-        "description": "Designing and documenting an integrated management system tailored to your business activities, bringing quality, environmental, and health & safety together in one framework."
+        "description": "Designing and documenting an integrated management system tailored to your business activities — bringing quality, environmental, H&S, energy, continuity and sector-specific standards together in one framework."
       },
       {
         "number": "03",
         "title": "Accreditation Support",
-        "description": "Preparing your team for audit, conducting internal audits, and supporting you through the certification and accreditation process to achieve and maintain your standards."
+        "description": "Preparing your team for audit, conducting internal audits and supporting you through the certification and accreditation process to achieve and maintain your standards."
       }
     ]
   },
   "cta": {
     "heading": "Get Accredited",
-    "description": "Whether you need ISO certification, Safe Contractor, CHAS, or any other third-party accreditation, our pragmatic approach will get you there without unnecessary complexity.",
+    "description": "Whether you need ISO 9001, 14001, 45001, 22301, 50001, 14064 or 14068 certification, BS 99001 for the built environment, or third-party accreditations like Safe Contractor and CHAS — our pragmatic approach will get you there without unnecessary complexity.",
     "buttonText": "Enquire Now"
   }
 }
