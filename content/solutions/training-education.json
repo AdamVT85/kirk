@@ -91,6 +91,17 @@
         ]
       },
       {
+        "name": "First Aid & Mental Health",
+        "icon": "medical_services",
+        "url": "https://www.tmsinsight.co.uk/training/first-aid-and-mental-health/",
+        "courses": [
+          { "name": "FAA Level 2 Award in Basic Life Support", "url": "https://www.tmsinsight.co.uk/courses/faa-level-2-award-in-basic-life-support/" },
+          { "name": "FAA Level 3 Award in Emergency First Aid at Work (RQF)", "url": "https://www.tmsinsight.co.uk/courses/faa-level-3-award-in-emergency-first-aid-at-work-rqf/" },
+          { "name": "FAA Level 3 Award in Emergency Paediatric First Aid", "url": "https://www.tmsinsight.co.uk/courses/faa-level-3-award-in-emergency-paediatric-first-aid/" },
+          { "name": "FAA Level 3 Award in First Aid at Work (RQF)", "url": "https://www.tmsinsight.co.uk/courses/faa-level-3-award-in-first-aid-at-work-rqf/" }
+        ]
+      },
+      {
         "name": "Health & Safety",
         "icon": "health_and_safety",
         "url": "https://www.tmsinsight.co.uk/training/health-and-safety/",
