@@ -51,9 +51,8 @@
   },
   "metrics": [
     { "value": "200+", "label": "Businesses Helped", "highlight": true },
-    { "value": "25", "label": "Years Experience", "highlight": false },
-    { "value": "12", "label": "Countries", "highlight": false },
-    { "value": "100%", "label": "Client Focused", "highlight": false }
+    { "value": "14", "label": "Years Experience", "highlight": false },
+    { "value": "UK & IE", "label": "Operating Region", "highlight": false }
   ],
   "map": {
     "heading": "Based in the UK, Working Internationally",

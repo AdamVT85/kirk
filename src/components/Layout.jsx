@@ -4,15 +4,15 @@ export default function Layout() {
   return (
     <>
       <nav className="fixed top-0 w-full z-50 rounded-none border-b border-white/5 bg-zinc-950/40 backdrop-blur-2xl">
-        <div className="flex justify-between items-center px-8 py-4 w-full max-w-none">
+        <div className="flex justify-between items-center px-4 md:px-8 py-4 w-full max-w-none">
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center" aria-label="Kirk & Kirk — Professional Management Consultancy">
-              <img src="/kirk-kirk-logo.jpg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[200px] md:w-[250px] h-auto" />
+              <img src="/kirk-kirk-logo.jpg" alt="Kirk & Kirk — Professional Management Consultancy" className="w-[140px] md:w-[250px] h-auto" />
             </Link>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/consultation">
-              <button className="px-6 py-2 bg-primary text-on-primary font-bold text-[0.75rem] uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95 duration-200 ease-in-out">
+              <button className="px-3 py-2 md:px-6 bg-primary text-on-primary font-bold text-[0.65rem] md:text-[0.75rem] uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95 duration-200 ease-in-out">
                 Consultation
               </button>
             </Link>
