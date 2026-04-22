@@ -30,9 +30,11 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-24 blueprint-grid">
           <div className="max-w-7xl w-full pt-16 md:pt-32">
-            <div className="inline-block border border-outline-variant px-4 py-1 mb-8">
-              <span className="text-[0.7rem] uppercase tracking-[0.3em] font-medium text-primary">{content.hero.badge}</span>
-            </div>
+            {content.hero.badge && (
+              <div className="inline-block border border-outline-variant px-4 py-1 mb-8">
+                <span className="text-[0.7rem] uppercase tracking-[0.3em] font-medium text-primary">{content.hero.badge}</span>
+              </div>
+            )}
             <h1 className="text-[clamp(2rem,9vw,8rem)] leading-[0.9] font-black tracking-tighter uppercase mb-12">
               {content.hero.titleLine1}<br />{content.hero.titleLine2}
             </h1>
@@ -123,9 +125,11 @@ export default function Home() {
               <div className="md:col-span-8 bg-surface overflow-hidden relative min-h-[400px]">
                 <img alt="Modern minimalist architectural structure" className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700" src={content.solutions.featureImage} />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
-                <div className="absolute bottom-12 left-12 right-12">
-                  <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
-                </div>
+                {content.solutions.featureTitle && (
+                  <div className="absolute bottom-12 left-12 right-12">
+                    <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">{content.solutions.featureTitle}</h3>
+                  </div>
+                )}
               </div>
             </div>
           </div>
