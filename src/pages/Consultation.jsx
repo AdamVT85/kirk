@@ -34,7 +34,11 @@ export default function Consultation() {
                 <div className="max-w-xl mx-auto lg:ml-0">
                     <h2 className="text-2xl font-bold uppercase tracking-tight mb-2">{content.form.heading}</h2>
                     <p className="text-on-surface-variant text-sm mb-12 font-light">{content.form.description}</p>
-                    <form action="https://formspree.io/f/duncan@kirkandkirk.co" method="POST" className="space-y-8">
+                    <form action="https://api.web3forms.com/submit" method="POST" className="space-y-8">
+                        <input type="hidden" name="access_key" value="f53f85f1-5b15-4b5a-818a-0b04b1f99fe2" />
+                        <input type="hidden" name="subject" value="New consultation enquiry — Kirk & Kirk" />
+                        <input type="hidden" name="from_name" value="Kirk & Kirk Website" />
+                        <input type="checkbox" name="botcheck" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="relative group">
                                 <label className="block text-[0.65rem] uppercase tracking-widest text-primary mb-2">{content.form.fields.nameLabel}</label>
