@@ -3,7 +3,7 @@ import content from '../../content/consultation/index.json';
 
 export default function Consultation() {
   return (
-    <main className="pt-32 min-h-screen">
+    <main className="pt-36 min-h-screen">
         {/* Hero Section */}
         <section className="px-8 md:px-16 pt-12 pb-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-l border-outline-variant/30">

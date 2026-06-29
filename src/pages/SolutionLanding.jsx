@@ -51,14 +51,14 @@ export default function SolutionLanding() {
 
   if (!content) {
     return (
-      <main className="pt-32 min-h-screen flex items-center justify-center">
+      <main className="pt-36 min-h-screen flex items-center justify-center">
         <p className="text-on-surface-variant uppercase tracking-widest text-sm">Loading...</p>
       </main>
     );
   }
 
   return (
-    <main className="pt-32">
+    <main className="pt-36">
       {/* Hero */}
       <section className="relative min-h-[70vh] flex flex-col justify-end px-8 md:px-16 pb-24 blueprint-grid">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
